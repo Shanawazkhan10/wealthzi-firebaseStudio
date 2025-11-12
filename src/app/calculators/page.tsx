@@ -21,14 +21,14 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieC
 import { Loader2 } from 'lucide-react';
 
 const formatCurrency = (value: number, toFixed = 0) => {
-    if (isNaN(value) || !isFinite(value)) return 'Rs 0';
+    if (isNaN(value) || !isFinite(value)) return 'Rs. 0';
     if (value >= 10000000) {
-      return `Rs ${(value / 10000000).toFixed(2)} Cr`;
+      return `Rs. ${(value / 10000000).toFixed(2)} Cr`;
     }
     if (value >= 100000) {
-      return `Rs ${(value / 100000).toFixed(2)} Lac`;
+      return `Rs. ${(value / 100000).toFixed(2)} Lac`;
     }
-    return `Rs ${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
+    return `Rs. ${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
   };
 
 const CustomTooltip = ({ active, payload, label, chartConfig }: any) => {
@@ -97,7 +97,7 @@ function SIPCalculator() {
   return (
     <Card className="shadow-lg">
       <CardContent className="p-6 md:p-8">
-        <h3 className="text-2xl font-bold text-center mb-8">SIP Calculator</h3>
+        <h3 className="text-2xl font-bold text-center mb-8 font-heading">SIP Calculator</h3>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           <div className="space-y-8">
             <div>
@@ -108,7 +108,7 @@ function SIPCalculator() {
                 <span>Monthly SIP Amount</span>
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
-                    Rs
+                    Rs.
                   </span>
                   <Input
                     id="monthly-investment"
@@ -117,7 +117,7 @@ function SIPCalculator() {
                     onChange={(e) =>
                       setMonthlyInvestment(Number(e.target.value))
                     }
-                    className="w-32 md:w-36 pl-8"
+                    className="w-32 md:w-36 pl-9"
                     min={500}
                     max={1000000}
                   />
@@ -132,7 +132,7 @@ function SIPCalculator() {
                 className="mt-2"
               />
               <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">
-                (Rs 500 to Rs 10 Lac)
+                (Rs. 500 to Rs. 10 Lac)
               </p>
             </div>
 
@@ -316,19 +316,19 @@ function LumpsumCalculator() {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Lumpsum Calculator</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 font-heading">Lumpsum Calculator</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
                 <Label htmlFor="lumpsum-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Lumpsum Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs</span>
-                    <Input id="lumpsum-amount" type="number" value={lumpSumAmount} onChange={(e) => setLumpSumAmount(Number(e.target.value))} className="w-32 md:w-36 pl-8" min={1000} max={50000000} />
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <Input id="lumpsum-amount" type="number" value={lumpSumAmount} onChange={(e) => setLumpSumAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={1000} max={50000000} />
                   </div>
                 </Label>
                 <Slider value={[lumpSumAmount]} onValueChange={(v) => setLumpSumAmount(v[0])} min={1000} max={50000000} step={1000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs 1,000 to Rs 5 Cr)</p>
+                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 1,000 to Rs. 5 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-lumpsum" className="flex justify-between items-center text-sm md:text-base">
@@ -417,19 +417,19 @@ function LumpsumCalculator() {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">SIP Goal Calculator</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 font-heading">SIP Goal Calculator</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
                 <Label htmlFor="target-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Target Amount</span>
                   <div className="relative">
-                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs</span>
-                    <Input id="target-amount" type="number" value={targetAmount} onChange={(e) => setTargetAmount(Number(e.target.value))} className="w-32 md:w-36 pl-8" min={10000} max={100000000}/>
+                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <Input id="target-amount" type="number" value={targetAmount} onChange={(e) => setTargetAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={10000} max={100000000}/>
                   </div>
                 </Label>
                 <Slider value={[targetAmount]} onValueChange={(v) => setTargetAmount(v[0])} min={10000} max={100000000} step={10000} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs 10,000 to Rs 10 Cr)</p>
+                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 10,000 to Rs. 10 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-goal" className="flex justify-between items-center text-sm md:text-base">
@@ -499,19 +499,19 @@ function LumpsumCalculator() {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Fixed Deposit (FD) Calculator</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 font-heading">Fixed Deposit (FD) Calculator</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
                 <Label htmlFor="principal-fd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Investment Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs</span>
-                    <Input id="principal-fd" type="number" value={principal} onChange={(e) => setPrincipal(Number(e.target.value))} className="w-32 md:w-36 pl-8" />
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <Input id="principal-fd" type="number" value={principal} onChange={(e) => setPrincipal(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[principal]} onValueChange={(v) => setPrincipal(v[0])} min={5000} max={10000000} step={5000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs 5,000 to Rs 1 Cr)</p>
+                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 5,000 to Rs. 1 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-fd" className="flex justify-between items-center text-sm md:text-base">
@@ -611,19 +611,19 @@ function LumpsumCalculator() {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Recurring Deposit (RD) Calculator</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 font-heading">Recurring Deposit (RD) Calculator</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
                 <Label htmlFor="monthly-deposit-rd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Monthly Deposit</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs</span>
-                    <Input id="monthly-deposit-rd" type="number" value={monthlyDeposit} onChange={(e) => setMonthlyDeposit(Number(e.target.value))} className="w-32 md:w-36 pl-8" />
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <Input id="monthly-deposit-rd" type="number" value={monthlyDeposit} onChange={(e) => setMonthlyDeposit(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[monthlyDeposit]} onValueChange={(v) => setMonthlyDeposit(v[0])} min={500} max={100000} step={500} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs 500 to Rs 1 Lac)</p>
+                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 500 to Rs. 1 Lac)</p>
               </div>
               <div>
                 <Label htmlFor="rate-rd" className="flex justify-between items-center text-sm md:text-base">
@@ -698,19 +698,19 @@ function LumpsumCalculator() {
     return (
       <Card className="shadow-lg">
         <CardContent className="p-6 md:p-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Loan EMI Calculator</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 font-heading">Loan EMI Calculator</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             <div className="space-y-8">
               <div>
                 <Label htmlFor="loan-amount-emi" className="flex justify-between items-center text-sm md:text-base">
                   <span>Loan Amount</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs</span>
-                    <Input id="loan-amount-emi" type="number" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-32 md:w-36 pl-8" />
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <Input id="loan-amount-emi" type="number" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[loanAmount]} onValueChange={(v) => setLoanAmount(v[0])} min={50000} max={20000000} step={10000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs 50,000 to Rs 2 Cr)</p>
+                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 50,000 to Rs. 2 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="interest-rate-emi" className="flex justify-between items-center text-sm md:text-base">
@@ -821,6 +821,9 @@ function CalculatorsPageContent() {
   const handleTabChange = (newTab: string) => {
     if (newTab !== activeTab) {
       setIsLoading(true);
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', newTab);
+      window.history.pushState({}, '', url);
       setActiveTab(newTab);
     }
   };
