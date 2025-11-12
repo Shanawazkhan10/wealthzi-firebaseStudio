@@ -9,7 +9,6 @@ import {
   Users,
 } from 'lucide-react';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 const features = [
   {
@@ -40,19 +39,27 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto">
+    <section id="features" className="relative py-16 lg:py-24 bg-background">
+       <Image
+          src="https://picsum.photos/seed/features-bg/1920/1080"
+          alt="Abstract background"
+          fill
+          className="object-cover"
+          data-ai-hint="abstract background"
+        />
+       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="container mx-auto relative">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Create Wealth with Wealthzi
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-xl text-muted-foreground">
             Wealth creation is made smooth with an easy-to-use interface to
             transact in and research mutual funds, FDs, bonds, portfolio
             management services and AIFs along with automated portfolio review
             and tracking.
           </p>
-          <p className="mt-2 text-base text-muted-foreground">
+          <p className="mt-2 text-lg text-muted-foreground">
             Join over 10,000 customers who trust wealthzi to take control of
             their financial future.
           </p>
@@ -64,23 +71,17 @@ export default function Features() {
               Get FREE financial guidance and invest in best investment options
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {features.map((feature) => (
-              <Card
+              <div
                 key={feature.title}
-                className="text-center shadow-lg hover:shadow-xl transition-shadow bg-background/70"
+                className="text-center flex flex-col items-center gap-4"
               >
-                <CardHeader>
-                  <div className="mx-auto bg-green-100/50 p-3 rounded-full">
-                    {feature.icon}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardTitle className="text-base sm:text-lg font-semibold">
-                    {feature.title}
-                  </CardTitle>
-                </CardContent>
-              </Card>
+                <div className="mx-auto bg-green-100/50 p-3 rounded-full">
+                  {feature.icon}
+                </div>
+                <h4 className="text-lg font-semibold">{feature.title}</h4>
+              </div>
             ))}
           </div>
         </div>
