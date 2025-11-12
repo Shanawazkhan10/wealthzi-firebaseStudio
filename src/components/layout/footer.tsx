@@ -17,7 +17,7 @@ const companyLinks = [
   { title: 'Terms of Use', href: '#' },
   { title: 'Privacy Policy', href: '#' },
   { title: 'RIA Disclaimers', href: '#' },
-  { title: 'Regulatory Disclosure', href: '#' },
+  { title: 'Regulatory Disclosure', href: '/regulatory-disclosure' },
   { title: 'Investor Charter', href: '#' },
   { title: 'SCORES Link', href: '#' },
   { title: 'SMARTODR', href: '#' },
