@@ -36,25 +36,25 @@ export default function Team() {
             Our team combines decades of wealth management and technology experience to empower your financial journey.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
           {teamMembers.map((member) => {
             const image = getImage(member.imageId);
             return (
-              <Card key={member.name} className="text-center bg-background/80 shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-6">
-                  {image && (
+              <Card key={member.name} className="relative overflow-hidden rounded-lg shadow-lg group text-white">
+                {image && (
                     <Image
-                      src={image.imageUrl}
-                      alt={`Photo of ${member.name}`}
-                      width={400}
-                      height={400}
-                      className="rounded-full w-24 h-24 md:w-32 md:h-32 mx-auto object-cover border-4 border-white shadow-md"
-                      data-ai-hint={image.imageHint}
+                    src={image.imageUrl}
+                    alt={`Photo of ${member.name}`}
+                    fill
+                    className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-110"
+                    data-ai-hint={image.imageHint}
                     />
-                  )}
-                  <h3 className="font-heading mt-4 text-xl font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-lg text-primary font-medium">{member.title}</p>
-                </CardContent>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                <div className="relative flex flex-col justify-end h-full p-4 md:p-6 min-h-[250px] md:min-h-[300px]">
+                    <h3 className="font-heading text-lg md:text-xl font-bold">{member.name}</h3>
+                    <p className="text-base text-white/80">{member.title}</p>
+                </div>
               </Card>
             );
           })}
