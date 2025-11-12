@@ -170,10 +170,6 @@ export default function Footer() {
             ))}
             </div>
         </div>
-
-        <div className="mt-12 border-t border-white/20 pt-8 text-center text-base text-[#cbd5e1]">
-             <p>&copy; {new Date().getFullYear()} Wealthzi Digital. All rights reserved.</p>
-        </div>
       </div>
     </footer>
   );
