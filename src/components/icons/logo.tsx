@@ -11,7 +11,7 @@ export function Logo({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
       )}
       {...props}
     >
-      <Landmark className="h-6 w-6 text-secondary" />
+      <Landmark className="h-6 w-6 text-primary" />
       <span className="mt-1">Wealthzi</span>
     </div>
   );

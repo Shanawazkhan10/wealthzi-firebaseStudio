@@ -137,7 +137,7 @@ export default function Hero() {
                           </p>
                         )}
                         {slide.stats && (
-                          <p className="mt-4 text-lg font-semibold text-amber-300 drop-shadow-md">
+                          <p className="mt-4 text-lg font-semibold text-green-300 drop-shadow-md">
                             {slide.stats}
                           </p>
                         )}
@@ -145,7 +145,7 @@ export default function Hero() {
                           <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-left">
                             {slide.features.map((feature) => (
                               <li key={feature} className="flex items-center gap-2 text-neutral-200">
-                                <Check className="h-5 w-5 text-accent" />
+                                <Check className="h-5 w-5 text-primary" />
                                 <span>{feature}</span>
                               </li>
                             ))}
@@ -153,7 +153,7 @@ export default function Hero() {
                         )}
                         <Button
                           size="lg"
-                          className="mt-8 font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90"
+                          className="mt-8 font-bold"
                           aria-label={slide.cta}
                         >
                           {slide.cta}

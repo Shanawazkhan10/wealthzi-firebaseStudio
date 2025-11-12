@@ -22,7 +22,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ['"Inter"', '"Segoe UI"', 'system-ui', 'sans-serif'],
-        body: ['"Lato"', '"Arial"', 'sans-serif'],
+        body: ['"PT Sans"', '"Arial"', 'sans-serif'],
         mono: ['"SF Mono"', '"Monaco"', 'monospace'],
       },
       colors: {

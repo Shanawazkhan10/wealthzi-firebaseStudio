@@ -47,7 +47,7 @@ function InvestmentCalculator() {
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-start">
-        <Button onClick={calculate} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+        <Button onClick={calculate}>
           <Calculator className="mr-2 h-4 w-4" /> Calculate
         </Button>
         {futureValue !== null && (
@@ -69,7 +69,7 @@ export default function Calculators() {
     <section id="explore" className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-primary">
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Investment Calculator Tools
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">

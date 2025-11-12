@@ -55,7 +55,7 @@ export default function Chatbot() {
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
         <Button
-          className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-xl bg-primary hover:bg-primary/90"
+          className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-xl"
           size="icon"
         >
           {isOpen ? <X className="h-8 w-8" /> : <Bot className="h-8 w-8" />}
@@ -124,7 +124,7 @@ export default function Chatbot() {
               className="flex-grow"
               disabled={loading}
             />
-            <Button type="submit" size="icon" disabled={loading} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+            <Button type="submit" size="icon" disabled={loading}>
               <Send className="h-4 w-4" />
               <span className="sr-only">Send</span>
             </Button>

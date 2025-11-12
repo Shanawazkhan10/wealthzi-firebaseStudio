@@ -68,12 +68,12 @@ export default function InvestmentRecommendations() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto">
         <Card className="max-w-4xl mx-auto shadow-lg">
           <CardHeader>
-            <CardTitle className="font-heading text-3xl text-primary flex items-center gap-2">
-              <BrainCircuit className="w-8 h-8 text-secondary" />
+            <CardTitle className="font-heading text-3xl text-foreground flex items-center gap-2">
+              <BrainCircuit className="w-8 h-8 text-primary" />
               AI-Powered Investment Plan
             </CardTitle>
             <CardDescription>
@@ -139,7 +139,7 @@ export default function InvestmentRecommendations() {
                     )}
                   />
                 </div>
-                <Button type="submit" disabled={loading} size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                <Button type="submit" disabled={loading} size="lg">
                   {loading ? (
                     <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Plan...</>
                   ) : (
@@ -153,7 +153,7 @@ export default function InvestmentRecommendations() {
             {result && (
               <div className="mt-8 p-6 bg-muted rounded-lg border">
                 <h3 className="font-heading text-xl font-bold text-primary mb-4">Your Personalized Recommendations</h3>
-                <div className="prose prose-blue max-w-none text-foreground">
+                <div className="prose prose-green max-w-none text-foreground">
                   <p>{result.recommendations}</p>
                 </div>
               </div>
