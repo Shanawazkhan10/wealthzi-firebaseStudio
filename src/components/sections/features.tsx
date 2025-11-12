@@ -8,6 +8,7 @@ import {
   RefreshCw,
   Users,
 } from 'lucide-react';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 
 const features = [
@@ -39,8 +40,18 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto">
+    <section id="features" className="relative py-16 lg:py-24 bg-background">
+      <div className="absolute inset-0">
+        <Image
+          src="https://picsum.photos/seed/features/1920/1080"
+          alt="Abstract background"
+          fill
+          className="object-cover"
+          data-ai-hint="abstract background"
+        />
+        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
+      </div>
+      <div className="container mx-auto relative">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Create Wealth with Wealthzi
@@ -67,7 +78,7 @@ export default function Features() {
             {features.map((feature) => (
               <Card
                 key={feature.title}
-                className="text-center shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center shadow-lg hover:shadow-xl transition-shadow bg-background/70"
               >
                 <CardHeader>
                   <div className="mx-auto bg-green-100/50 p-3 rounded-full">
