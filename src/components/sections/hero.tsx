@@ -16,35 +16,33 @@ import { Check } from 'lucide-react';
 const slides = [
   {
     id: 'slide1',
-    headline: "We'll need ₹1.5 crore in 8-10 years for our kids higher education and wedding.",
-    subheadline: 'Give us a long-term investment plan!',
-    cta: 'Start Planning',
+    headline: 'Personalized wealth management for you.',
     imageId: 'hero-1',
-    contentPosition: 'center',
+    contentPosition: 'left',
   },
   {
     id: 'slide2',
-    headline: 'Create Wealth with Wealthzi',
-    subheadline: 'Wealth creation is made smooth with an easy-to-use interface to transact in and research mutual funds, FDs, bonds, portfolio management services and AIFs along with automated portfolio review and tracking.',
-    stats: 'Join over 10,000 customers who trust wealthzi to take control of their financial future.',
-    cta: 'Join Now',
+    headline: 'Achieve your financial goals with expert advice.',
     imageId: 'hero-2',
     contentPosition: 'left',
   },
   {
     id: 'slide3',
-    headline: 'Get FREE financial guidance and invest in best investment options',
-    features: [
-      'Build Portfolio',
-      'Easy Transactions',
-      'Portfolio Tracking',
-      'Review & Rebalancing',
-      'Proprietary Zi Algorithm',
-      'Remote Human Assistance',
-    ],
-    cta: 'Get Free Advice',
+    headline: 'Invest in your future, start today.',
     imageId: 'hero-3',
-    contentPosition: 'right',
+    contentPosition: 'left',
+  },
+  {
+    id: 'slide4',
+    headline: 'Smart investing for a secure tomorrow.',
+    imageId: 'hero-1',
+    contentPosition: 'left',
+  },
+  {
+    id: 'slide5',
+    headline: 'Build your legacy with Wealthzi.',
+    imageId: 'hero-2',
+    contentPosition: 'left',
   },
 ];
 
@@ -119,36 +117,9 @@ export default function Hero() {
                           'ml-auto': slide.contentPosition === 'right',
                         })}
                       >
-                        <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
+                        <h1 className="font-heading text-5xl font-extrabold tracking-tight drop-shadow-lg">
                           {slide.headline}
                         </h1>
-                        {slide.subheadline && (
-                          <p className="mt-4 text-md sm:text-lg md:text-xl text-neutral-200 drop-shadow-md">
-                            {slide.subheadline}
-                          </p>
-                        )}
-                        {slide.stats && (
-                          <p className="mt-4 text-md sm:text-lg font-semibold text-green-300 drop-shadow-md">
-                            {slide.stats}
-                          </p>
-                        )}
-                        {slide.features && (
-                          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-left">
-                            {slide.features.map((feature) => (
-                              <li key={feature} className="flex items-center gap-2 text-neutral-200">
-                                <Check className="h-5 w-5 text-primary" />
-                                <span>{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                        <Button
-                          size="lg"
-                          className="mt-8 font-bold"
-                          aria-label={slide.cta}
-                        >
-                          {slide.cta}
-                        </Button>
                       </div>
                     </div>
                   </div>
