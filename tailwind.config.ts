@@ -24,6 +24,7 @@ export default {
         heading: ['"Inter"', '"Segoe UI"', 'system-ui', 'sans-serif'],
         body: ['"PT Sans"', '"Arial"', 'sans-serif'],
         mono: ['"SF Mono"', '"Monaco"', 'monospace'],
+        'caveat-brush': ['"Caveat Brush"', 'cursive'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -118,12 +119,5 @@ export default {
   },
   plugins: [
     require('tailwindcss-animate'),
-    function ({ addUtilities }: { addUtilities: (utilities: any) => void }) {
-      addUtilities({
-        ".font-['Caveat_Brush']": {
-          fontFamily: '"Caveat Brush", cursive',
-        },
-      });
-    },
   ],
 } satisfies Config;

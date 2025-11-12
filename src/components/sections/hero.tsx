@@ -156,7 +156,7 @@ export default function Hero() {
                         <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
                           {slide.text1}
                         </div>
-                        <p className="pt-6 font-normal text-white text-left text-2xl lg:text-4xl xl:text-5xl leading-tight font-['Caveat_Brush']">
+                        <p className="pt-6 font-normal text-white text-left text-2xl lg:text-4xl xl:text-5xl leading-tight font-caveat-brush">
                           {slide.text2}
                         </p>
                       </div>
