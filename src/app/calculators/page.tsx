@@ -265,6 +265,16 @@ function SIPCalculator() {
                 </ResponsiveContainer>
               </ChartContainer>
             </div>
+            <div className="flex justify-center gap-4 mt-4 text-sm md:text-base">
+                <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{backgroundColor: chartConfig['Total Invested'].color}}></div>
+                    <span>Total Invested</span>
+                </div>
+                <div className="flex items-center gap-2">
+                     <div className="w-3 h-3 rounded-full" style={{backgroundColor: chartConfig['Expected Amount'].color}}></div>
+                    <span>Expected Amount</span>
+                </div>
+            </div>
           </div>
         </div>
       </CardContent>
@@ -371,6 +381,16 @@ function LumpsumCalculator() {
                     </LineChart>
                   </ResponsiveContainer>
                 </ChartContainer>
+              </div>
+              <div className="flex justify-center gap-4 mt-4 text-sm md:text-base">
+                <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full" style={{backgroundColor: chartConfig['Total Invested'].color}}></div>
+                    <span>Total Invested</span>
+                </div>
+                <div className="flex items-center gap-2">
+                        <div className="w-3 h-3 rounded-full" style={{backgroundColor: chartConfig['Expected Amount'].color}}></div>
+                    <span>Expected Amount</span>
+                </div>
               </div>
             </div>
           </div>

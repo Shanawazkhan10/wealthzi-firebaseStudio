@@ -23,16 +23,6 @@ const companyLinks = [
   { title: 'SMARTODR', href: '#' },
 ];
 
-const productLinks = [
-  { title: 'Mutual Funds', href: '#' },
-  { title: 'PMS', href: '#' },
-  { title: 'AIF', href: '#' },
-  { title: 'Fixed Deposits', href: '#' },
-  { title: 'Bonds', href: '#' },
-  { title: 'Gold', href: '#' },
-  { title: 'NFO', href: '#' },
-];
-
 const calculatorLinks = [
   { title: 'SIP Calculator', href: '/calculators?tab=sip' },
   { title: 'Lumpsum Calculator', href: '/calculators?tab=lumpsum' },
@@ -109,23 +99,11 @@ export default function Footer() {
 
             {/* Column 2: Links */}
             <div className="lg:col-span-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <div>
                         <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
                         <ul className="mt-4 space-y-3">
                         {companyLinks.map((link) => (
-                            <li key={link.title}>
-                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                                {link.title}
-                            </Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-heading font-semibold text-lg text-white">PRODUCTS</h3>
-                        <ul className="mt-4 space-y-3">
-                        {productLinks.map((link) => (
                             <li key={link.title}>
                             <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
