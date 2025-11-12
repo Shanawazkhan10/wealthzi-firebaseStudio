@@ -6,36 +6,73 @@ import { Star } from 'lucide-react';
 
 const stories = [
   {
-    achievement: '4x his investments in last 3 years',
+    achievement: (
+      <>
+        <span className="text-primary font-bold">4x his investments</span> <br />
+        in last 3 years
+      </>
+    ),
     name: 'B Madan, 55Y',
     details: 'CFO, Listed Company',
     imageId: 'success-1',
   },
   {
-    achievement: 'Wealth up by 107% since Feb 2020',
+    achievement: (
+      <>
+        <span className="text-primary font-bold">Wealth up by 107%</span> <br />
+        since Feb 2020
+      </>
+    ),
     name: 'MSR Kumaraswamy, 52Y',
     details: 'Sr Engineer',
     imageId: 'success-2',
   },
   {
-    achievement: '2x his investments in less than a year',
+    achievement: (
+      <>
+        <span className="text-primary font-bold">2x his investments</span> <br />
+        in less than a year
+      </>
+    ),
     name: 'S Berry, 37Y',
     details: 'Executive',
     imageId: 'success-3',
   },
-    {
-    achievement: 'Networth up by 68% in 18 months',
+  {
+    achievement: (
+      <>
+        <span className="text-primary font-bold">Networth up by 68%</span> <br />
+        in 18 months
+      </>
+    ),
     name: 'S Agarwal, 43Y',
     details: 'Works with BIG4',
-    imageId: 'team-sanjeev'
+    imageId: 'team-sanjeev',
   },
-    {
-    achievement: 'Doubled wealth in last 2 years',
+  {
+    achievement: (
+      <>
+        <span className="text-primary font-bold">Doubled wealth</span> <br />
+        in last 2 years
+      </>
+    ),
     name: 'S Bhasin, 52Y',
     details: 'Journalist',
-    imageId: 'team-pradeep'
-  }
+    imageId: 'team-pradeep',
+  },
+  {
+    achievement: (
+      <>
+        <span className="text-primary font-bold">Wealth up by 75%</span> <br />
+        in 2 years
+      </>
+    ),
+    name: 'K Jerath, 41Y',
+    details: 'Media Professional',
+    imageId: 'success-4',
+  },
 ];
+
 
 export default function SuccessStories() {
   const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
@@ -76,7 +113,7 @@ export default function SuccessStories() {
                                 data-ai-hint={image.imageHint}
                             />
                         )}
-                      <p className="font-bold font-heading text-lg md:text-xl text-primary flex-grow">
+                      <p className="font-heading text-lg md:text-xl text-muted-foreground flex-grow">
                         {story.achievement}
                       </p>
                       <div className="mt-4">
