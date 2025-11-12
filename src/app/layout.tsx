@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Chatbot from '@/components/chatbot';
+import Marquee from '@/components/layout/marquee';
 
 export const metadata: Metadata = {
   title: 'Wealthzi Digital',
@@ -26,6 +27,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
+        <Marquee />
         <Header />
         <main>{children}</main>
         <Footer />
