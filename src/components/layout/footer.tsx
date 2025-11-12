@@ -34,12 +34,12 @@ const productLinks = [
 ];
 
 const calculatorLinks = [
-  { title: 'SIP Calculator', href: '#' },
-  { title: 'Lumpsum Calculator', href: '#' },
-  { title: 'SIP Goal Calculator', href: '#' },
-  { title: 'Fixed Deposit (FD) Calculator', href: '#' },
-  { title: 'Recurring Deposit (RD) Calculator', href: '#' },
-  { title: 'Loan EMI Calculator', href: '#' },
+  { title: 'SIP Calculator', href: '/calculators?tab=sip' },
+  { title: 'Lumpsum Calculator', href: '/calculators?tab=lumpsum' },
+  { title: 'SIP Goal Calculator', href: '/calculators?tab=sip-goal' },
+  { title: 'Fixed Deposit (FD) Calculator', href: '/calculators?tab=fd' },
+  { title: 'Recurring Deposit (RD) Calculator', href: '/calculators?tab=rd' },
+  { title: 'Loan EMI Calculator', href: '/calculators?tab=loan-emi' },
 ];
 
 const complianceData = [

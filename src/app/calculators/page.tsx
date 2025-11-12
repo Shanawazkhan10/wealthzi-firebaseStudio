@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import {
   Tabs,
   TabsContent,
@@ -778,14 +779,27 @@ const LoadingComponent = () => (
   </div>
 );
 
-export default function CalculatorsPage() {
-  const [activeTab, setActiveTab] = useState('sip');
+function CalculatorsPageContent() {
+  const searchParams = useSearchParams();
+  const tab = searchParams.get('tab') || 'sip';
+  
+  const [activeTab, setActiveTab] = useState(tab);
   const [isLoading, setIsLoading] = useState(false);
-  const [previousTab, setPreviousTab] = useState('sip');
+
+  useEffect(() => {
+    const newTab = searchParams.get('tab') || 'sip';
+    if (newTab !== activeTab) {
+      handleTabChange(newTab);
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+      setActiveTab(tab);
+  }, [tab]);
+
 
   const handleTabChange = (newTab: string) => {
     if (newTab !== activeTab) {
-      setPreviousTab(activeTab);
       setIsLoading(true);
       setActiveTab(newTab);
     }
@@ -858,5 +872,13 @@ export default function CalculatorsPage() {
         </Tabs>
       </div>
     </section>
+  );
+}
+
+export default function CalculatorsPage() {
+  return (
+    <Suspense fallback={<LoadingComponent />}>
+      <CalculatorsPageContent />
+    </Suspense>
   );
 }
