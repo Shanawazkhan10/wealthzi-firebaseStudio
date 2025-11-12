@@ -8,8 +8,8 @@ const stories = [
   {
     achievement: (
       <>
-        4x his investments <br />
-        <span className="text-[#56b28b] font-bold">in last 3 years</span>
+        <span className="text-white">4x his investments</span> <br />
+        in last 3 years
       </>
     ),
     name: 'B Madan, 55Y',
@@ -19,7 +19,7 @@ const stories = [
   {
     achievement: (
       <>
-        Wealth up by <span className="text-[#56b28b] font-bold">107%</span> <br />
+        <span className="text-white">Wealth up by 107%</span> <br />
         since Feb 2020
       </>
     ),
@@ -30,7 +30,7 @@ const stories = [
   {
     achievement: (
       <>
-        <span className="text-[#56b28b] font-bold">2x his investments</span> <br />
+        <span className="text-white">2x his investments</span> <br />
         in less than a year
       </>
     ),
@@ -41,7 +41,7 @@ const stories = [
   {
     achievement: (
       <>
-        Networth up by <span className="text-[#56b28b] font-bold">68%</span> <br />
+        <span className="text-white">Networth up by 68%</span> <br />
         in 18 months
       </>
     ),
@@ -52,7 +52,7 @@ const stories = [
   {
     achievement: (
       <>
-        <span className="text-[#56b28b] font-bold">Doubled wealth</span> <br />
+        <span className="text-white">Doubled wealth</span> <br />
         in last 2 years
       </>
     ),
@@ -63,7 +63,7 @@ const stories = [
   {
     achievement: (
       <>
-        Wealth up by <span className="text-[#56b28b] font-bold">75%</span> <br />
+        <span className="text-white">Wealth up by 75%</span> <br />
         in 2 years
       </>
     ),
@@ -93,15 +93,15 @@ export default function SuccessStories() {
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-5xl mx-auto"
+          className="w-full max-w-sm sm:max-w-xl md:max-w-3xl lg:max-w-7xl mx-auto"
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-4">
             {stories.map((story, index) => {
               const image = getImage(story.imageId);
               return (
-              <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/2 lg:basis-1/3">
-                <div className="p-2 h-full">
-                  <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-primary text-primary-foreground relative overflow-hidden">
+              <CarouselItem key={index} className="pl-4 sm:basis-1/2 md:basis-1/2 lg:basis-1/4">
+                <div className="h-full">
+                  <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-primary text-primary-foreground relative overflow-hidden min-h-[300px]">
                      <div className="absolute top-0 left-0 w-full h-full bg-black/10"></div>
                      <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-black/10 rounded-full"></div>
                     <CardContent className="p-6 flex-grow flex flex-col items-center text-center z-10">
