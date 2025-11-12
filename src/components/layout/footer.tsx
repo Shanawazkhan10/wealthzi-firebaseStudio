@@ -14,7 +14,7 @@ const companyLinks = [
   { title: 'About Wealthzi', href: '#' },
   { title: 'Blogs', href: '#' },
   { title: 'Contact Us', href: '#' },
-  { title: 'Terms of Use', href: '#' },
+  { title: 'Terms of Use', href: '/terms-of-use' },
   { title: 'Privacy Policy', href: '#' },
   { title: 'RIA Disclaimers', href: '#' },
   { title: 'Regulatory Disclosure', href: '/regulatory-disclosure' },
