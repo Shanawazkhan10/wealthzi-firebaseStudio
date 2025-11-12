@@ -39,7 +39,7 @@ const faqData = [
   {
     title: 'What is the minimum SIP amount?',
     subTitle:
-      'Minimum SIP amount varies from fund to fund, you can start as low as Rs. 100 in some of the funds.',
+      'Minimum SIP amount varies from fund to fund, you can start as low as Rs 100 in some of the funds.',
   },
   {
     title: 'Is Wealthzi Safe?',
@@ -128,7 +128,7 @@ const faqData = [
   {
     title: 'What is the minimum investment amount to start?',
     subTitle:
-      "At Wealthzi, we understand the importance of making investing accessible to all. That's why we offer you the flexibility to start building their investment portfolio with as little as Rs. 100. However, we recommend a minimum investment of Rs. 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor's risk profile and investment goals.",
+      "At Wealthzi, we understand the importance of making investing accessible to all. That's why we offer you the flexibility to start building their investment portfolio with as little as Rs 100. However, we recommend a minimum investment of Rs 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor's risk profile and investment goals.",
   },
   {
     title: 'Does Wealthzi charges fees for the services?',
