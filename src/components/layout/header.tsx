@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '#explore', label: 'Explore Funds' },
+  { href: '/calculators', label: 'Calculators' },
   { href: '#learn', label: 'Learn' },
   { href: '#about', label: 'About Us' },
 ];
