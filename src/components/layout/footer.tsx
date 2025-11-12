@@ -30,22 +30,22 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary text-secondary-foreground border-t">
+    <footer className="bg-muted text-muted-foreground border-t">
       <div className="container py-12 lg:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           <div className="col-span-2 lg:col-span-1">
             <Logo className="text-primary" />
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs">
+            <p className="mt-4 text-sm max-w-xs">
               Take control of your financial future with expert guidance.
             </p>
           </div>
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h3 className="font-headline font-semibold tracking-wider text-sm">{section.title}</h3>
+              <h3 className="font-heading font-semibold tracking-wider text-sm text-foreground">{section.title}</h3>
               <ul className="mt-4 space-y-3">
                 {section.links.map((link) => (
                   <li key={link}>
-                    <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Link href="#" className="text-sm hover:text-primary transition-colors">
                       {link}
                     </Link>
                   </li>
@@ -55,19 +55,19 @@ export default function Footer() {
           ))}
         </div>
         <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row items-center justify-between">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm">
             &copy; {new Date().getFullYear()} Wealthzi Digital. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
             {socialLinks.map((social) => (
-              <Link key={social.name} href={social.href} className="text-muted-foreground hover:text-primary transition-colors">
+              <Link key={social.name} href={social.href} className="hover:text-primary transition-colors">
                 <social.icon className="h-5 w-5" />
                 <span className="sr-only">{social.name}</span>
               </Link>
             ))}
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-xs text-muted-foreground space-y-2">
+        <div className="mt-8 border-t pt-8 text-xs space-y-2">
             <h4 className="font-semibold text-foreground">Regulatory Disclosures</h4>
             <p>
             Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Wealthzi is a SEBI registered Investment Advisor (INA000017429).

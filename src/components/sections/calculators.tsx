@@ -47,11 +47,11 @@ function InvestmentCalculator() {
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-start">
-        <Button onClick={calculate} style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+        <Button onClick={calculate} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
           <Calculator className="mr-2 h-4 w-4" /> Calculate
         </Button>
         {futureValue !== null && (
-          <div className="mt-6 p-4 bg-secondary rounded-lg w-full">
+          <div className="mt-6 p-4 bg-muted rounded-lg w-full">
             <p className="text-muted-foreground">Estimated Future Value:</p>
             <p className="text-2xl font-bold text-primary">
               ₹ {futureValue.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
@@ -66,10 +66,10 @@ function InvestmentCalculator() {
 
 export default function Calculators() {
   return (
-    <section id="explore" className="py-16 lg:py-24 bg-secondary">
+    <section id="explore" className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary">
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-primary">
             Investment Calculator Tools
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">

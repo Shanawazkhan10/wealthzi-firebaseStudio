@@ -55,9 +55,8 @@ export default function Chatbot() {
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
         <Button
-          className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-xl"
+          className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-xl bg-primary hover:bg-primary/90"
           size="icon"
-          style={{ backgroundColor: 'hsl(var(--primary))' }}
         >
           {isOpen ? <X className="h-8 w-8" /> : <Bot className="h-8 w-8" />}
           <span className="sr-only">Toggle Chat</span>
@@ -68,7 +67,7 @@ export default function Chatbot() {
         align="end"
         className="w-[90vw] max-w-md h-[70vh] flex flex-col p-0 mr-4"
       >
-        <div className="p-4 bg-secondary border-b">
+        <div className="p-4 bg-muted border-b">
             <Logo className="text-base" />
         </div>
         <ScrollArea className="flex-grow p-4">
@@ -125,7 +124,7 @@ export default function Chatbot() {
               className="flex-grow"
               disabled={loading}
             />
-            <Button type="submit" size="icon" disabled={loading} style={{ backgroundColor: 'hsl(var(--accent))' }}>
+            <Button type="submit" size="icon" disabled={loading} className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
               <Send className="h-4 w-4" />
               <span className="sr-only">Send</span>
             </Button>

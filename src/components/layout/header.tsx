@@ -46,7 +46,7 @@ export default function Header() {
 
         <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
           <AuthButtons />
-          <Button style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="font-bold">
+          <Button className="font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90">
             Get Started
           </Button>
         </div>
@@ -78,7 +78,7 @@ export default function Header() {
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
                 <AuthButtons />
-                <Button style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }} className="font-bold">Get Started</Button>
+                <Button className="font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90">Get Started</Button>
               </div>
             </SheetContent>
           </Sheet>

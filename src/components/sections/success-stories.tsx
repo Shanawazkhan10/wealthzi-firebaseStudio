@@ -28,10 +28,10 @@ export default function SuccessStories() {
   const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
 
   return (
-    <section id="learn" className="py-16 lg:py-24 bg-secondary">
+    <section id="learn" className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary">
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-primary">
             Success Stories
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -59,7 +59,7 @@ export default function SuccessStories() {
                                 alt={image.description}
                                 width={80}
                                 height={80}
-                                className="rounded-full mb-4 border-2 border-accent"
+                                className="rounded-full mb-4 border-2 border-secondary"
                                 data-ai-hint={image.imageHint}
                             />
                         )}
@@ -67,8 +67,8 @@ export default function SuccessStories() {
                         "{story.quote}"
                       </blockquote>
                       <div className="mt-4">
-                        <p className="font-bold font-headline text-primary">{story.name}</p>
-                        <p className="text-sm text-accent font-semibold">{story.achievement}</p>
+                        <p className="font-bold font-heading text-primary">{story.name}</p>
+                        <p className="text-sm text-secondary font-semibold">{story.achievement}</p>
                       </div>
                     </CardContent>
                   </Card>

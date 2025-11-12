@@ -72,8 +72,8 @@ export default function InvestmentRecommendations() {
       <div className="container mx-auto">
         <Card className="max-w-4xl mx-auto shadow-lg">
           <CardHeader>
-            <CardTitle className="font-headline text-3xl text-primary flex items-center gap-2">
-              <BrainCircuit className="w-8 h-8 text-accent" />
+            <CardTitle className="font-heading text-3xl text-primary flex items-center gap-2">
+              <BrainCircuit className="w-8 h-8 text-secondary" />
               AI-Powered Investment Plan
             </CardTitle>
             <CardDescription>
@@ -139,7 +139,7 @@ export default function InvestmentRecommendations() {
                     )}
                   />
                 </div>
-                <Button type="submit" disabled={loading} size="lg" style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}>
+                <Button type="submit" disabled={loading} size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
                   {loading ? (
                     <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Plan...</>
                   ) : (
@@ -149,10 +149,10 @@ export default function InvestmentRecommendations() {
               </form>
             </Form>
 
-            {error && <p className="mt-4 text-red-500">{error}</p>}
+            {error && <p className="mt-4 text-destructive">{error}</p>}
             {result && (
-              <div className="mt-8 p-6 bg-secondary rounded-lg border">
-                <h3 className="font-headline text-xl font-bold text-primary mb-4">Your Personalized Recommendations</h3>
+              <div className="mt-8 p-6 bg-muted rounded-lg border">
+                <h3 className="font-heading text-xl font-bold text-primary mb-4">Your Personalized Recommendations</h3>
                 <div className="prose prose-blue max-w-none text-foreground">
                   <p>{result.recommendations}</p>
                 </div>

@@ -16,7 +16,7 @@ import { Check } from 'lucide-react';
 const slides = [
   {
     id: 'slide1',
-    headline: 'We\'ll need ₹1.5 crore in 8-10 years for our kids higher education and wedding.',
+    headline: "We'll need ₹1.5 crore in 8-10 years for our kids higher education and wedding.",
     subheadline: 'Give us a long-term investment plan!',
     cta: 'Start Planning',
     imageId: 'hero-1',
@@ -128,7 +128,7 @@ export default function Hero() {
                           'ml-auto': slide.contentPosition === 'right',
                         })}
                       >
-                        <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
+                        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
                           {slide.headline}
                         </h1>
                         {slide.subheadline && (
@@ -153,8 +153,7 @@ export default function Hero() {
                         )}
                         <Button
                           size="lg"
-                          className="mt-8 font-bold"
-                          style={{ backgroundColor: 'hsl(var(--accent))', color: 'hsl(var(--accent-foreground))' }}
+                          className="mt-8 font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90"
                           aria-label={slide.cta}
                         >
                           {slide.cta}

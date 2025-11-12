@@ -6,12 +6,12 @@ export function Logo({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
-        'flex items-center gap-2 text-xl font-bold font-headline text-primary',
+        'flex items-center gap-2 text-xl font-bold font-heading text-primary',
         className
       )}
       {...props}
     >
-      <Landmark className="h-6 w-6 text-accent" />
+      <Landmark className="h-6 w-6 text-secondary" />
       <span className="mt-1">Wealthzi</span>
     </div>
   );

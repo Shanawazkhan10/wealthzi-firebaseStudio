@@ -21,7 +21,7 @@ export default function Team() {
     <section id="about" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary">
+          <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-primary">
             Wealth experts with 20+ years experience
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
@@ -44,8 +44,8 @@ export default function Team() {
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <h3 className="font-headline mt-4 text-lg font-semibold text-primary">{member.name}</h3>
-                  <p className="text-sm text-accent font-medium">{member.title}</p>
+                  <h3 className="font-heading mt-4 text-lg font-semibold text-primary">{member.name}</h3>
+                  <p className="text-sm text-secondary font-medium">{member.title}</p>
                 </CardContent>
               </Card>
             );
@@ -54,9 +54,9 @@ export default function Team() {
         <div className="mt-16">
             <Card className="max-w-4xl mx-auto bg-primary text-primary-foreground shadow-xl">
                 <CardContent className="p-8 flex flex-col md:flex-row items-center gap-6">
-                    <Award className="w-16 h-16 text-accent shrink-0"/>
+                    <Award className="w-16 h-16 text-secondary shrink-0"/>
                     <div>
-                        <h3 className="font-headline text-xl font-bold">Backed by Trust</h3>
+                        <h3 className="font-heading text-xl font-bold">Backed by Trust</h3>
                         <p className="mt-2 text-primary-foreground/80">
                         Team with decades of wealth management and technology experience in managing ₹2,500 crore worth assets of 1000+ high net-worth clients.
                         </p>
