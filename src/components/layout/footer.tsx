@@ -57,14 +57,14 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f172a] text-[#f8fafc]">
       <div className="container py-12 lg:py-16">
-        <h2 className="font-heading font-bold text-lg text-white mb-8">BUILD WEALTH WITH CONFIDENCE</h2>
+        <h2 className="font-heading font-bold text-lg md:text-xl text-white mb-8">BUILD WEALTH WITH CONFIDENCE</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
             {/* Column 1: Contact and Compliance */}
             <div className="lg:col-span-6 space-y-8">
                  <div>
-                    <p className="text-base text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
-                    <div className="mt-4 space-y-3 text-base text-[#cbd5e1]">
+                    <p className="text-base md:text-lg text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
+                    <div className="mt-4 space-y-3 text-sm md:text-base text-[#cbd5e1]">
                         <div className="flex items-start gap-2">
                             <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                             <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
@@ -81,39 +81,41 @@ export default function Footer() {
                  </div>
 
                  <div>
-                    <h3 className="font-heading font-semibold text-lg text-white mb-4">Status of Annual Compliance Report</h3>
-                    <Table className="w-full text-base text-[#f8fafc] border border-white/20">
-                      <TableHeader>
-                        <TableRow className="border-white/20">
-                          <TableHead className="text-white font-medium">Sr. No</TableHead>
-                          <TableHead className="text-white font-medium">Financial Year</TableHead>
-                          <TableHead className="text-white font-medium">Compliance Audit Status</TableHead>
-                          <TableHead className="text-white font-medium">Remarks, if any</TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {complianceData.map((row) => (
-                          <TableRow key={row.sl} className="border-white/20 hover:bg-white/10">
-                            <TableCell>{row.sl}</TableCell>
-                            <TableCell>{row.fy}</TableCell>
-                            <TableCell>{row.status}</TableCell>
-                            <TableCell>{row.remarks}</TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
+                    <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Status of Annual Compliance Report</h3>
+                    <div className="overflow-x-auto">
+                        <Table className="w-full text-sm md:text-base text-[#f8fafc] border border-white/20 min-w-[600px]">
+                        <TableHeader>
+                            <TableRow className="border-white/20">
+                            <TableHead className="text-white font-medium">Sr. No</TableHead>
+                            <TableHead className="text-white font-medium">Financial Year</TableHead>
+                            <TableHead className="text-white font-medium">Compliance Audit Status</TableHead>
+                            <TableHead className="text-white font-medium">Remarks, if any</TableHead>
+                            </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                            {complianceData.map((row) => (
+                            <TableRow key={row.sl} className="border-white/20 hover:bg-white/10">
+                                <TableCell>{row.sl}</TableCell>
+                                <TableCell>{row.fy}</TableCell>
+                                <TableCell>{row.status}</TableCell>
+                                <TableCell>{row.remarks}</TableCell>
+                            </TableRow>
+                            ))}
+                        </TableBody>
+                        </Table>
+                    </div>
                  </div>
             </div>
 
             {/* Column 2: Links */}
             <div className="lg:col-span-6">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
                         <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
                         <ul className="mt-4 space-y-3">
                         {companyLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -125,7 +127,7 @@ export default function Footer() {
                         <ul className="mt-4 space-y-3">
                         {productLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -137,7 +139,7 @@ export default function Footer() {
                         <ul className="mt-4 space-y-3">
                         {calculatorLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -149,7 +151,7 @@ export default function Footer() {
         </div>
 
         {/* Regulatory */}
-         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-sm text-[#cbd5e1] space-y-4">
+         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1] space-y-4">
             <p><span className='font-semibold'>BSE Member code:</span> 58371</p>
             <p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p>
             <p>Wealthzi Investment Advisers (A division of Lime Internet Private Limited)</p>
@@ -162,8 +164,8 @@ export default function Footer() {
 
 
         {/* Disclaimers */}
-        <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-sm text-[#cbd5e1]">
-            <h3 className="font-heading font-semibold text-lg text-white mb-4">Disclaimers:</h3>
+        <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1]">
+            <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Disclaimers:</h3>
             <div className="space-y-4">
             {disclaimers.map((disclaimer, index) => (
                 <p key={index}>{disclaimer}</p>

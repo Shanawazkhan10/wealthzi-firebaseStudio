@@ -117,7 +117,7 @@ export default function Hero() {
                           'ml-auto': slide.contentPosition === 'right',
                         })}
                       >
-                        <h1 className="font-heading text-5xl font-extrabold tracking-tight drop-shadow-lg">
+                        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
                           {slide.headline}
                         </h1>
                       </div>

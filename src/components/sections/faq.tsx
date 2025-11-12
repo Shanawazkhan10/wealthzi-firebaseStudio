@@ -161,17 +161,17 @@ export default function Faq() {
           <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-foreground">
             Frequently Asked Questions
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-lg md:text-xl text-muted-foreground">
             Find answers to common questions about our services and investments.
           </p>
         </div>
         <Accordion type="single" collapsible className="w-full">
           {faqData.map((item, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className="text-left font-bold text-xl hover:no-underline">
+              <AccordionTrigger className="text-left font-bold text-lg md:text-xl hover:no-underline">
                 {item.title}
               </AccordionTrigger>
-              <AccordionContent className="text-lg text-muted-foreground">
+              <AccordionContent className="text-base md:text-lg text-muted-foreground">
                 {item.subTitle}
               </AccordionContent>
             </AccordionItem>

@@ -8,6 +8,7 @@ import {
   RefreshCw,
   Users,
 } from 'lucide-react';
+import Image from 'next/image';
 
 const features = [
   {
@@ -44,13 +45,13 @@ export default function Features() {
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Create Wealth with Wealthzi
           </h2>
-          <p className="mt-4 text-xl text-muted-foreground">
+          <p className="mt-4 text-lg md:text-xl text-muted-foreground">
             Wealth creation is made smooth with an easy-to-use interface to
             transact in and research mutual funds, FDs, bonds, portfolio
             management services and AIFs along with automated portfolio review
             and tracking.
           </p>
-          <p className="mt-2 text-lg text-muted-foreground">
+          <p className="mt-2 text-base md:text-lg text-muted-foreground">
             Join over 10,000 customers who trust wealthzi to take control of
             their financial future.
           </p>
@@ -71,7 +72,7 @@ export default function Features() {
                 <div className="mx-auto bg-green-100/50 p-3 rounded-full">
                   {feature.icon}
                 </div>
-                <h4 className="text-lg font-semibold">{feature.title}</h4>
+                <h4 className="text-base md:text-lg font-semibold">{feature.title}</h4>
               </div>
             ))}
           </div>

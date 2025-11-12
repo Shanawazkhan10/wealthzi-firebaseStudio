@@ -47,7 +47,7 @@ export default function SuccessStories() {
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Real Impact. Real Savings.
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
             Read success stories from Wealthzi Customers.
           </p>
         </div>
@@ -76,12 +76,12 @@ export default function SuccessStories() {
                                 data-ai-hint={image.imageHint}
                             />
                         )}
-                      <p className="font-bold font-heading text-xl text-primary flex-grow">
+                      <p className="font-bold font-heading text-lg md:text-xl text-primary flex-grow">
                         {story.achievement}
                       </p>
                       <div className="mt-4">
-                        <p className="font-semibold text-foreground text-lg">{story.name}</p>
-                        <p className="text-base text-muted-foreground">{story.details}</p>
+                        <p className="font-semibold text-foreground text-base md:text-lg">{story.name}</p>
+                        <p className="text-sm md:text-base text-muted-foreground">{story.details}</p>
                       </div>
                     </CardContent>
                   </Card>

@@ -32,11 +32,11 @@ export default function Team() {
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Wealth experts with 20+ years experience
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
             Our team combines decades of wealth management and technology experience to empower your financial journey.
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {teamMembers.map((member) => {
             const image = getImage(member.imageId);
             return (
@@ -51,9 +51,9 @@ export default function Team() {
                     />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-                <div className="relative flex flex-col justify-end h-full p-4 md:p-6 min-h-[250px] md:min-h-[300px]">
-                    <h3 className="font-heading text-lg md:text-xl font-bold">{member.name}</h3>
-                    <p className="text-base text-white/80">{member.title}</p>
+                <div className="relative flex flex-col justify-end h-full p-4 min-h-[200px] sm:min-h-[250px] md:min-h-[300px]">
+                    <h3 className="font-heading text-base md:text-lg lg:text-xl font-bold">{member.name}</h3>
+                    <p className="text-sm md:text-base text-white/80">{member.title}</p>
                 </div>
               </Card>
             );
@@ -64,8 +64,8 @@ export default function Team() {
                 <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
                     <Award className="w-12 h-12 md:w-16 md:h-16 text-white shrink-0"/>
                     <div>
-                        <h3 className="font-heading text-2xl font-bold">Backed by Trust</h3>
-                        <p className="mt-2 text-primary-foreground/80 text-lg">
+                        <h3 className="font-heading text-xl md:text-2xl font-bold">Backed by Trust</h3>
+                        <p className="mt-2 text-primary-foreground/80 text-base md:text-lg">
                         Team with decades of wealth management and technology experience in managing Rs 2,500 crore worth assets of 1000+ high net-worth clients.
                         </p>
                     </div>
