@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Tabs,
   TabsContent,
@@ -16,8 +16,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
-import { Button } from '@/components/ui/button';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import { Loader2 } from 'lucide-react';
 
 const formatCurrency = (value: number, toFixed = 0) => {
     if (isNaN(value) || !isFinite(value)) return '₹0';
@@ -25,7 +25,7 @@ const formatCurrency = (value: number, toFixed = 0) => {
       return `₹${(value / 10000000).toFixed(2)} Cr`;
     }
     if (value >= 100000) {
-      return `₹${(value / 100000).toFixed(2)} L`;
+      return `₹${(value / 100000).toFixed(2)} Lac`;
     }
     return `₹${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
   };
@@ -467,6 +467,11 @@ function LumpsumCalculator() {
       { name: 'Interest Earned', value: interestEarned },
     ];
     const COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))'];
+
+    const chartConfig = {
+      'Principal Amount': { label: 'Principal', color: COLORS[0] },
+      'Interest Earned': { label: 'Interest', color: COLORS[1] },
+    };
   
     return (
       <Card className="shadow-lg">
@@ -520,6 +525,7 @@ function LumpsumCalculator() {
                     </div>
                 </div>
                 <div className="w-full h-[250px]">
+                  <ChartContainer config={chartConfig} className="w-full h-full">
                     <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
                             <Pie data={pieData} cx="50%" cy="50%" labelLine={false} outerRadius={100} dataKey="value" nameKey="name" >
@@ -527,9 +533,21 @@ function LumpsumCalculator() {
                                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                 ))}
                             </Pie>
-                             <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
+                             <ChartTooltip
+                                cursor={false}
+                                content={<ChartTooltipContent 
+                                    indicator="dot" 
+                                    formatter={(value, name) => (
+                                        <div className="flex w-full items-center justify-between">
+                                            <span className="text-muted-foreground">{name}:</span>
+                                            <span className="font-bold">{formatCurrency(value)}</span>
+                                        </div>
+                                    )} 
+                                />} 
+                             />
                         </PieChart>
                     </ResponsiveContainer>
+                  </ChartContainer>
                 </div>
                  <div className="flex justify-center gap-4 mt-4">
                     <div className="flex items-center gap-2">
@@ -559,7 +577,9 @@ function LumpsumCalculator() {
       const n = months;
       // Assuming quarterly compounding for RDs
       const i = r / 4;
-      const maturityValue = P * ((Math.pow(1 + i, n / 3) - 1) / (1 - Math.pow(1 + i, -1 / 3)));
+      const numQuarters = n / 3;
+      const maturityValue = P * n + P * n * (n+1) * r / 24;
+
       const totalDeposited = P * n;
       const interestEarned = maturityValue - totalDeposited;
       return { maturityValue: isNaN(maturityValue) ? 0 : maturityValue, totalDeposited, interestEarned: isNaN(interestEarned) ? 0 : interestEarned };
@@ -646,6 +666,11 @@ function LumpsumCalculator() {
       { name: 'Total Interest', value: totalInterest },
     ];
     const COLORS = ['hsl(var(--chart-1))', 'hsl(var(--chart-2))'];
+
+    const chartConfig = {
+      'Principal Amount': { label: 'Principal', color: COLORS[0] },
+      'Total Interest': { label: 'Interest', color: COLORS[1] },
+    };
   
     return (
       <Card className="shadow-lg">
@@ -704,6 +729,7 @@ function LumpsumCalculator() {
                 </div>
 
                 <div className="w-full h-[200px] mt-4">
+                  <ChartContainer config={chartConfig} className='w-full h-full'>
                     <ResponsiveContainer width="100%" height="100%">
                         <PieChart>
                             <Pie data={pieData} cx="50%" cy="50%" labelLine={false} innerRadius={60} outerRadius={80} dataKey="value" nameKey="name" paddingAngle={5}>
@@ -711,9 +737,21 @@ function LumpsumCalculator() {
                                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                                 ))}
                             </Pie>
-                             <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="dot" />} />
+                             <ChartTooltip 
+                                cursor={false} 
+                                content={<ChartTooltipContent 
+                                    indicator="dot" 
+                                    formatter={(value, name) => (
+                                        <div className="flex w-full items-center justify-between">
+                                            <span className="text-muted-foreground">{name}:</span>
+                                            <span className="font-bold">{formatCurrency(value)}</span>
+                                        </div>
+                                    )} 
+                                />} 
+                              />
                         </PieChart>
                     </ResponsiveContainer>
+                  </ChartContainer>
                 </div>
                  <div className="flex justify-center gap-4 mt-2">
                     <div className="flex items-center gap-2">
@@ -732,8 +770,56 @@ function LumpsumCalculator() {
     );
   }
 
+const LoadingComponent = () => (
+  <div className="flex items-center justify-center min-h-[50vh]">
+    <Loader2 className="h-12 w-12 animate-spin text-primary" />
+  </div>
+);
+
 export default function CalculatorsPage() {
   const [activeTab, setActiveTab] = useState('sip');
+  const [isLoading, setIsLoading] = useState(false);
+  const [previousTab, setPreviousTab] = useState('sip');
+
+  const handleTabChange = (newTab: string) => {
+    if (newTab !== activeTab) {
+      setPreviousTab(activeTab);
+      setIsLoading(true);
+      setActiveTab(newTab);
+    }
+  };
+
+  useEffect(() => {
+    if (isLoading) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 500); // Simulate network delay
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
+
+  const renderContent = () => {
+    if (isLoading) {
+      return <LoadingComponent />;
+    }
+    switch (activeTab) {
+      case 'sip':
+        return <SIPCalculator />;
+      case 'lumpsum':
+        return <LumpsumCalculator />;
+      case 'sip-goal':
+        return <SIPGoalCalculator />;
+      case 'fd':
+        return <FDCalculator />;
+      case 'rd':
+        return <RDCalculator />;
+      case 'loan-emi':
+        return <LoanEMICalculator />;
+      default:
+        return <SIPCalculator />;
+    }
+  };
+
   return (
     <section className="py-16 lg:py-24 bg-muted">
       <div className="container mx-auto">
@@ -743,7 +829,7 @@ export default function CalculatorsPage() {
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">Plan your investments, loans, and financial goals with our powerful calculators.</p>
         </div>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
           <div className="overflow-x-auto">
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-6 mb-4 bg-transparent p-0 border-b min-w-[700px] md:min-w-full">
               <TabsTrigger value="sip" className="rounded-none border-b-2 border-transparent data-[state=active]:border-primary data-[state=active]:shadow-none data-[state=active]:bg-transparent">SIP</TabsTrigger>
@@ -764,26 +850,13 @@ export default function CalculatorsPage() {
               </TabsTrigger>
             </TabsList>
           </div>
-          <TabsContent value="sip">
-            <SIPCalculator />
-          </TabsContent>
-           <TabsContent value="lumpsum">
-            <LumpsumCalculator />
-          </TabsContent>
-          <TabsContent value="sip-goal">
-            <SIPGoalCalculator />
-          </TabsContent>
-          <TabsContent value="fd">
-            <FDCalculator />
-          </TabsContent>
-          <TabsContent value="rd">
-            <RDCalculator />
-          </TabsContent>
-          <TabsContent value="loan-emi">
-            <LoanEMICalculator />
+           <TabsContent value={activeTab} className="min-h-[50vh]">
+            {renderContent()}
           </TabsContent>
         </Tabs>
       </div>
     </section>
   );
 }
+
+    
