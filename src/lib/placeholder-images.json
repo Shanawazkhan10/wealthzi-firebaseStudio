@@ -1,3 +1,70 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-1",
+      "description": "A family planning their finances for their children's education and wedding.",
+      "imageUrl": "https://images.unsplash.com/photo-1758686254415-9348b5b5df01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYW1pbHklMjBmaW5hbmNlfGVufDB8fHx8MTc2Mjk0NDcxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "family finance"
+    },
+    {
+      "id": "hero-2",
+      "description": "An abstract representation of wealth creation and financial growth.",
+      "imageUrl": "https://images.unsplash.com/photo-1716445226692-d05669369f21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZWFsdGglMjBncm93dGh8ZW58MHx8fHwxNzYyOTQ0NzE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wealth growth"
+    },
+    {
+      "id": "hero-3",
+      "description": "A professional providing financial guidance.",
+      "imageUrl": "https://images.unsplash.com/photo-1675242314995-034d11bac319?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmaW5hbmNpYWwlMjBndWlkYW5jZXxlbnwwfHx8fDE3NjI5NDQ3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "financial guidance"
+    },
+    {
+      "id": "team-sanjeev",
+      "description": "Portrait of Sanjeev Johari.",
+      "imageUrl": "https://images.unsplash.com/photo-1715423058726-ddea1ec51b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyOTA1MzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-pradeep",
+      "description": "Portrait of Pradeep Pillai.",
+      "imageUrl": "https://images.unsplash.com/photo-1715412507413-c7416b47cacb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyOTA1MzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-yogesh",
+      "description": "Portrait of Yogesh Kumar.",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bWFsZSUyMHBvcnRyYWl0fGVufDB8fHx8MTc2MjkwNTMzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-aditya",
+      "description": "Portrait of Aditya Kachru.",
+      "imageUrl": "https://images.unsplash.com/photo-1692197393247-c76e1bd8f29e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyOTA1MzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "team-harshit",
+      "description": "Portrait of Harshit Singh.",
+      "imageUrl": "https://images.unsplash.com/photo-1656338997878-279d71d48f6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYWxlJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzYyOTA1MzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "male portrait"
+    },
+    {
+      "id": "success-1",
+      "description": "A happy client who achieved their financial goals.",
+      "imageUrl": "https://images.unsplash.com/photo-1525186402429-b4ff38bedec6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYXBweSUyMHBlcnNvbnxlbnwwfHx8fDE3NjI5NDQ3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy person"
+    },
+    {
+      "id": "success-2",
+      "description": "A couple planning their retirement.",
+      "imageUrl": "https://images.unsplash.com/photo-1556659174-f9042009b872?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYXBweSUyMGNvdXBsZXxlbnwwfHx8fDE3NjI4MzMyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy couple"
+    },
+    {
+      "id": "success-3",
+      "description": "A professional enjoying financial freedom.",
+      "imageUrl": "https://images.unsplash.com/photo-1758518729474-7c037c198350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdWNjZXNzJTIwZnJlZWRvbXxlbnwwfHx8fDE3NjI5NDQ3MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "success freedom"
+    }
+  ]
 }
