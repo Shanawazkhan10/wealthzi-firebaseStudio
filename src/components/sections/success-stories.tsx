@@ -9,7 +9,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">4x his investments</span> <br />
-        in last 3 years
+        <span style={{ color: 'rgb(76 167 113)'}}>in last 3 years</span>
       </>
     ),
     name: 'B Madan, 55Y',
@@ -20,7 +20,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">Wealth up by 107%</span> <br />
-        since Feb 2020
+        <span style={{ color: 'rgb(76 167 113)'}}>since Feb 2020</span>
       </>
     ),
     name: 'MSR Kumaraswamy, 52Y',
@@ -31,7 +31,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">2x his investments</span> <br />
-        in less than a year
+        <span style={{ color: 'rgb(76 167 113)'}}>in less than a year</span>
       </>
     ),
     name: 'S Berry, 37Y',
@@ -42,7 +42,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">Networth up by 68%</span> <br />
-        in 18 months
+        <span style={{ color: 'rgb(76 167 113)'}}>in 18 months</span>
       </>
     ),
     name: 'S Agarwal, 43Y',
@@ -53,7 +53,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">Doubled wealth</span> <br />
-        in last 2 years
+        <span style={{ color: 'rgb(76 167 113)'}}>in last 2 years</span>
       </>
     ),
     name: 'S Bhasin, 52Y',
@@ -64,7 +64,7 @@ const stories = [
     achievement: (
       <>
         <span className="text-white">Wealth up by 75%</span> <br />
-        in 2 years
+        <span style={{ color: 'rgb(76 167 113)'}}>in 2 years</span>
       </>
     ),
     name: 'K Jerath, 41Y',
@@ -78,7 +78,7 @@ export default function SuccessStories() {
   const getImage = (id: string) => PlaceHolderImages.find((img) => img.id === id);
 
   return (
-    <section id="learn" className="py-16 lg:py-24 bg-background">
+    <section id="learn" className="py-16 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
