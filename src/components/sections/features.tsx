@@ -52,7 +52,7 @@ export default function Features() {
             management services and AIFs along with automated portfolio review
             and tracking.
           </p>
-          <p className="mt-2 text-md text-muted-foreground">
+          <p className="mt-2 text-base text-muted-foreground">
             Join over 10,000 customers who trust wealthzi to take control of
             their financial future.
           </p>
@@ -76,7 +76,7 @@ export default function Features() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="text-sm sm:text-base font-semibold">
+                  <CardTitle className="text-base sm:text-lg font-semibold">
                     {feature.title}
                   </CardTitle>
                 </CardContent>

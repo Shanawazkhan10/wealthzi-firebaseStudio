@@ -80,8 +80,8 @@ export default function SuccessStories() {
                         {story.achievement}
                       </p>
                       <div className="mt-4">
-                        <p className="font-semibold text-foreground">{story.name}</p>
-                        <p className="text-sm text-muted-foreground">{story.details}</p>
+                        <p className="font-semibold text-foreground text-lg">{story.name}</p>
+                        <p className="text-base text-muted-foreground">{story.details}</p>
                       </div>
                     </CardContent>
                   </Card>

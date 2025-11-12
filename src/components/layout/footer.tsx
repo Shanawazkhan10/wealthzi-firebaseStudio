@@ -63,8 +63,8 @@ export default function Footer() {
             {/* Column 1: Contact and Compliance */}
             <div className="lg:col-span-6 space-y-8">
                  <div>
-                    <p className="text-sm text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
-                    <div className="mt-4 space-y-3 text-sm text-[#cbd5e1]">
+                    <p className="text-base text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
+                    <div className="mt-4 space-y-3 text-base text-[#cbd5e1]">
                         <div className="flex items-start gap-2">
                             <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
                             <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
@@ -81,8 +81,8 @@ export default function Footer() {
                  </div>
 
                  <div>
-                    <h3 className="font-heading font-semibold text-base text-white mb-4">Status of Annual Compliance Report</h3>
-                    <Table className="w-full text-sm text-[#f8fafc] border border-white/20">
+                    <h3 className="font-heading font-semibold text-lg text-white mb-4">Status of Annual Compliance Report</h3>
+                    <Table className="w-full text-base text-[#f8fafc] border border-white/20">
                       <TableHeader>
                         <TableRow className="border-white/20">
                           <TableHead className="text-white font-medium">Sr. No</TableHead>
@@ -109,11 +109,11 @@ export default function Footer() {
             <div className="lg:col-span-6">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                     <div>
-                        <h3 className="font-heading font-semibold text-base text-white">COMPANY</h3>
+                        <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
                         <ul className="mt-4 space-y-3">
                         {companyLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -121,11 +121,11 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-heading font-semibold text-base text-white">PRODUCTS</h3>
+                        <h3 className="font-heading font-semibold text-lg text-white">PRODUCTS</h3>
                         <ul className="mt-4 space-y-3">
                         {productLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -133,11 +133,11 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="font-heading font-semibold text-base text-white">CALCULATORS</h3>
+                        <h3 className="font-heading font-semibold text-lg text-white">CALCULATORS</h3>
                         <ul className="mt-4 space-y-3">
                         {calculatorLinks.map((link) => (
                             <li key={link.title}>
-                            <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            <Link href={link.href} className="text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
                                 {link.title}
                             </Link>
                             </li>
@@ -149,7 +149,7 @@ export default function Footer() {
         </div>
 
         {/* Regulatory */}
-         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs text-[#cbd5e1] space-y-4">
+         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-sm text-[#cbd5e1] space-y-4">
             <p><span className='font-semibold'>BSE Member code:</span> 58371</p>
             <p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p>
             <p>Wealthzi Investment Advisers (A division of Lime Internet Private Limited)</p>
@@ -162,8 +162,8 @@ export default function Footer() {
 
 
         {/* Disclaimers */}
-        <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs text-[#cbd5e1]">
-            <h3 className="font-heading font-semibold text-base text-white mb-4">Disclaimers:</h3>
+        <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-sm text-[#cbd5e1]">
+            <h3 className="font-heading font-semibold text-lg text-white mb-4">Disclaimers:</h3>
             <div className="space-y-4">
             {disclaimers.map((disclaimer, index) => (
                 <p key={index}>{disclaimer}</p>
@@ -171,7 +171,7 @@ export default function Footer() {
             </div>
         </div>
 
-        <div className="mt-12 border-t border-white/20 pt-8 text-center text-sm text-[#cbd5e1]">
+        <div className="mt-12 border-t border-white/20 pt-8 text-center text-base text-[#cbd5e1]">
              <p>&copy; {new Date().getFullYear()} Wealthzi Digital. All rights reserved.</p>
         </div>
       </div>

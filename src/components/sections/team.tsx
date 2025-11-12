@@ -52,8 +52,8 @@ export default function Team() {
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <h3 className="font-heading mt-4 text-md md:text-lg font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium">{member.title}</p>
+                  <h3 className="font-heading mt-4 text-lg md:text-xl font-semibold text-foreground">{member.name}</h3>
+                  <p className="text-base text-primary font-medium">{member.title}</p>
                 </CardContent>
               </Card>
             );
@@ -64,8 +64,8 @@ export default function Team() {
                 <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
                     <Award className="w-12 h-12 md:w-16 md:h-16 text-white shrink-0"/>
                     <div>
-                        <h3 className="font-heading text-lg md:text-xl font-bold">Backed by Trust</h3>
-                        <p className="mt-2 text-primary-foreground/80 text-sm md:text-base">
+                        <h3 className="font-heading text-xl md:text-2xl font-bold">Backed by Trust</h3>
+                        <p className="mt-2 text-primary-foreground/80 text-base md:text-lg">
                         Team with decades of wealth management and technology experience in managing ₹2,500 crore worth assets of 1000+ high net-worth clients.
                         </p>
                     </div>

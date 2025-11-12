@@ -32,7 +32,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center space-x-6 text-base font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.href}
