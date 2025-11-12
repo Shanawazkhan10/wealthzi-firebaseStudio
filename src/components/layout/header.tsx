@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -37,7 +38,7 @@ export default function Header() {
 
         <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
            <Button asChild className="font-bold">
-            <a href="https://app.wealthzi.com/login" target="_blank" rel="noopener noreferrer">
+            <a href="https://app.wealthzi.com/login">
                 Login/Register
             </a>
           </Button>
@@ -70,7 +71,7 @@ export default function Header() {
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
                  <Button asChild className="font-bold">
-                    <a href="https://app.wealthzi.com/login" target="_blank" rel="noopener noreferrer">
+                    <a href="https://app.wealthzi.com/login">
                         Login/Register
                     </a>
                 </Button>

@@ -19,9 +19,9 @@ const companyLinks = [
   { title: 'Privacy Policy', href: '#' },
   { title: 'RIA Disclaimers', href: '/ria-disclaimers' },
   { title: 'Regulatory Disclosure', href: '/regulatory-disclosure' },
-  { title: 'Investor Charter', href: '#' },
-  { title: 'SCORES Link', href: '#' },
-  { title: 'SMARTODR', href: '#' },
+  { title: 'Investor Charter', href: 'https://drive.google.com/file/d/1QWGelX6o4itgep4-QrIvRH__e2ZpDA5U/view' },
+  { title: 'SCORES Link', href: 'https://scores.sebi.gov.in/scores-home' },
+  { title: 'SMARTODR', href: 'https://smartodr.in/login' },
 ];
 
 const calculatorLinks = [
