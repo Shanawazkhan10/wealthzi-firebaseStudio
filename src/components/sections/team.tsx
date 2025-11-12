@@ -40,8 +40,8 @@ export default function Team() {
           {teamMembers.map((member) => {
             const image = getImage(member.imageId);
             return (
-              <Card key={member.name} className="text-center border-0 shadow-none bg-transparent">
-                <CardContent className="p-0">
+              <Card key={member.name} className="text-center bg-background/80 shadow-lg hover:shadow-xl transition-shadow">
+                <CardContent className="p-6">
                   {image && (
                     <Image
                       src={image.imageUrl}
@@ -52,8 +52,8 @@ export default function Team() {
                       data-ai-hint={image.imageHint}
                     />
                   )}
-                  <h3 className="font-heading mt-4 text-lg md:text-xl font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-base text-primary font-medium">{member.title}</p>
+                  <h3 className="font-heading mt-4 text-xl font-semibold text-foreground">{member.name}</h3>
+                  <p className="text-lg text-primary font-medium">{member.title}</p>
                 </CardContent>
               </Card>
             );
@@ -64,8 +64,8 @@ export default function Team() {
                 <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
                     <Award className="w-12 h-12 md:w-16 md:h-16 text-white shrink-0"/>
                     <div>
-                        <h3 className="font-heading text-xl md:text-2xl font-bold">Backed by Trust</h3>
-                        <p className="mt-2 text-primary-foreground/80 text-base md:text-lg">
+                        <h3 className="font-heading text-2xl font-bold">Backed by Trust</h3>
+                        <p className="mt-2 text-primary-foreground/80 text-lg">
                         Team with decades of wealth management and technology experience in managing ₹2,500 crore worth assets of 1000+ high net-worth clients.
                         </p>
                     </div>
