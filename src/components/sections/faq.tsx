@@ -113,7 +113,7 @@ const faqData = [
     title:
       'Can I choose not to invest or exit from the recommended portfolio?',
     subTitle:
-      'Yes, you can choose to not invest or exit from the recommended portfolio at any time. It is completely up to your discretion. However, it\'s important to note that some mutual funds may have exit loads depending upon the scheme.',
+      "Yes, you can choose to not invest or exit from the recommended portfolio at any time. It is completely up to your discretion. However, it's important to note that some mutual funds may have exit loads depending upon the scheme.",
   },
   {
     title: 'Can I Top Up or redeem after initial lumpsum investment?',
@@ -128,12 +128,12 @@ const faqData = [
   {
     title: 'What is the minimum investment amount to start?',
     subTitle:
-      'At Wealthzi, we understand the importance of making investing accessible to all. That\'s why we offer you the flexibility to start building their investment portfolio with as little as Rs. 100. However, we recommend a minimum investment of Rs. 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor\'s risk profile and investment goals.',
+      "At Wealthzi, we understand the importance of making investing accessible to all. That's why we offer you the flexibility to start building their investment portfolio with as little as Rs. 100. However, we recommend a minimum investment of Rs. 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor's risk profile and investment goals.",
   },
   {
     title: 'Does Wealthzi charges fees for the services?',
     subTitle:
-      'Wealthzi is a mutual fund distribution platform that allows investors to invest in mutual funds online. As a distributor, Wealthzi does not charge any additional fees for its services. However, there may be certain charges associated with the mutual funds such as expense ratios, exit loads, and other regulatory fees. Wealthzi\'s investment experts can provide clarity on the fees associated with mutual fund investments and help you make informed decisions based on their investment goals and risk appetite.',
+      "Wealthzi is a mutual fund distribution platform that allows investors to invest in mutual funds online. As a distributor, Wealthzi does not charge any additional fees for its services. However, there may be certain charges associated with the mutual funds such as expense ratios, exit loads, and other regulatory fees. Wealthzi's investment experts can provide clarity on the fees associated with mutual fund investments and help you make informed decisions based on their investment goals and risk appetite.",
   },
   {
     title: 'Are returns from investment on Wealthzi app guaranteed?',
@@ -144,7 +144,7 @@ const faqData = [
     title:
       'Why Wealthzi investments experts required, when one invests only for long term?',
     subTitle:
-      'While investing for the long term is important, it\'s essential to have the right guidance and support to navigate through the ups and downs of the market. Wealthzi\'s investment experts are equipped with the knowledge and experience to help you create and manage a well-diversified portfolio that is aligned with their long-term financial goals. They can provide hand-holding and support through every stage of your life, including the changing market conditions, to ensure that their portfolio stays on track. By having an expert partner like Wealthzi, you can stay focused on their long-term investment objectives and achieve your financial goals with confidence.',
+      "While investing for the long term is important, it's essential to have the right guidance and support to navigate through the ups and downs of the market. Wealthzi's investment experts are equipped with the knowledge and experience to help you create and manage a well-diversified portfolio that is aligned with their long-term financial goals. They can provide hand-holding and support through every stage of your life, including the changing market conditions, to ensure that their portfolio stays on track. By having an expert partner like Wealthzi, you can stay focused on their long-term investment objectives and achieve your financial goals with confidence.",
   },
   {
     title: 'How can I start with investing via Wealthzi app?',
@@ -156,7 +156,7 @@ const faqData = [
 export default function Faq() {
   return (
     <section id="faq" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto max-w-3xl">
+      <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-foreground">
             Frequently Asked Questions
@@ -168,10 +168,10 @@ export default function Faq() {
         <Accordion type="single" collapsible className="w-full">
           {faqData.map((item, index) => (
             <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className="text-left font-semibold text-lg hover:no-underline">
+              <AccordionTrigger className="text-left font-bold text-xl hover:no-underline">
                 {item.title}
               </AccordionTrigger>
-              <AccordionContent className="text-base text-muted-foreground">
+              <AccordionContent className="text-lg text-muted-foreground">
                 {item.subTitle}
               </AccordionContent>
             </AccordionItem>
