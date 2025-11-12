@@ -26,8 +26,10 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased">
-        <Marquee />
-        <Header />
+        <div className="sticky top-0 z-50">
+          <Marquee />
+          <Header />
+        </div>
         <main>{children}</main>
         <Footer />
         <Toaster />
