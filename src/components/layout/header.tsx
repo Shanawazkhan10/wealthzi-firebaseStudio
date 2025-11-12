@@ -9,18 +9,8 @@ import { Logo } from '@/components/icons/logo';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '#explore', label: 'Explore Funds' },
   { href: '/calculators', label: 'Calculators' },
-  { href: '#learn', label: 'Learn' },
-  { href: '#about', label: 'About Us' },
 ];
-
-const AuthButtons = ({ inSheet = false }: { inSheet?: boolean }) => (
-  <div className={cn("flex space-x-2", { "flex-col space-y-2 space-x-0": inSheet })}>
-    <Button variant="ghost">Login</Button>
-    <Button variant="ghost">Register</Button>
-  </div>
-);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,9 +36,10 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
-          <AuthButtons />
-          <Button className="font-bold">
-            Get Started
+           <Button asChild className="font-bold">
+            <a href="https://app.wealthzi.com/login" target="_blank" rel="noopener noreferrer">
+                Login/Register
+            </a>
           </Button>
         </div>
 
@@ -78,8 +69,11 @@ export default function Header() {
                 ))}
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
-                <AuthButtons inSheet={true} />
-                <Button className="font-bold">Get Started</Button>
+                 <Button asChild className="font-bold">
+                    <a href="https://app.wealthzi.com/login" target="_blank" rel="noopener noreferrer">
+                        Login/Register
+                    </a>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>
