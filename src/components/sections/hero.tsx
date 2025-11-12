@@ -16,31 +16,67 @@ import { Check } from 'lucide-react';
 const slides = [
   {
     id: 'slide1',
-    headline: 'Personalized wealth management for you.',
+    text1: (
+      <p>
+        I am a working professional, and want a{' '}
+        <span className="text-[#56b28b]">₹40L</span> corpus in the next{' '}
+        <span className="text-[#56b28b]">5 years.</span>
+      </p>
+    ),
+    text2: "“But, I don't know how to get there!”",
     imageId: 'hero-1',
     contentPosition: 'left',
   },
   {
     id: 'slide2',
-    headline: 'Achieve your financial goals with expert advice.',
+    text1: (
+      <p>
+        I have just started earning. I want to make my{' '}
+        <span className="text-[#56b28b]">First SIP</span> investment.
+      </p>
+    ),
+    text2: '“How should I start?”',
     imageId: 'hero-2',
     contentPosition: 'left',
   },
   {
     id: 'slide3',
-    headline: 'Invest in your future, start today.',
+    text1: (
+      <p>
+        I am a <span className="text-[#56b28b]"> retired</span>
+        /about to retire person and I have{' '}
+        <span className="text-[#56b28b]">₹50L </span>investments and{' '}
+        <span className="text-[#56b28b]">₹35K </span>
+        monthly expense.
+      </p>
+    ),
+    text2: '“Help me generate monthly income.”',
     imageId: 'hero-3',
     contentPosition: 'left',
   },
   {
     id: 'slide4',
-    headline: 'Smart investing for a secure tomorrow.',
+    text1: (
+       <p>
+        I’ve been investing <span className="text-[#56b28b]">on my own</span>{' '}
+        since last few years, but I’m getting{' '}
+        <span className="text-[#56b28b]">below average returns.</span>
+      </p>
+    ),
+    text2: '“Please review my portfolio and give recommendation.”',
     imageId: 'hero-1',
     contentPosition: 'left',
   },
   {
     id: 'slide5',
-    headline: 'Build your legacy with Wealthzi.',
+    text1: (
+      <p>
+        We’ll need <span className="text-[#56b28b]">₹1.5 crore</span> in 8-10
+        years for our <span className="text-[#56b28b]">kids</span> higher
+        education and wedding.
+      </p>
+    ),
+    text2: '“Give us a long-term investment plan!”',
     imageId: 'hero-2',
     contentPosition: 'left',
   },
@@ -117,9 +153,12 @@ export default function Hero() {
                           'ml-auto': slide.contentPosition === 'right',
                         })}
                       >
-                        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
-                          {slide.headline}
-                        </h1>
+                        <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
+                          {slide.text1}
+                        </div>
+                        <p className="pt-6 font-normal text-white text-left text-2xl lg:text-4xl xl:text-5xl leading-tight font-['Caveat_Brush']">
+                          {slide.text2}
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -116,5 +116,14 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    function ({ addUtilities }: { addUtilities: (utilities: any) => void }) {
+      addUtilities({
+        ".font-['Caveat_Brush']": {
+          fontFamily: '"Caveat Brush", cursive',
+        },
+      });
+    },
+  ],
 } satisfies Config;

@@ -82,3 +82,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .font-['Caveat_Brush'] {
+    font-family: 'Caveat Brush', cursive;
+  }
+}
