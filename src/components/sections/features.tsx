@@ -40,18 +40,8 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-16 lg:py-24 bg-background">
-      <div className="absolute inset-0">
-        <Image
-          src="https://picsum.photos/seed/features/1920/1080"
-          alt="Abstract background"
-          fill
-          className="object-cover"
-          data-ai-hint="abstract background"
-        />
-        <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
-      </div>
-      <div className="container mx-auto relative">
+    <section id="features" className="py-16 lg:py-24 bg-background">
+      <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Create Wealth with Wealthzi
