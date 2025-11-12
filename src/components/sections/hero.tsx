@@ -51,25 +51,16 @@ const slides = [
 export default function Hero() {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [_, setPlugins] = React.useState([
-    {
-      name: 'autoplay',
-      options: {
-        delay: 5000,
-        stopOnInteraction: true,
-      },
-    },
-  ]);
 
   React.useEffect(() => {
     if (!api) {
       return;
     }
 
-    setCurrent(api.selectedScrollSnap() + 1);
+    setCurrent(api.selectedScrollSnap());
 
     const onSelect = () => {
-      setCurrent(api.selectedScrollSnap() + 1);
+      setCurrent(api.selectedScrollSnap());
     };
 
     api.on('select', onSelect);
@@ -97,18 +88,18 @@ export default function Hero() {
     <section id="hero" className="relative w-full">
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
-          {slides.map((slide) => {
+          {slides.map((slide, index) => {
             const image = getImage(slide.imageId);
             return (
               <CarouselItem key={slide.id}>
-                <div className="relative h-[80vh] min-h-[600px] w-full">
+                <div className="relative h-[70vh] min-h-[500px] w-full">
                   {image && (
                     <Image
                       src={image.imageUrl}
                       alt={image.description}
                       fill
                       className="object-cover"
-                      priority={slide.id === 'slide1'}
+                      priority={index === 0}
                       data-ai-hint={image.imageHint}
                     />
                   )}
@@ -128,21 +119,21 @@ export default function Hero() {
                           'ml-auto': slide.contentPosition === 'right',
                         })}
                       >
-                        <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
+                        <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
                           {slide.headline}
                         </h1>
                         {slide.subheadline && (
-                          <p className="mt-4 text-lg md:text-xl text-neutral-200 drop-shadow-md">
+                          <p className="mt-4 text-md sm:text-lg md:text-xl text-neutral-200 drop-shadow-md">
                             {slide.subheadline}
                           </p>
                         )}
                         {slide.stats && (
-                          <p className="mt-4 text-lg font-semibold text-green-300 drop-shadow-md">
+                          <p className="mt-4 text-md sm:text-lg font-semibold text-green-300 drop-shadow-md">
                             {slide.stats}
                           </p>
                         )}
                         {slide.features && (
-                          <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-left">
+                          <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-left">
                             {slide.features.map((feature) => (
                               <li key={feature} className="flex items-center gap-2 text-neutral-200">
                                 <Check className="h-5 w-5 text-primary" />
@@ -174,7 +165,7 @@ export default function Hero() {
             onClick={() => api?.scrollTo(index)}
             className={cn(
               'h-2 w-2 rounded-full transition-all',
-              current === index + 1 ? 'w-6 bg-white' : 'bg-white/50'
+              current === index ? 'w-6 bg-white' : 'bg-white/50'
             )}
             aria-label={`Go to slide ${index + 1}`}
           />

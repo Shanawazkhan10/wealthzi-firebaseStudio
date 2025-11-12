@@ -14,11 +14,11 @@ const navLinks = [
   { href: '#about', label: 'About Us' },
 ];
 
-const AuthButtons = () => (
-  <>
+const AuthButtons = ({ inSheet = false }: { inSheet?: boolean }) => (
+  <div className={cn("flex space-x-2", { "flex-col space-y-2 space-x-0": inSheet })}>
     <Button variant="ghost">Login</Button>
     <Button variant="ghost">Register</Button>
-  </>
+  </div>
 );
 
 export default function Header() {
@@ -60,7 +60,7 @@ export default function Header() {
                 <span className="sr-only">Open Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pr-0">
+            <SheetContent side="left" className="pr-0 w-3/4">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setIsMenuOpen(false)}>
                 <Logo />
               </Link>
@@ -70,14 +70,14 @@ export default function Header() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="text-foreground"
+                    className="text-foreground text-lg py-1"
                   >
                     {link.label}
                   </Link>
                 ))}
               </div>
               <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
-                <AuthButtons />
+                <AuthButtons inSheet={true} />
                 <Button className="font-bold">Get Started</Button>
               </div>
             </SheetContent>

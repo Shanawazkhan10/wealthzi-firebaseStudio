@@ -55,17 +55,17 @@ export default function Chatbot() {
     <Popover open={isOpen} onOpenChange={setIsOpen}>
       <PopoverTrigger asChild>
         <Button
-          className="fixed bottom-6 right-6 h-16 w-16 rounded-full shadow-xl"
+          className="fixed bottom-4 right-4 md:bottom-6 md:right-6 h-14 w-14 md:h-16 md:w-16 rounded-full shadow-xl"
           size="icon"
         >
-          {isOpen ? <X className="h-8 w-8" /> : <Bot className="h-8 w-8" />}
+          {isOpen ? <X className="h-7 w-7 md:h-8 md:w-8" /> : <Bot className="h-7 w-7 md:h-8 md:w-8" />}
           <span className="sr-only">Toggle Chat</span>
         </Button>
       </PopoverTrigger>
       <PopoverContent
         side="top"
         align="end"
-        className="w-[90vw] max-w-md h-[70vh] flex flex-col p-0 mr-4"
+        className="w-[calc(100vw-2rem)] max-w-md h-[70vh] flex flex-col p-0 m-2 md:mr-4"
       >
         <div className="p-4 bg-muted border-b">
             <Logo className="text-base" />
@@ -87,7 +87,7 @@ export default function Chatbot() {
                 )}
                 <div
                   className={cn(
-                    'max-w-[75%] rounded-lg px-3 py-2 text-sm',
+                    'max-w-[85%] sm:max-w-[75%] rounded-lg px-3 py-2 text-sm',
                     message.sender === 'user'
                       ? 'bg-primary text-primary-foreground'
                       : 'bg-muted'

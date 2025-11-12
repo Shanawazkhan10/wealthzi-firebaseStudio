@@ -63,7 +63,7 @@ export default function Features() {
               Get FREE financial guidance and invest in best investment options
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
             {features.map((feature) => (
               <Card
                 key={feature.title}
@@ -75,7 +75,7 @@ export default function Features() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <CardTitle className="text-base font-semibold">
+                  <CardTitle className="text-sm sm:text-base font-semibold">
                     {feature.title}
                   </CardTitle>
                 </CardContent>

@@ -43,13 +43,13 @@ export default function SuccessStories() {
             align: 'start',
             loop: true,
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-sm sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
         >
           <CarouselContent>
             {stories.map((story, index) => {
               const image = getImage(story.imageId);
               return (
-              <CarouselItem key={index} className="md:basis-1/2">
+              <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                 <div className="p-1 h-full">
                   <Card className="h-full flex flex-col">
                     <CardContent className="p-6 flex-grow flex flex-col items-center text-center">
@@ -76,8 +76,8 @@ export default function SuccessStories() {
               </CarouselItem>
             )})}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="hidden sm:inline-flex" />
+          <CarouselNext className="hidden sm:inline-flex" />
         </Carousel>
       </div>
     </section>
