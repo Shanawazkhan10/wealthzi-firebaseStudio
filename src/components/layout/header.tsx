@@ -8,8 +8,8 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/components/icons/logo';
 import { cn } from '@/lib/utils';
 
-const navLinks = [
-  { href: '/calculators', label: 'Calculators' },
+const navLinks: { href: string, label: string }[] = [
+  // { href: '/calculators', label: 'Calculators' },
 ];
 
 export default function Header() {
