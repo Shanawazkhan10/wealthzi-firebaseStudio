@@ -1,3 +1,4 @@
+
 'use client';
 import Link from 'next/link';
 import {
@@ -13,7 +14,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const companyLinks = [
   { title: 'About Wealthzi', href: '#' },
   { title: 'Blogs', href: '#' },
-  { title: 'Contact Us', href: '#' },
+  { title: 'Contact Us', href: '/contact-us' },
   { title: 'Terms of Use', href: '/terms-of-use' },
   { title: 'Privacy Policy', href: '#' },
   { title: 'RIA Disclaimers', href: '#' },
