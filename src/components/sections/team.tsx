@@ -18,8 +18,16 @@ export default function Team() {
   };
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-background">
-      <div className="container mx-auto">
+    <section id="about" className="relative py-16 lg:py-24">
+       <Image
+          src="https://picsum.photos/seed/team-bg/1920/1080"
+          alt="Financial experts in a meeting"
+          fill
+          className="object-cover"
+          data-ai-hint="team meeting"
+        />
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      <div className="container mx-auto relative">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Wealth experts with 20+ years experience
