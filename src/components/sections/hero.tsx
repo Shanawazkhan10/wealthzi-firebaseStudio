@@ -23,7 +23,7 @@ const slides = [
     text1: (
       <p>
         I am a working professional, and want a{' '}
-        <span className="text-[#56b28b]">₹40L</span> corpus in the next{' '}
+        <span className="text-[#56b28b]">Rs. 40L</span> corpus in the next{' '}
         <span className="text-[#56b28b]">5 years.</span>
       </p>
     ),
@@ -55,8 +55,8 @@ const slides = [
       <p>
         I am a <span className="text-[#56b28b]"> retired</span>
         /about to retire person and I have{' '}
-        <span className="text-[#56b28b]">₹50L </span>investments and{' '}
-        <span className="text-[#56b28b]">₹35K </span>
+        <span className="text-[#56b28b]">Rs. 50L </span>investments and{' '}
+        <span className="text-[#56b28b]">Rs. 35K </span>
         monthly expense.
       </p>
     ),
@@ -87,7 +87,7 @@ const slides = [
     id: 'slide5',
     text1: (
       <p>
-        We'll need <span className="text-[#56b28b]">₹1.5 crore</span> in 8-10
+        We'll need <span className="text-[#56b28b]">Rs. 1.5 crore</span> in 8-10
         years for our <span className="text-[#56b28b]">kids</span> higher
         education and wedding.
       </p>
@@ -198,3 +198,5 @@ export default function Hero() {
     </section>
   );
 }
+
+    
