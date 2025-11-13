@@ -14,7 +14,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 const companyLinks = [
   { title: 'Contact Us', href: '/contact-us' },
   { title: 'Terms of Use', href: '/terms-of-use' },
-  { title: 'Privacy Policy', href: '#' },
+  { title: 'Privacy Policy', href: '/privacy-policy' },
   { title: 'RIA Disclaimers', href: '/ria-disclaimers' },
   { title: 'Regulatory Disclosure', href: '/regulatory-disclosure' },
   { title: 'Investor Charter', href: 'https://drive.google.com/file/d/1QWGelX6o4itgep4-QrIvRH__e2ZpDA5U/view' },
