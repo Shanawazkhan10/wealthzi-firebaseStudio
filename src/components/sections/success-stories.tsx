@@ -78,7 +78,7 @@ export default function SuccessStories() {
 
   return (
     <section id="learn" className="bg-[#efffed] pb-10">
-      <div className="container mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground pt-10">
             Real Impact. Real Savings.
