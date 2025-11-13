@@ -40,12 +40,12 @@ export default function Header() {
 
       {/* Main Header - Added gradient effect */}
       <header className="w-full bg-gradient-to-b from-[#00313A] to-transparent">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between px-6">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
               src={wealthziLogo}
               alt="Wealthzi Logo"
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
