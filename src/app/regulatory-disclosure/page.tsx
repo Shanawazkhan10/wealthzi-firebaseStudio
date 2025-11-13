@@ -155,6 +155,14 @@ export default function RegulatoryDisclosurePage() {
                         <TableCell>0</TableCell>
                         <TableCell>0</TableCell>
                     </TableRow>
+                     <TableRow>
+                        <TableCell>5</TableCell>
+                        <TableCell>September 2025</TableCell>
+                        <TableCell>0</TableCell>
+                        <TableCell>0</TableCell>
+                        <TableCell>0</TableCell>
+                        <TableCell>0</TableCell>
+                    </TableRow>
                 </TableBody>
                 </Table>
             </div>

@@ -38,8 +38,8 @@ export default function Header() {
         }
       `}</style>
 
-      {/* Main Header - Made transparent and removed blur */}
-      <header className="w-full bg-transparent">
+      {/* Main Header - Added gradient effect */}
+      <header className="w-full bg-gradient-to-b from-[#00313A] to-transparent">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
