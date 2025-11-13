@@ -39,7 +39,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className=" bg-muted">
+    <section id="features" className="pt-10 bg-muted">
       <div className="mx-auto">
         {/* Main Heading Section - No background color */}
         <div className="text-center max-w-3xl mx-auto">
