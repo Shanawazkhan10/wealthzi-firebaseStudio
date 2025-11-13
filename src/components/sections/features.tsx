@@ -39,8 +39,8 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="py-16 lg:py-24 bg-muted">
-      <div className="container mx-auto">
+    <section id="features" className=" bg-muted">
+      <div className="mx-auto">
         {/* Main Heading Section - No background color */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
@@ -59,10 +59,10 @@ export default function Features() {
         </div>
 
         {/* Features Grid Section - With RGB background color */}
-        <div className="mt-12" style={{ backgroundColor: 'rgb(2 45 53)' }}>
-          <div className="container mx-auto py-16 lg:py-24">
-            <div className="text-center mb-12">
-              <h3 className="font-heading text-2xl md:text-3xl font-bold text-background">
+        <div className="mt-12 " style={{ backgroundColor: 'rgb(2 45 53)' }}>
+          <div className=" py-16 lg:py-24 max-w-6xl text-center mx-auto px-4">
+            <div className="text-center  mx-auto mb-12">
+              <h3 className="font-heading text-2xl md:text-4xl font-bold text-background">
                 Get <span style={{ color: 'rgb(76 167 113)' }}>FREE</span> financial guidance and invest in best investment options
               </h3>
             </div>

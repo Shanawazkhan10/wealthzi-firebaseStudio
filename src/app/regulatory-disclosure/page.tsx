@@ -13,16 +13,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function RegulatoryDisclosurePage() {
   return (
-    <section className="py-16 lg:py-24 bg-muted">
-      <div className="container">
-        <Card className="shadow-lg">
+    <section className="py-16 lg:py-24 ">
+      <div className="">
+        <Card className="border-0 shadow-lg">
           <CardHeader>
             <CardTitle className="font-heading text-3xl md:text-4xl font-extrabold text-foreground text-center">
               Regulatory Disclosure
             </CardTitle>
           </CardHeader>
           <CardContent className="prose prose-sm md:prose-base max-w-none text-foreground">
-            <p>
+            <p className='text-center'>
               In terms of Annexure B of SEBI Circular No.
               SEBI/HO/IMD/IMD-II CIS/P/CIR/2021/0685 dated December 13, 2021,
               we, Lime Internet Private Limited (SEBI Registered Investment
