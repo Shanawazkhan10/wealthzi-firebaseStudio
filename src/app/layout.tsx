@@ -1,9 +1,8 @@
+import Footer from '@/components/layout/footer';
+import Header from '@/components/layout/header';
+import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import Marquee from '@/components/layout/marquee';
 
 export const metadata: Metadata = {
   title: 'Wealthzi Digital',
@@ -27,7 +26,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         <div className="sticky top-0 z-50">
-          <Marquee />
+          {/* <Marquee /> */}
           <Header />
         </div>
         <main>{children}</main>

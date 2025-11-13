@@ -155,23 +155,31 @@ const faqData = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="pb-16 lg:pb-24 bg-background">
-      <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-foreground">
+    <section id="faq" className="pb-16 lg:pb-24 bg-gradient-to-b from-[#e4f3ff] to-white pt-15">
+      <div className="container mx-auto xl:max-w-screen-xl px-4 py-8">
+        <div className="flex-col mb-8 md:mb-12">
+          <p className="font-bold text-2xl md:text-5xl text-center">
             Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-lg md:text-xl text-muted-foreground">
-            Find answers to common questions about our services and investments.
           </p>
+          <h2 className="text-sm md:text-2xl text-center md:pt-7 text-foreground">
+            If you got any query? Here you go! Don't hesitate to ask any
+            Question!
+            <br />
+            We are happy to help with your questions.
+          </h2>
         </div>
-        <Accordion type="single" collapsible className="w-full">
+
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {faqData.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index + 1}`}>
-              <AccordionTrigger className="text-left font-bold text-lg md:text-xl hover:no-underline">
+            <AccordionItem
+              key={index}
+              value={`item-${index + 1}`}
+              className="bg-white rounded-2xl shadow-[4px_8px_30px_rgb(0_0_0_/_20%)] p-[0.6rem]"
+            >
+              <AccordionTrigger className="text-left font-bold text-lg md:text-xl hover:no-underline hover:text-primary">
                 {item.title}
               </AccordionTrigger>
-              <AccordionContent className="text-base md:text-lg text-muted-foreground">
+              <AccordionContent className="text-base md:text-lg text-foreground pt-4">
                 {item.subTitle}
               </AccordionContent>
             </AccordionItem>

@@ -1,17 +1,21 @@
 'use client';
 
-import * as React from 'react';
-import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
-import { Check } from 'lucide-react';
+import Image from 'next/image';
+import * as React from 'react';
+
+// Import images
+import familyPlanningImage from '../../../public/familyPlanning.png';
+import firstSipImage from '../../../public/firstSip.png';
+import portfolioReviewImage from '../../../public/portfolioReview.png';
+import retiredLifeImage from '../../../public/retiredLife.png';
+import workingProfessionalImage from '../../../public/workingProfessional.png';
 
 const slides = [
   {
@@ -24,8 +28,11 @@ const slides = [
       </p>
     ),
     text2: "“But, I don't know how to get there!”",
-    imageId: 'hero-1',
+    image: workingProfessionalImage,
+    altImage: "working professional",
     contentPosition: 'left',
+    text1Size: "text-3xl md:text-4xl lg:text-5xl",
+    text2Size: "text-xl lg:text-2xl xl:text-3xl"
   },
   {
     id: 'slide2',
@@ -36,8 +43,11 @@ const slides = [
       </p>
     ),
     text2: '“How should I start?”',
-    imageId: 'hero-2',
+    image: firstSipImage,
+    altImage: "first SIP investment",
     contentPosition: 'left',
+    text1Size: "text-3xl md:text-4xl lg:text-5xl",
+    text2Size: "text-xl lg:text-2xl xl:text-3xl"
   },
   {
     id: 'slide3',
@@ -51,34 +61,43 @@ const slides = [
       </p>
     ),
     text2: '“Help me generate monthly income.”',
-    imageId: 'hero-3',
+    image: retiredLifeImage,
+    altImage: "about to retire person",
     contentPosition: 'left',
+    text1Size: "text-3xl md:text-4xl lg:text-5xl",
+    text2Size: "text-xl lg:text-2xl xl:text-3xl"
   },
   {
     id: 'slide4',
     text1: (
        <p>
-        I’ve been investing <span className="text-[#56b28b]">on my own</span>{' '}
-        since last few years, but I’m getting{' '}
+        I've been investing <span className="text-[#56b28b]">on my own</span>{' '}
+        since last few years, but I'm getting{' '}
         <span className="text-[#56b28b]">below average returns.</span>
       </p>
     ),
     text2: '“Please review my portfolio and give recommendation.”',
-    imageId: 'hero-1',
+    image: portfolioReviewImage,
+    altImage: "investing since last few years",
     contentPosition: 'left',
+    text1Size: "text-3xl md:text-4xl lg:text-5xl",
+    text2Size: "text-xl lg:text-2xl xl:text-3xl"
   },
   {
     id: 'slide5',
     text1: (
       <p>
-        We’ll need <span className="text-[#56b28b]">₹1.5 crore</span> in 8-10
+        We'll need <span className="text-[#56b28b]">₹1.5 crore</span> in 8-10
         years for our <span className="text-[#56b28b]">kids</span> higher
         education and wedding.
       </p>
     ),
     text2: '“Give us a long-term investment plan!”',
-    imageId: 'hero-2',
+    image: familyPlanningImage,
+    altImage: "higher education and wedding",
     contentPosition: 'left',
+    text1Size: "text-3xl md:text-4xl lg:text-5xl",
+    text2Size: "text-xl lg:text-2xl xl:text-3xl"
   },
 ];
 
@@ -107,65 +126,60 @@ export default function Hero() {
       }
     }, 5000);
 
-
     return () => {
       api.off('select', onSelect);
       clearInterval(interval);
     };
   }, [api]);
 
-  const getImage = (id: string) => {
-    return PlaceHolderImages.find((img) => img.id === id);
-  };
-
   return (
-    <section id="hero" className="relative w-full">
+    <section id="hero" className="relative w-full pt-5">
       <Carousel setApi={setApi} className="w-full">
         <CarouselContent>
-          {slides.map((slide, index) => {
-            const image = getImage(slide.imageId);
-            return (
-              <CarouselItem key={slide.id}>
-                <div className="relative h-[70vh] min-h-[500px] w-full">
-                  {image && (
-                    <Image
-                      src={image.imageUrl}
-                      alt={image.description}
-                      fill
-                      className="object-cover"
-                      priority={index === 0}
-                      data-ai-hint={image.imageHint}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-black/50" />
-                  <div className="relative h-full container mx-auto flex items-center">
+          {slides.map((slide, index) => (
+            <CarouselItem key={slide.id}>
+              <div className="relative h-[70vh] min-h-[500px] w-full">
+                <Image
+                  src={slide.image}
+                  alt={slide.altImage}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative h-full container mx-auto flex items-center">
+                  <div
+                    className={cn('w-full text-white', {
+                      'text-center': slide.contentPosition === 'center',
+                      'text-left': slide.contentPosition === 'left',
+                      'text-right': slide.contentPosition === 'right',
+                    })}
+                  >
                     <div
-                      className={cn('w-full text-white', {
-                        'text-center': slide.contentPosition === 'center',
-                        'text-left': slide.contentPosition === 'left',
-                        'text-right': slide.contentPosition === 'right',
+                      className={cn('max-w-2xl', {
+                        'mx-auto': slide.contentPosition === 'center',
+                        'mr-auto': slide.contentPosition === 'left',
+                        'ml-auto': slide.contentPosition === 'right',
                       })}
                     >
-                      <div
-                        className={cn('max-w-2xl', {
-                          'mx-auto': slide.contentPosition === 'center',
-                          'mr-auto': slide.contentPosition === 'left',
-                          'ml-auto': slide.contentPosition === 'right',
-                        })}
-                      >
-                        <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight drop-shadow-lg">
-                          {slide.text1}
-                        </div>
-                        <p className="pt-6 font-normal text-white text-left text-2xl lg:text-4xl xl:text-5xl leading-tight font-caveat-brush">
-                          {slide.text2}
-                        </p>
+                      <div className={cn(
+                        "font-heading font-extrabold tracking-tight drop-shadow-lg",
+                        slide.text1Size
+                      )}>
+                        {slide.text1}
                       </div>
+                      <p className={cn(
+                        "pt-6 font-normal text-white text-left leading-tight font-caveat-brush",
+                        slide.text2Size
+                      )}>
+                        {slide.text2}
+                      </p>
                     </div>
                   </div>
                 </div>
-              </CarouselItem>
-            );
-          })}
+              </div>
+            </CarouselItem>
+          ))}
         </CarouselContent>
       </Carousel>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex space-x-2">

@@ -52,7 +52,7 @@ function InvestmentCalculator() {
         </Button>
         {futureValue !== null && (
           <div className="mt-6 p-4 bg-muted rounded-lg w-full">
-            <p className="text-muted-foreground">Estimated Future Value:</p>
+            <p className="text-foreground">Estimated Future Value:</p>
             <p className="text-2xl font-bold text-primary">
               ₹ {futureValue.toLocaleString('en-IN', { maximumFractionDigits: 0 })}
             </p>
@@ -72,7 +72,7 @@ export default function Calculators() {
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Investment Calculator Tools
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
+          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground">
             Plan for your financial goals with our easy-to-use calculators.
           </p>
         </div>

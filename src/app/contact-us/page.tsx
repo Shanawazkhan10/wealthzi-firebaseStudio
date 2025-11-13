@@ -103,7 +103,7 @@ export default function ContactUsPage() {
                   <br />
                   +91-9818465241
                 </p>
-                <p className="text-muted-foreground">(10 am-6pm IST, Mon-Friday)</p>
+                <p className="text-foreground">(10 am-6pm IST, Mon-Friday)</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -116,7 +116,7 @@ export default function ContactUsPage() {
               <MapPin className="h-8 w-8 text-primary mt-1" />
               <div>
                 <p className="font-semibold text-lg text-foreground">Lime Internet Pvt Ltd</p>
-                <p className="text-muted-foreground">
+                <p className="text-foreground">
                   Kanchenjunga Building, #603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001
                 </p>
               </div>

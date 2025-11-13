@@ -107,7 +107,7 @@ function SIPCalculator() {
               >
                 <span>Monthly SIP Amount</span>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">
                     Rs.
                   </span>
                   <Input
@@ -131,7 +131,7 @@ function SIPCalculator() {
                 step={500}
                 className="mt-2"
               />
-              <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">
+              <p className="text-xs md:text-sm text-foreground text-right mt-1">
                 (Rs. 500 to Rs. 10 Lac)
               </p>
             </div>
@@ -152,7 +152,7 @@ function SIPCalculator() {
                     min={1}
                     max={30}
                   />
-                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">
                     %
                   </span>
                 </div>
@@ -165,7 +165,7 @@ function SIPCalculator() {
                 step={0.5}
                 className="mt-2"
               />
-               <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">
+               <p className="text-xs md:text-sm text-foreground text-right mt-1">
                 (1 to 30%)
               </p>
             </div>
@@ -186,7 +186,7 @@ function SIPCalculator() {
                     min={1}
                     max={30}
                   />
-                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
+                   <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">
                     Yr
                   </span>
                 </div>
@@ -199,7 +199,7 @@ function SIPCalculator() {
                 step={1}
                 className="mt-2"
               />
-               <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">
+               <p className="text-xs md:text-sm text-foreground text-right mt-1">
                 (1 to 30 Yrs)
               </p>
             </div>
@@ -323,34 +323,34 @@ function LumpsumCalculator() {
                 <Label htmlFor="lumpsum-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Lumpsum Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
                     <Input id="lumpsum-amount" type="number" value={lumpSumAmount} onChange={(e) => setLumpSumAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={1000} max={50000000} />
                   </div>
                 </Label>
                 <Slider value={[lumpSumAmount]} onValueChange={(v) => setLumpSumAmount(v[0])} min={1000} max={50000000} step={1000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 1,000 to Rs. 5 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 1,000 to Rs. 5 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-lumpsum" className="flex justify-between items-center text-sm md:text-base">
                   <span>Expected Rate of Returns (% PA)</span>
                   <div className="relative">
                     <Input id="rate-of-return-lumpsum" type="number" value={rateOfReturn} onChange={(e) => setRateOfReturn(Number(e.target.value))} className="w-32 md:w-36 pr-6 text-right" min={1} max={30}/>
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">%</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">%</span>
                   </div>
                 </Label>
                 <Slider value={[rateOfReturn]} onValueChange={(v) => setRateOfReturn(v[0])} min={1} max={30} step={0.5} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 30%)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 30%)</p>
               </div>
               <div>
                 <Label htmlFor="time-period-lumpsum" className="flex justify-between items-center text-sm md:text-base">
                   <span>Investment Period (Years)</span>
                   <div className="relative">
                     <Input id="time-period-lumpsum" type="number" value={timePeriod} onChange={(e) => setTimePeriod(Number(e.target.value))} className="w-32 md:w-36 pr-8 text-right" min={1} max={30} />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">Yr</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">Yr</span>
                   </div>
                 </Label>
                 <Slider value={[timePeriod]} onValueChange={(v) => setTimePeriod(v[0])} min={1} max={30} step={1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 30 Yrs)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 30 Yrs)</p>
               </div>
             </div>
             <div className="flex flex-col">
@@ -424,43 +424,43 @@ function LumpsumCalculator() {
                 <Label htmlFor="target-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Target Amount</span>
                   <div className="relative">
-                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
                     <Input id="target-amount" type="number" value={targetAmount} onChange={(e) => setTargetAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={10000} max={100000000}/>
                   </div>
                 </Label>
                 <Slider value={[targetAmount]} onValueChange={(v) => setTargetAmount(v[0])} min={10000} max={100000000} step={10000} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 10,000 to Rs. 10 Cr)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 10,000 to Rs. 10 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-goal" className="flex justify-between items-center text-sm md:text-base">
                   <span>Expected Rate of Returns (% PA)</span>
                   <div className="relative">
                     <Input id="rate-of-return-goal" type="number" value={rateOfReturn} onChange={(e) => setRateOfReturn(Number(e.target.value))} className="w-32 md:w-36 pr-6 text-right" min={1} max={30} />
-                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">%</span>
+                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">%</span>
                   </div>
                 </Label>
                 <Slider value={[rateOfReturn]} onValueChange={(v) => setRateOfReturn(v[0])} min={1} max={30} step={0.5} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 30%)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 30%)</p>
               </div>
               <div>
                 <Label htmlFor="time-period-goal" className="flex justify-between items-center text-sm md:text-base">
                   <span>Investment Period (Years)</span>
                   <div className="relative">
                     <Input id="time-period-goal" type="number" value={timePeriod} onChange={(e) => setTimePeriod(Number(e.target.value))} className="w-32 md:w-36 pr-8 text-right" min={1} max={30} />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">Yr</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">Yr</span>
                   </div>
                 </Label>
                 <Slider value={[timePeriod]} onValueChange={(v) => setTimePeriod(v[0])} min={1} max={30} step={1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 30 Yrs)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 30 Yrs)</p>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center bg-muted p-8 rounded-lg">
-                <p className="text-base md:text-lg text-muted-foreground text-center">To reach {formatCurrency(targetAmount)}, you need to invest</p>
+                <p className="text-base md:text-lg text-foreground text-center">To reach {formatCurrency(targetAmount)}, you need to invest</p>
                 <p className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary my-4">{formatCurrency(monthlyInvestment, 0)}</p>
-                <p className="text-base md:text-lg text-muted-foreground">per month.</p>
+                <p className="text-base md:text-lg text-foreground">per month.</p>
                 <div className="mt-6 text-center w-full space-y-2">
-                    <p className="text-base md:text-lg text-muted-foreground">Total Invested: <span className="font-bold text-foreground">{formatCurrency(monthlyInvestment * timePeriod * 12)}</span></p>
-                    <p className="text-base md:text-lg text-muted-foreground">Wealth Gained: <span className="font-bold text-foreground">{formatCurrency(targetAmount - (monthlyInvestment * timePeriod * 12))}</span></p>
+                    <p className="text-base md:text-lg text-foreground">Total Invested: <span className="font-bold text-foreground">{formatCurrency(monthlyInvestment * timePeriod * 12)}</span></p>
+                    <p className="text-base md:text-lg text-foreground">Wealth Gained: <span className="font-bold text-foreground">{formatCurrency(targetAmount - (monthlyInvestment * timePeriod * 12))}</span></p>
                 </div>
             </div>
           </div>
@@ -506,34 +506,34 @@ function LumpsumCalculator() {
                 <Label htmlFor="principal-fd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Investment Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
                     <Input id="principal-fd" type="number" value={principal} onChange={(e) => setPrincipal(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[principal]} onValueChange={(v) => setPrincipal(v[0])} min={5000} max={10000000} step={5000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 5,000 to Rs. 1 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 5,000 to Rs. 1 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-fd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Interest Rate (% PA)</span>
                   <div className="relative">
                     <Input id="rate-fd" type="number" value={rate} onChange={(e) => setRate(Number(e.target.value))} className="w-32 md:w-36 pr-6 text-right" />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">%</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">%</span>
                   </div>
                 </Label>
                 <Slider value={[rate]} onValueChange={(v) => setRate(v[0])} min={1} max={15} step={0.1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 15%)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 15%)</p>
               </div>
               <div>
                 <Label htmlFor="years-fd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Tenure (Years)</span>
                   <div className="relative">
                     <Input id="years-fd" type="number" value={years} onChange={(e) => setYears(Number(e.target.value))} className="w-32 md:w-36 pr-8 text-right" />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">Yr</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">Yr</span>
                   </div>
                 </Label>
                 <Slider value={[years]} onValueChange={(v) => setYears(v[0])} min={1} max={10} step={1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 10 Yrs)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 10 Yrs)</p>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center">
@@ -562,7 +562,7 @@ function LumpsumCalculator() {
                                     indicator="dot" 
                                     formatter={(value, name) => (
                                         <div className="flex w-full items-center justify-between gap-4 text-sm md:text-base">
-                                            <span className="text-muted-foreground">{name}:</span>
+                                            <span className="text-foreground">{name}:</span>
                                             <span className="font-bold">{formatCurrency(value as number)}</span>
                                         </div>
                                     )} 
@@ -618,46 +618,46 @@ function LumpsumCalculator() {
                 <Label htmlFor="monthly-deposit-rd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Monthly Deposit</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
                     <Input id="monthly-deposit-rd" type="number" value={monthlyDeposit} onChange={(e) => setMonthlyDeposit(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[monthlyDeposit]} onValueChange={(v) => setMonthlyDeposit(v[0])} min={500} max={100000} step={500} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 500 to Rs. 1 Lac)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 500 to Rs. 1 Lac)</p>
               </div>
               <div>
                 <Label htmlFor="rate-rd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Interest Rate (% PA)</span>
                   <div className="relative">
                      <Input id="rate-rd" type="number" value={rate} onChange={(e) => setRate(Number(e.target.value))} className="w-32 md:w-36 pr-6 text-right" />
-                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">%</span>
+                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">%</span>
                   </div>
                 </Label>
                 <Slider value={[rate]} onValueChange={(v) => setRate(v[0])} min={1} max={15} step={0.1} className="mt-2" />
-                 <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1% to 15%)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(1% to 15%)</p>
               </div>
               <div>
                 <Label htmlFor="months-rd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Tenure (Months)</span>
                   <div className="relative">
                     <Input id="months-rd" type="number" value={months} onChange={(e) => setMonths(Number(e.target.value))} className="w-32 md:w-36 pr-10 text-right" />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">Mo</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">Mo</span>
                   </div>
                 </Label>
                 <Slider value={[months]} onValueChange={(v) => setMonths(v[0])} min={6} max={120} step={1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(6 to 120 Months)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(6 to 120 Months)</p>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center bg-muted rounded-lg p-8">
-                <p className="text-lg md:text-xl text-muted-foreground mb-4 text-center">On maturity, you get</p>
+                <p className="text-lg md:text-xl text-foreground mb-4 text-center">On maturity, you get</p>
                 <p className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-primary">{formatCurrency(maturityValue)}</p>
                 <div className="mt-6 text-center w-full space-y-2">
                     <div className="flex justify-between text-base md:text-lg">
-                        <span className="text-muted-foreground">Total Deposited:</span>
+                        <span className="text-foreground">Total Deposited:</span>
                         <span className="font-bold text-foreground">{formatCurrency(totalDeposited)}</span>
                     </div>
                     <div className="flex justify-between text-base md:text-lg">
-                        <span className="text-muted-foreground">Interest Earned:</span>
+                        <span className="text-foreground">Interest Earned:</span>
                         <span className="font-bold text-foreground">{formatCurrency(interestEarned)}</span>
                     </div>
                 </div>
@@ -705,48 +705,48 @@ function LumpsumCalculator() {
                 <Label htmlFor="loan-amount-emi" className="flex justify-between items-center text-sm md:text-base">
                   <span>Loan Amount</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
                     <Input id="loan-amount-emi" type="number" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[loanAmount]} onValueChange={(v) => setLoanAmount(v[0])} min={50000} max={20000000} step={10000} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(Rs. 50,000 to Rs. 2 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 50,000 to Rs. 2 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="interest-rate-emi" className="flex justify-between items-center text-sm md:text-base">
                   <span>Interest Rate (% PA)</span>
                   <div className="relative">
                      <Input id="interest-rate-emi" type="number" value={interestRate} onChange={(e) => setInterestRate(Number(e.target.value))} className="w-32 md:w-36 pr-6 text-right" />
-                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">%</span>
+                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">%</span>
                   </div>
                 </Label>
                 <Slider value={[interestRate]} onValueChange={(v) => setInterestRate(v[0])} min={5} max={20} step={0.1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(5% to 20%)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(5% to 20%)</p>
               </div>
               <div>
                 <Label htmlFor="loan-tenure-emi" className="flex justify-between items-center text-sm md:text-base">
                   <span>Loan Tenure (Years)</span>
                   <div className="relative">
                     <Input id="loan-tenure-emi" type="number" value={loanTenure} onChange={(e) => setLoanTenure(Number(e.target.value))} className="w-32 md:w-36 pr-8 text-right" />
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground">Yr</span>
+                    <span className="absolute right-3 top-1/2 -translate-y-1/2 text-foreground">Yr</span>
                   </div>
                 </Label>
                 <Slider value={[loanTenure]} onValueChange={(v) => setLoanTenure(v[0])} min={1} max={30} step={1} className="mt-2" />
-                <p className="text-xs md:text-sm text-muted-foreground text-right mt-1">(1 to 30 Yrs)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(1 to 30 Yrs)</p>
               </div>
             </div>
             <div className="flex flex-col items-center justify-center">
                 <div className="text-center mb-6">
-                    <p className="text-lg md:text-xl text-muted-foreground">Monthly EMI</p>
+                    <p className="text-lg md:text-xl text-foreground">Monthly EMI</p>
                     <p className="text-3xl md:text-4xl font-extrabold text-primary">{formatCurrency(emi)}</p>
                 </div>
                 <div className="grid grid-cols-2 border-t pt-4 w-full text-center">
                      <div>
-                        <p className="text-sm md:text-base text-muted-foreground">Total Interest</p>
+                        <p className="text-sm md:text-base text-foreground">Total Interest</p>
                         <p className="font-bold text-base md:text-lg">{formatCurrency(totalInterest)}</p>
                      </div>
                      <div>
-                        <p className="text-sm md:text-base text-muted-foreground">Total Payable</p>
+                        <p className="text-sm md:text-base text-foreground">Total Payable</p>
                         <p className="font-bold text-base md:text-lg">{formatCurrency(totalPayable)}</p>
                      </div>
                 </div>
@@ -766,7 +766,7 @@ function LumpsumCalculator() {
                                     indicator="dot" 
                                     formatter={(value, name) => (
                                         <div className="flex w-full items-center justify-between gap-4 text-sm md:text-base">
-                                            <span className="text-muted-foreground">{name}:</span>
+                                            <span className="text-foreground">{name}:</span>
                                             <span className="font-bold">{formatCurrency(value as number)}</span>
                                         </div>
                                     )} 
@@ -866,7 +866,7 @@ function CalculatorsPageContent() {
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Financial Calculators
           </h2>
-          <p className="mt-2 text-lg md:text-xl text-muted-foreground">Plan your investments, loans, and financial goals with our powerful calculators.</p>
+          <p className="mt-2 text-lg md:text-xl text-foreground">Plan your investments, loans, and financial goals with our powerful calculators.</p>
         </div>
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
           <div className="overflow-x-auto">
