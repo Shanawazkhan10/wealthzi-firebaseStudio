@@ -133,6 +133,26 @@ export default function Team() {
               </CardContent>
             </Card>
 
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-8">
+              {reviewsArray.map((item, index) => (
+                <Card key={index} className="bg-blue-100/50 backdrop-blur-sm border-blue-200">
+                  <CardContent className="p-6 text-center">
+                    <Image
+                      src={item.emoji}
+                      alt={item.subtitle}
+                      className="h-12 w-12 md:h-16 md:w-16 mx-auto mb-4"
+                    />
+                    <p className="text-2xl md:text-3xl font-bold text-blue-900">
+                      {item.title}
+                    </p>
+                    <p className="text-base md:text-lg text-blue-800">
+                      {item.subtitle}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
             {/* Mobile Stats */}
             <div className="md:hidden bg-lightBlueBg rounded-lg p-6">
               <p className="text-center pt-3 text-sm md:text-2xl self-center">
