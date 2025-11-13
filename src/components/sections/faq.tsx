@@ -174,7 +174,7 @@ export default function Faq() {
             <AccordionItem
               key={index}
               value={`item-${index + 1}`}
-              className="bg-white rounded-2xl shadow-[4px_8px_30px_rgb(0_0_0_/_20%)] p-[0.6rem]"
+              className="bg-white rounded-2xl shadow-xl py-[0.6rem] px-4"
             >
               <AccordionTrigger className="text-left font-bold text-lg md:text-xl hover:no-underline hover:text-primary">
                 {item.title}

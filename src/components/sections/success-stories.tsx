@@ -100,7 +100,7 @@ export default function SuccessStories() {
               return (
                 <CarouselItem key={index} className="pl-4 sm:basis-1/2 md:basis-1/2 lg:basis-1/4">
                   <div className="h-full">
-                    <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-primary text-primary-foreground relative overflow-hidden min-h-[300px]">
+                    <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 bg-primary text-primary-foreground relative overflow-hidden min-h-[300px] rounded-xl">
                       <div className="absolute top-0 left-0 w-full h-full bg-black/10"></div>
                       <div className="absolute -bottom-16 -right-16 w-48 h-48 bg-black/10 rounded-full"></div>
                       <CardContent className="p-6 flex-grow flex flex-col items-center text-center z-10">

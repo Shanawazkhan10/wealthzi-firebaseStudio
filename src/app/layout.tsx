@@ -8,6 +8,9 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Wealthzi Digital',
   description: 'A modern, professional wealth management website by Wealthzi.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

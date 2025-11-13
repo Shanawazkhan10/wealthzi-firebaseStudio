@@ -13,16 +13,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function RegulatoryDisclosurePage() {
   return (
-    <section className="py-16 lg:py-24 bg-muted">
-      <div className="container mx-auto">
-        <Card className="shadow-lg">
+    <section className="py-16 lg:py-24 ">
+      <div className="">
+        <Card className="border-0 shadow-lg">
           <CardHeader>
             <CardTitle className="font-heading text-3xl md:text-4xl font-extrabold text-foreground text-center">
               Regulatory Disclosure
             </CardTitle>
           </CardHeader>
           <CardContent className="prose prose-sm md:prose-base max-w-none text-foreground">
-            <p>
+            <p className='text-center'>
               In terms of Annexure B of SEBI Circular No.
               SEBI/HO/IMD/IMD-II CIS/P/CIR/2021/0685 dated December 13, 2021,
               we, Lime Internet Private Limited (SEBI Registered Investment
@@ -30,61 +30,61 @@ export default function RegulatoryDisclosurePage() {
             </p>
 
             <h3 className="text-lg md:text-xl font-bold mt-8 mb-4 text-center">
-              Data for the month ending - 31st August, 2025
+              Data for the month ending - 31st October, 2025
             </h3>
             <div className="overflow-x-auto">
                 <Table className='min-w-[800px]'>
-                <TableHeader>
+                <TableHeader className='text-center'>
                     <TableRow>
-                    <TableHead>Sr. No</TableHead>
-                    <TableHead>Received from</TableHead>
-                    <TableHead>Pending at the end of last month</TableHead>
-                    <TableHead>Received</TableHead>
-                    <TableHead>Resolved*</TableHead>
-                    <TableHead>Total Pending#</TableHead>
-                    <TableHead>Pending complaints &gt; 3months</TableHead>
-                    <TableHead>Average Resolution time^ (in days)</TableHead>
+                    <TableHead className='text-center'>Sr. No</TableHead>
+                    <TableHead className='text-center'>Received from</TableHead>
+                    <TableHead className='text-center'>Pending at the end of last month</TableHead>
+                    <TableHead className='text-center'>Received</TableHead>
+                    <TableHead className='text-center'>Resolved*</TableHead>
+                    <TableHead className='text-center'>Total Pending#</TableHead>
+                    <TableHead className='text-center'>Pending complaints &gt; 3months</TableHead>
+                    <TableHead className='text-center'>Average Resolution time^ (in days)</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                    <TableCell>1</TableCell>
-                    <TableCell>Directly from Investors</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
+                    <TableCell className='text-center'>1</TableCell>
+                    <TableCell className='text-center'>Directly from Investors</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                    <TableCell>2</TableCell>
-                    <TableCell>SEBI (SCORES)</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
+                    <TableCell className='text-center'>2</TableCell>
+                    <TableCell className='text-center'>SEBI (SCORES)</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                    <TableCell>3</TableCell>
-                    <TableCell>Other Sources (if any)</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
+                    <TableCell className='text-center'> 3</TableCell>
+                    <TableCell className='text-center'> Other Sources (if any)</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
+                    <TableCell className='text-center'> 0</TableCell>
                     </TableRow>
                     <TableRow className="font-bold">
-                    <TableCell colSpan={2}>Grand Total</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
-                    <TableCell>0</TableCell>
+                    <TableCell className='text-center' colSpan={2}>Grand Total</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
+                    <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                 </TableBody>
                 </Table>
@@ -106,62 +106,70 @@ export default function RegulatoryDisclosurePage() {
                 <Table className='min-w-[600px]'>
                 <TableHeader>
                     <TableRow>
-                    <TableHead>Sr. No</TableHead>
-                    <TableHead>Month</TableHead>
-                    <TableHead>Carried forward from previous month</TableHead>
-                    <TableHead>Received</TableHead>
-                    <TableHead>Resolved*</TableHead>
-                    <TableHead>Pending#</TableHead>
+                    <TableHead className='text-center'>Sr. No</TableHead>
+                    <TableHead className='text-center'>Month</TableHead>
+                    <TableHead className='text-center'>Carried forward from previous month</TableHead>
+                    <TableHead className='text-center'>Received</TableHead>
+                    <TableHead className='text-center'>Resolved*</TableHead>
+                    <TableHead className='text-center'>Pending#</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                        <TableCell>1</TableCell>
-                        <TableCell>April 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>1</TableCell>
+                        <TableCell className='text-center'>April 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>2</TableCell>
-                        <TableCell>May 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>2</TableCell>
+                        <TableCell className='text-center'>May 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>3</TableCell>
-                        <TableCell>June 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>3</TableCell>
+                        <TableCell className='text-center'>June 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>4</TableCell>
-                        <TableCell>July 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>4</TableCell>
+                        <TableCell className='text-center'>July 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                      <TableRow>
-                        <TableCell>5</TableCell>
-                        <TableCell>August 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>5</TableCell>
+                        <TableCell className='text-center'>August 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                      <TableRow>
-                        <TableCell>5</TableCell>
-                        <TableCell>September 2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>6</TableCell>
+                        <TableCell className='text-center'>September 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                    </TableRow>
+                     <TableRow>
+                        <TableCell className='text-center'>7</TableCell>
+                        <TableCell className='text-center'>October 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                 </TableBody>
                 </Table>
@@ -180,46 +188,46 @@ export default function RegulatoryDisclosurePage() {
                  <Table className='min-w-[600px]'>
                 <TableHeader>
                     <TableRow>
-                    <TableHead>Sr. No</TableHead>
-                    <TableHead>Year</TableHead>
-                    <TableHead>Carried forward from previous month</TableHead>
-                    <TableHead>Received</TableHead>
-                    <TableHead>Resolved*</TableHead>
-                    <TableHead>Pending#</TableHead>
+                    <TableHead className='text-center'>Sr. No</TableHead>
+                    <TableHead className='text-center'>Year</TableHead>
+                    <TableHead className='text-center'>Carried forward from previous month</TableHead>
+                    <TableHead className='text-center'>Received</TableHead>
+                    <TableHead className='text-center'>Resolved*</TableHead>
+                    <TableHead className='text-center'>Pending#</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
                     <TableRow>
-                        <TableCell>1</TableCell>
-                        <TableCell>2021-2022</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>1</TableCell>
+                        <TableCell className='text-center'>2021-2022</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>2</TableCell>
-                        <TableCell>2022-2023</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>2</TableCell>
+                        <TableCell className='text-center'>2022-2023</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell>3</TableCell>
-                        <TableCell>2023-2024</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>3</TableCell>
+                        <TableCell className='text-center'>2023-2024</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                      <TableRow>
-                        <TableCell>4</TableCell>
-                        <TableCell>2024-2025</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
-                        <TableCell>0</TableCell>
+                        <TableCell className='text-center'>4</TableCell>
+                        <TableCell className='text-center'>2024-2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                 </TableBody>
                 </Table>
