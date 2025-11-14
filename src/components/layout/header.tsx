@@ -9,8 +9,6 @@ import { useState } from 'react';
 import wealthziLogo from "../../../public/svgs/wealthziLogo.svg";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="fixed z-50 w-full">
       {/* Marquee Banner - Kept as is */}
@@ -49,7 +47,7 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Navigation - Removed nav links, only keeping button */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
@@ -64,37 +62,16 @@ export default function Header() {
 
           {/* Mobile Navigation */}
           <div className="md:hidden">
-            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu />
-                  <span className="sr-only">Open Menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="left" className="pr-0 w-3/4">
-                <div className="p-4">
-                  <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMenuOpen(false)}>
-                    <Image
-                      src={wealthziLogo}
-                      alt="Wealthzi Logo"
-                      className="h-10 w-auto"
-                    />
-                  </Link>
-                </div>
-                <div className="absolute bottom-6 left-4 right-4 flex flex-col space-y-4">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="font-bold rounded-[10px] h-12 text-base"
-                    style={{ backgroundColor: 'rgb(76 167 113)' }}
-                  >
-                    <a href="https://app.wealthzi.com/login">
-                      Login/Register
-                    </a>
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
+            <Button
+              asChild
+              size="sm"
+              className="font-bold rounded-lg h-9 px-4 text-sm"
+              style={{ backgroundColor: 'rgb(76 167 113)' }}
+            >
+              <a href="https://app.wealthzi.com/login">
+                Login/Register
+              </a>
+            </Button>
           </div>
         </div>
       </header>

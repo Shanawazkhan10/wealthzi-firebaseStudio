@@ -137,7 +137,7 @@ export default function Hero() {
                   src={slide.image}
                   alt={slide.altImage}
                   fill
-                  className="object-cover"
+                  className="object-cover w-full h-full"
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-black/50" />
@@ -176,14 +176,14 @@ export default function Hero() {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex space-x-2">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => api?.scrollTo(index)}
             className={cn(
-              'h-2 w-2 rounded-full transition-all',
-              current === index ? 'w-6 bg-white' : 'bg-white/50'
+              'h-3 w-3 rounded-full transition-colors duration-300',
+              current === index ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
             )}
             aria-label={`Go to slide ${index + 1}`}
           />
