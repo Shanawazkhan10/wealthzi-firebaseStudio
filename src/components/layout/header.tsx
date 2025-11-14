@@ -65,7 +65,7 @@ export default function Header() {
             <Button
               asChild
               size="sm"
-              className="font-bold rounded-lg h-9 px-4 text-sm"
+              className="font-bold rounded-[10px] h-9 px-4 text-sm"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
               <a href="https://app.wealthzi.com/login">

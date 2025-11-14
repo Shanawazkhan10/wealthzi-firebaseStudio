@@ -113,11 +113,7 @@ export default function Hero() {
     api.on('select', onSelect);
     
     const interval = setInterval(() => {
-      if (api.canScrollNext()) {
-        api.scrollNext();
-      } else {
-        api.scrollTo(0);
-      }
+      api.scrollNext();
     }, 5000);
 
     return () => {
@@ -128,7 +124,13 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative w-full pt-5">
-      <Carousel setApi={setApi} className="w-full">
+      <Carousel 
+        setApi={setApi} 
+        className="w-full"
+        opts={{
+          loop: true,
+        }}
+      >
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id}>
