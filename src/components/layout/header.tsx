@@ -40,12 +40,12 @@ export default function Header() {
 
       {/* Main Header - Added gradient effect */}
       <header className="w-full bg-gradient-to-b from-[#00313A] to-transparent">
-        <div className="flex h-16 items-center justify-between px-6">
+        <div className="flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
               src={wealthziLogo}
               alt="Wealthzi Logo"
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </Link>
 
@@ -53,7 +53,7 @@ export default function Header() {
           <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
-              className="font-bold rounded-[10px]"
+              className="font-bold rounded-[10px] h-11 px-6 text-base"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
               <a href="https://app.wealthzi.com/login">
@@ -72,17 +72,20 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="pr-0 w-3/4">
-                <Link href="/" className="mr-6 flex items-center space-x-2 mb-6" onClick={() => setIsMenuOpen(false)}>
-                  <Image
-                    src={wealthziLogo}
-                    alt="Wealthzi Logo"
-                    className="h-8 w-auto"
-                  />
-                </Link>
-                <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
+                <div className="p-4">
+                  <Link href="/" className="flex items-center space-x-2 mb-8" onClick={() => setIsMenuOpen(false)}>
+                    <Image
+                      src={wealthziLogo}
+                      alt="Wealthzi Logo"
+                      className="h-10 w-auto"
+                    />
+                  </Link>
+                </div>
+                <div className="absolute bottom-6 left-4 right-4 flex flex-col space-y-4">
                   <Button
                     asChild
-                    className="font-bold rounded-[10px]"
+                    size="lg"
+                    className="font-bold rounded-[10px] h-12 text-base"
                     style={{ backgroundColor: 'rgb(76 167 113)' }}
                   >
                     <a href="https://app.wealthzi.com/login">

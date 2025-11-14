@@ -22,8 +22,7 @@ const slides = [
     id: 'slide1',
     text1: (
       <p>
-        I am a working professional, and want a{' '}
-        <span className="text-[#56b28b]">Rs. 40L</span> corpus in the next{' '}
+        I need a <span className="text-[#56b28b]">Rs. 40L</span> corpus <br /> in the next{' '}
         <span className="text-[#56b28b]">5 years.</span>
       </p>
     ),
@@ -38,7 +37,7 @@ const slides = [
     id: 'slide2',
     text1: (
       <p>
-        I have just started earning. I want to make my{' '}
+        I want to make my{' '}
         <span className="text-[#56b28b]">First SIP</span> investment.
       </p>
     ),
@@ -53,11 +52,9 @@ const slides = [
     id: 'slide3',
     text1: (
       <p>
-        I am a <span className="text-[#56b28b]"> retired</span>
-        /about to retire person and I have{' '}
-        <span className="text-[#56b28b]">Rs. 50L </span>investments and{' '}
+        I'm retiring with <span className="text-[#56b28b]">Rs. 50L</span> and have{' '}
         <span className="text-[#56b28b]">Rs. 35K </span>
-        monthly expense.
+        monthly expenses.
       </p>
     ),
     text2: '“Help me generate monthly income.”',
@@ -71,8 +68,7 @@ const slides = [
     id: 'slide4',
     text1: (
        <p>
-        I've been investing <span className="text-[#56b28b]">on my own</span>{' '}
-        since last few years, but I'm getting{' '}
+        My investments are giving {' '}
         <span className="text-[#56b28b]">below average returns.</span>
       </p>
     ),
@@ -87,9 +83,7 @@ const slides = [
     id: 'slide5',
     text1: (
       <p>
-        We'll need <span className="text-[#56b28b]">Rs. 1.5 crore</span> in 8-10
-        years for our <span className="text-[#56b28b]">kids</span> higher
-        education and wedding.
+        We'll need <span className="text-[#56b28b]">Rs. 1.5 crore</span> for our <span className="text-[#56b28b]">kids'</span> future.
       </p>
     ),
     text2: '“Give us a long-term investment plan!”',
@@ -138,7 +132,7 @@ export default function Hero() {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-screen min-h-[500px] w-full">
+              <div className="relative h-[calc(100vh-80px)] min-h-[500px] w-full">
                 <Image
                   src={slide.image}
                   alt={slide.altImage}
@@ -164,13 +158,13 @@ export default function Hero() {
                     >
                       <div className={cn(
                         "font-heading font-extrabold tracking-tight drop-shadow-lg",
-                        slide.text1Size
+                        "text-3xl sm:text-4xl md:text-5xl"
                       )}>
                         {slide.text1}
                       </div>
                       <p className={cn(
                         "pt-6 font-normal text-white text-left leading-tight font-caveat-brush",
-                        slide.text2Size
+                        "text-xl sm:text-2xl md:text-3xl"
                       )}>
                         {slide.text2}
                       </p>
@@ -198,5 +192,3 @@ export default function Hero() {
     </section>
   );
 }
-
-    
