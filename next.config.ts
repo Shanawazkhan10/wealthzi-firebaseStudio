@@ -1,26 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // 👈 static export enable
+  // ✅ Enables static export (replaces `next export`)
+  output: 'export',
+
+  // ✅ Recommended for performance (optional)
   reactStrictMode: false,
+
+  // ✅ Ignore build-time TS & ESLint errors in CI/CD
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+  // ✅ Required for static sites (no server image optimization)
   images: {
-    unoptimized: true, // 👈 disable Next/Image optimization for static export
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "www.wealthzi.com",
         port: "",
-        pathname: "landing-page/banner.gif",
-      }
+        pathname: "/landing-page/**", // ✅ wildcard fix (was missing `/`)
+      },
     ],
   },
-  // ⚠ Static export me redirects/rewrites nahi chalega
-  // agar redirect chahiye toh client-side JS se handle karo
+
+  // ✅ Optional: add trailing slashes (helps with Nginx & GitHub Pages)
+  trailingSlash: true,
+
+  // ✅ Environment variables (if needed)
+  env: {
+    NEXT_PUBLIC_SITE_URL: "https://www.wealthzi.com",
+  },
+
+  // ⚠ Redirects and rewrites don’t work with static export.
+  // Use <Redirect> in components or client-side router.push().
   // async redirects() {
   //   return [
   //     { source: "/calculators/LumpSumCalculator", destination: "/calculators/lumpsum-calculator", permanent: true },

@@ -9,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const companyLinks = [
@@ -46,86 +47,141 @@ export default function Footer() {
   return (
     <footer className="bg-[#0f172a] text-[#f8fafc]">
       <div className="container py-12 lg:py-16">
-        <h2 className="font-heading font-bold text-lg md:text-xl text-white mb-8">BUILD WEALTH WITH CONFIDENCE</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-            {/* Column 1: Contact and Compliance */}
-            <div className="lg:col-span-6 space-y-8">
-                 <div>
-                    <p className="text-base md:text-lg text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
-                    <div className="mt-4 space-y-3 text-sm md:text-base text-[#cbd5e1]">
-                        <div className="flex items-start gap-2">
-                            <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                            <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Phone className="h-4 w-4" />
-                            <a href="tel:01142542796" className="hover:text-[#f59e0b]">011-42542796</a>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Mail className="h-4 w-4" />
-                            <a href="mailto:service@wealthzi.com" className="hover:text-[#f59e0b]">service@wealthzi.com</a>
-                        </div>
-                    </div>
-                 </div>
+        <div className="hidden md:block">
+          <h2 className="font-heading font-bold text-lg md:text-xl text-white mb-8">BUILD WEALTH WITH CONFIDENCE</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+              {/* Column 1: Contact and Compliance */}
+              <div className="lg:col-span-6 space-y-8">
+                   <div>
+                      <p className="text-base md:text-lg text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
+                      <div className="mt-4 space-y-3 text-sm md:text-base text-[#cbd5e1]">
+                          <div className="flex items-start gap-2">
+                              <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                              <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                              <Phone className="h-4 w-4" />
+                              <a href="tel:01142542796" className="hover:text-[#f59e0b]">011-42542796</a>
+                          </div>
+                          <div className="flex items-center gap-2">
+                              <Mail className="h-4 w-4" />
+                              <a href="mailto:service@wealthzi.com" className="hover:text-[#f59e0b]">service@wealthzi.com</a>
+                          </div>
+                      </div>
+                   </div>
 
-                 <div>
-                    <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Status of Annual Compliance Report</h3>
-                    <div className="overflow-x-auto">
-                        <Table className="w-full text-sm md:text-base text-[#f8fafc] border border-white/20 min-w-[600px]">
-                        <TableHeader>
-                            <TableRow className="border-white/20">
-                            <TableHead className="text-white font-medium">Sr. No</TableHead>
-                            <TableHead className="text-white font-medium">Financial Year</TableHead>
-                            <TableHead className="text-white font-medium">Compliance Audit Status</TableHead>
-                            <TableHead className="text-white font-medium">Remarks, if any</TableHead>
-                            </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                            {complianceData.map((row) => (
-                            <TableRow key={row.sl} className="border-white/20 hover:bg-white/10">
-                                <TableCell>{row.sl}</TableCell>
-                                <TableCell>{row.fy}</TableCell>
-                                <TableCell>{row.status}</TableCell>
-                                <TableCell>{row.remarks}</TableCell>
-                            </TableRow>
-                            ))}
-                        </TableBody>
-                        </Table>
-                    </div>
-                 </div>
-            </div>
+                   <div>
+                      <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Status of Annual Compliance Report</h3>
+                      <div className="overflow-x-auto">
+                          <Table className="w-full text-sm md:text-base text-[#f8fafc] border border-white/20 min-w-[600px]">
+                          <TableHeader>
+                              <TableRow className="border-white/20">
+                              <TableHead className="text-white font-medium">Sr. No</TableHead>
+                              <TableHead className="text-white font-medium">Financial Year</TableHead>
+                              <TableHead className="text-white font-medium">Compliance Audit Status</TableHead>
+                              <TableHead className="text-white font-medium">Remarks, if any</TableHead>
+                              </TableRow>
+                          </TableHeader>
+                          <TableBody>
+                              {complianceData.map((row) => (
+                              <TableRow key={row.sl} className="border-white/20 hover:bg-white/10">
+                                  <TableCell>{row.sl}</TableCell>
+                                  <TableCell>{row.fy}</TableCell>
+                                  <TableCell>{row.status}</TableCell>
+                                  <TableCell>{row.remarks}</TableCell>
+                              </TableRow>
+                              ))}
+                          </TableBody>
+                          </Table>
+                      </div>
+                   </div>
+              </div>
 
-            {/* Column 2: Links */}
-            <div className="lg:col-span-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div>
-                        <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
-                        <ul className="mt-4 space-y-3">
-                        {companyLinks.map((link) => (
-                            <li key={link.title}>
-                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                                {link.title}
-                            </Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 className="font-heading font-semibold text-lg text-white">CALCULATORS</h3>
-                        <ul className="mt-4 space-y-3">
-                        {calculatorLinks.map((link) => (
-                            <li key={link.title}>
-                            <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                                {link.title}
-                            </Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
+              {/* Column 2: Links */}
+              <div className="lg:col-span-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                      <div>
+                          <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
+                          <ul className="mt-4 space-y-3">
+                          {companyLinks.map((link) => (
+                              <li key={link.title}>
+                              <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                                  {link.title}
+                              </Link>
+                              </li>
+                          ))}
+                          </ul>
+                      </div>
+                      <div>
+                          <h3 className="font-heading font-semibold text-lg text-white">CALCULATORS</h3>
+                          <ul className="mt-4 space-y-3">
+                          {calculatorLinks.map((link) => (
+                              <li key={link.title}>
+                              <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                                  {link.title}
+                              </Link>
+                              </li>
+                          ))}
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </div>
+
+        {/* Mobile Accordion View */}
+        <div className="md:hidden">
+          <Accordion type="multiple" className="w-full">
+            <AccordionItem value="contact">
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Contact Us</AccordionTrigger>
+              <AccordionContent className="space-y-3 text-sm text-[#cbd5e1] pt-4">
+                  <p className="font-semibold">Lime Internet Pvt. Ltd</p>
+                  <div className="flex items-start gap-3">
+                      <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                      <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                      <Phone className="h-5 w-5" />
+                      <a href="tel:01142542796" className="hover:text-[#f59e0b]">011-42542796</a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                      <Mail className="h-5 w-5" />
+                      <a href="mailto:service@wealthzi.com" className="hover:text-[#f59e0b]">service@wealthzi.com</a>
+                  </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="company">
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Company</AccordionTrigger>
+              <AccordionContent className="pt-4">
+                  <ul className="space-y-3">
+                    {companyLinks.map((link) => (
+                        <li key={link.title}>
+                        <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                            {link.title}
+                        </Link>
+                        </li>
+                    ))}
+                  </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="calculators">
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Calculators</AccordionTrigger>
+              <AccordionContent className="pt-4">
+                <ul className="space-y-3">
+                  {calculatorLinks.map((link) => (
+                      <li key={link.title}>
+                      <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
+                          {link.title}
+                      </Link>
+                      </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+
 
         {/* Regulatory */}
          <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1] space-y-4">
