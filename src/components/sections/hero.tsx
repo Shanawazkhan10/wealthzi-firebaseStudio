@@ -134,7 +134,7 @@ export default function Hero() {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[calc(100vh-80px)] min-h-[500px] w-full">
+              <div className="relative h-[calc(100vh-80px)] min-h-screen w-full">
                 <Image
                   src={slide.image}
                   alt={slide.altImage}
