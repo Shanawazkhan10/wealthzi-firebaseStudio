@@ -30,7 +30,7 @@ export default function RegulatoryDisclosurePage() {
             </p>
 
             <h3 className="text-lg md:text-xl font-bold mt-8 mb-4 text-center">
-              Data for the month ending - 31st Novermber, 2025
+              Data for the month ending - 30th November, 2025
             </h3>
             <div className="overflow-x-auto">
                 <Table className='min-w-[800px]'>
