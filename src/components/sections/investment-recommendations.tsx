@@ -61,7 +61,6 @@ export default function InvestmentRecommendations() {
       setResult(recommendations);
     } catch (e) {
       setError('Failed to get recommendations. Please try again.');
-      console.error(e);
     } finally {
       setLoading(false);
     }

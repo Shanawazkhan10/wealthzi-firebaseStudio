@@ -53,6 +53,14 @@ export default function Header() {
           <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
+              className="font-bold rounded-[10px] border-tranasparent hover:border-[#00313A] text-white bg-transparent hover:bg-white hover:text-[#4ca670]"
+            >
+              <a href="/nri-services">
+                NRI Services
+              </a>
+            </Button>
+            <Button
+              asChild
               className="font-bold rounded-[10px]"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
@@ -80,6 +88,16 @@ export default function Header() {
                   />
                 </Link>
                 <div className="absolute bottom-4 left-4 right-4 flex flex-col space-y-2">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="font-bold rounded-[10px]"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Link href="/nri-services">
+                      NRI Services
+                    </Link>
+                  </Button>
                   <Button
                     asChild
                     className="font-bold rounded-[10px]"
