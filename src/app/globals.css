@@ -91,7 +91,7 @@
   .hero-bg {
     background: linear-gradient(-230deg, rgba(8, 46, 36, 0.95) 0%, rgba(2, 196, 121, 0.08) 50%, rgba(11, 61, 40, 0.95) 100%);
     background-size: 200% 200%;
-    animation: gradientShift 10s ease;
+    /* animation: gradientShift 10s ease; */
   }
 
   @keyframes gradientShift {
