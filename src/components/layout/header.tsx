@@ -10,7 +10,6 @@ import wealthziLogo from "../../../public/svgs/wealthziLogo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="fixed z-50 w-full">
       {/* Marquee Banner - Kept as is */}
@@ -40,16 +39,16 @@ export default function Header() {
 
       {/* Main Header - Added gradient effect */}
       <header className="w-full bg-gradient-to-b from-[#00313A] to-transparent">
-        <div className="flex h-16 items-center justify-between px-6">
+        <div className="flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
               src={wealthziLogo}
               alt="Wealthzi Logo"
-              className="h-12 w-auto"
+              className="h-10 md:h-12 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation - Removed nav links, only keeping button */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
@@ -61,7 +60,7 @@ export default function Header() {
             </Button>
             <Button
               asChild
-              className="font-bold rounded-[10px]"
+              className="font-bold rounded-[10px] h-11 px-6 text-base"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
               <a href="https://app.wealthzi.com/login">
@@ -91,7 +90,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="outline"
-                    className="font-bold rounded-[10px]"
+                    className="font-bold rounded-[10px] bg-[#EDF4FE] text-[#4ca670]"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Link href="/nri-services">
@@ -110,6 +109,16 @@ export default function Header() {
                 </div>
               </SheetContent>
             </Sheet>
+            {/* <Button
+              asChild
+              size="sm"
+              className="font-bold rounded-[10px] h-9 px-4 text-sm"
+              style={{ backgroundColor: 'rgb(76 167 113)' }}
+            >
+              <a href="https://app.wealthzi.com/login">
+                Login/Register
+              </a>
+            </Button> */}
           </div>
         </div>
       </header>
