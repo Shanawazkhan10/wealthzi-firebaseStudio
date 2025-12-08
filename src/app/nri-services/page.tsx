@@ -9,6 +9,7 @@ import Testimonials from "@/components/NRI/testimonials";
 import NRIHeroSection from "@/components/NRI/heroSection";
 import WhyChooseSection from "@/components/NRI/whyChooseUs";
 import KeySolutionsList from "@/components/NRI/explainedSolution";
+import AMCMarqueeCarousel from "@/components/NRI/amcCarousal";
 
 export default function NRIServicesPage() {
   return (
@@ -23,6 +24,7 @@ export default function NRIServicesPage() {
         <Team />
         <KeySolutionsList />
         <WhyChooseSection />
+        <AMCMarqueeCarousel />
         <Testimonials />
       </main>
       <Footer />
