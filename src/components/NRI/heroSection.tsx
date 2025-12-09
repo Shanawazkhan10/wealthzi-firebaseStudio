@@ -28,14 +28,14 @@ function HeroSection() {
               for returnees, and secure wealth creation via India GIFT City.
             </p>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-start items-center mb-8">
+            {/* <div className="flex flex-col md:flex-row gap-4 justify-start items-center mb-8">
               <Badge variant="secondary" className="text-sm py-2 px-4">
                 Managed by SEBI-Registered Advisors
               </Badge>
               <Badge variant="secondary" className="text-sm py-2 px-4">
                 Compliant. Transparent. India & Global Reach.
               </Badge>
-            </div>
+            </div> */}
 
             <div className="flex flex-col md:flex-row gap-4 justify-start">
               <Dialog>
