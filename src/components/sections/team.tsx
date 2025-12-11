@@ -49,7 +49,7 @@ const teamMembers = [
 
 const reviewsArray = [
   {
-    title: "Rs. 500cr+",
+    title: "₹500cr+",
     subtitle: "Assets Managed",
     emoji: SlightlySmilingFace,
   },
@@ -130,7 +130,7 @@ export default function Team() {
                 <div>
                   <h3 className="font-heading text-xl md:text-2xl font-bold">Backed by Trust</h3>
                   <p className="mt-2 text-primary-foreground/80 text-base md:text-lg leading-relaxed">
-                    Team with decades of wealth management and technology experience in managing Rs. 2,500 crore worth assets of 1000+ high net-worth clients.
+                    Team with decades of wealth management and technology experience in managing ₹2,500 crore worth assets of 1000+ high net-worth clients.
                   </p>
                 </div>
               </CardContent>

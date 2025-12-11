@@ -21,14 +21,14 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieC
 import { Loader2 } from 'lucide-react';
 
 const formatCurrency = (value: number, toFixed = 0) => {
-    if (isNaN(value) || !isFinite(value)) return 'Rs. 0';
+    if (isNaN(value) || !isFinite(value)) return '₹0';
     if (value >= 10000000) {
-      return `Rs. ${(value / 10000000).toFixed(2)} Cr`;
+      return `₹${(value / 10000000).toFixed(2)} Cr`;
     }
     if (value >= 100000) {
-      return `Rs. ${(value / 100000).toFixed(2)} Lac`;
+      return `₹${(value / 100000).toFixed(2)} Lac`;
     }
-    return `Rs. ${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
+    return `₹${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
   };
 
 const CustomTooltip = ({ active, payload, label, chartConfig }: any) => {
@@ -107,9 +107,7 @@ function SIPCalculator() {
               >
                 <span>Monthly SIP Amount</span>
                 <div className="relative">
-                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">
-                    Rs.
-                  </span>
+                  <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                   <Input
                     id="monthly-investment"
                     type="number"
@@ -132,7 +130,7 @@ function SIPCalculator() {
                 className="mt-2"
               />
               <p className="text-xs md:text-sm text-foreground text-right mt-1">
-                (Rs. 500 to Rs. 10 Lac)
+                (₹500 to ₹10 Lac)
               </p>
             </div>
 
@@ -323,12 +321,12 @@ function LumpsumCalculator() {
                 <Label htmlFor="lumpsum-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Lumpsum Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                     <Input id="lumpsum-amount" type="number" value={lumpSumAmount} onChange={(e) => setLumpSumAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={1000} max={50000000} />
                   </div>
                 </Label>
                 <Slider value={[lumpSumAmount]} onValueChange={(v) => setLumpSumAmount(v[0])} min={1000} max={50000000} step={1000} className="mt-2" />
-                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 1,000 to Rs. 5 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(₹1,000 to ₹5 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-lumpsum" className="flex justify-between items-center text-sm md:text-base">
@@ -424,12 +422,12 @@ function LumpsumCalculator() {
                 <Label htmlFor="target-amount" className="flex justify-between items-center text-sm md:text-base">
                   <span>Target Amount</span>
                   <div className="relative">
-                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
+                     <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                     <Input id="target-amount" type="number" value={targetAmount} onChange={(e) => setTargetAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" min={10000} max={100000000}/>
                   </div>
                 </Label>
                 <Slider value={[targetAmount]} onValueChange={(v) => setTargetAmount(v[0])} min={10000} max={100000000} step={10000} className="mt-2" />
-                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 10,000 to Rs. 10 Cr)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(₹10,000 to ₹10 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-of-return-goal" className="flex justify-between items-center text-sm md:text-base">
@@ -506,12 +504,12 @@ function LumpsumCalculator() {
                 <Label htmlFor="principal-fd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Investment Amount</span>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                     <Input id="principal-fd" type="number" value={principal} onChange={(e) => setPrincipal(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[principal]} onValueChange={(v) => setPrincipal(v[0])} min={5000} max={10000000} step={5000} className="mt-2" />
-                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 5,000 to Rs. 1 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(₹5,000 to ₹1 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="rate-fd" className="flex justify-between items-center text-sm md:text-base">
@@ -618,12 +616,12 @@ function LumpsumCalculator() {
                 <Label htmlFor="monthly-deposit-rd" className="flex justify-between items-center text-sm md:text-base">
                   <span>Monthly Deposit</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                     <Input id="monthly-deposit-rd" type="number" value={monthlyDeposit} onChange={(e) => setMonthlyDeposit(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[monthlyDeposit]} onValueChange={(v) => setMonthlyDeposit(v[0])} min={500} max={100000} step={500} className="mt-2" />
-                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 500 to Rs. 1 Lac)</p>
+                 <p className="text-xs md:text-sm text-foreground text-right mt-1">(₹500 to ₹1 Lac)</p>
               </div>
               <div>
                 <Label htmlFor="rate-rd" className="flex justify-between items-center text-sm md:text-base">
@@ -705,12 +703,12 @@ function LumpsumCalculator() {
                 <Label htmlFor="loan-amount-emi" className="flex justify-between items-center text-sm md:text-base">
                   <span>Loan Amount</span>
                    <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">Rs.</span>
+                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-foreground">₹</span>
                     <Input id="loan-amount-emi" type="number" value={loanAmount} onChange={(e) => setLoanAmount(Number(e.target.value))} className="w-32 md:w-36 pl-9" />
                   </div>
                 </Label>
                 <Slider value={[loanAmount]} onValueChange={(v) => setLoanAmount(v[0])} min={50000} max={20000000} step={10000} className="mt-2" />
-                <p className="text-xs md:text-sm text-foreground text-right mt-1">(Rs. 50,000 to Rs. 2 Cr)</p>
+                <p className="text-xs md:text-sm text-foreground text-right mt-1">(₹50,000 to ₹2 Cr)</p>
               </div>
               <div>
                 <Label htmlFor="interest-rate-emi" className="flex justify-between items-center text-sm md:text-base">

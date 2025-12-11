@@ -35,7 +35,7 @@ const formSchema = z.object({
     required_error: 'Please select your risk tolerance.',
   }),
   investmentAmount: z.coerce.number().min(1000, {
-    message: 'Investment amount must be at least Rs 1,000.',
+    message: 'Investment amount must be at least ₹1,000.',
   }),
 });
 
@@ -129,7 +129,7 @@ export default function InvestmentRecommendations() {
                     name="investmentAmount"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Investment Amount (Rs)</FormLabel>
+                        <FormLabel>Investment Amount (₹)</FormLabel>
                         <FormControl>
                           <Input type="number" placeholder="50000" {...field} />
                         </FormControl>

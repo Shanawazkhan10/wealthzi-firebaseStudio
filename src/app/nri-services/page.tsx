@@ -10,6 +10,7 @@ import NRIHeroSection from "@/components/NRI/heroSection";
 import WhyChooseSection from "@/components/NRI/whyChooseUs";
 import KeySolutionsList from "@/components/NRI/explainedSolution";
 import AMCMarqueeCarousel from "@/components/NRI/amcCarousal";
+import AnimatedImageCarousel from "@/components/NRI/AnimatedImageCarousel";
 
 export default function NRIServicesPage() {
   return (
@@ -18,6 +19,7 @@ export default function NRIServicesPage() {
       <main className="pt-8">
         <NRIHeroSection />
         <NriExpertise />
+        <AnimatedImageCarousel />
         <ImageShowcaseCarousel />
         <InvestmentSolutionsPage />
         <MapSection />
