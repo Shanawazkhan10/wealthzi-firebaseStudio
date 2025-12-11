@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Dialog,
   DialogTrigger,
@@ -14,36 +13,56 @@ import {
 import Image from "next/image";
 function HeroSection() {
   return (
-    <section className="hero-bg  pt-24 text-white h-screen">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8 items-center justify-between">
-          <div>
-            <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Expert Wealth Management for NRIs. Unlock India's Potential,
-              Globally.
+    <section className="hero-bg pt-16 pb-6 md:pt-24 md:pb-12 text-white">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center justify-between">
+          {/* Text Content */}
+          <div className="w-full mx-0 md:mx-5 flex flex-col justify-center items-start">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
+              Expert Wealth Management for NRIs. Unlock India's Potential, Globally.
             </h1>
-            <p className="text-md md:text-xl mb-8">
-              Tailored guidance across India and global investing, tax-efficient
-              short-term parking, long-term goal planning, retirement solutions
-              for returnees, and secure wealth creation via India GIFT City.
+            <p className="text-sm xs:text-base md:text-xl mb-6 md:mb-8 max-w-2xl">
+              Tailored Global & India-Focused Wealth Solutions for NRIs.
             </p>
-
-            {/* <div className="flex flex-col md:flex-row gap-4 justify-start items-center mb-8">
-              <Badge variant="secondary" className="text-sm py-2 px-4">
-                Managed by SEBI-Registered Advisors
-              </Badge>
-              <Badge variant="secondary" className="text-sm py-2 px-4">
-                Compliant. Transparent. India & Global Reach.
-              </Badge>
-            </div> */}
-
-            <div className="flex flex-col md:flex-row gap-4 justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start mb-6 md:mb-8 w-full">
+              <div className="flex items-center gap-2 bg-white/10 rounded-xl px-2 py-2">
+                <Image
+                  src="https://webassets.nivesh.com/RIA/wealthzi/Content/images/investmentPlanner/taxes.png"
+                  alt="Tax Optimization"
+                  width={48}
+                  height={48}
+                  className="rounded-full border bg-[#E4F4EE] m-1"
+                />
+                <span className="text-xs sm:text-base">Taxation Support</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 rounded-xl px-2 py-2">
+                <Image
+                  src="https://webassets.nivesh.com/RIA/wealthzi/Content/categoryimages/Mandate.png"
+                  alt="Kyc"
+                  width={48}
+                  height={48}
+                  className="rounded-full border bg-[#E4F4EE] m-1"
+                />
+                <span className="text-xs sm:text-base">Easy KYC</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 rounded-xl px-2 py-2">
+                <Image
+                  src="https://webassets.nivesh.com/RIA/wealthzi/Content/images/investmentPlanner/Large-&-Mid-cap.png"
+                  alt="assets"
+                  width={48}
+                  height={48}
+                  className="rounded-full border bg-[#E4F4EE] m-1"
+                />
+                <span className="text-xs sm:text-base">10+ Investment Assets</span>
+              </div>
+            </div>
+            <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 w-full max-w-full md:max-w-none">
               <Dialog>
                 <DialogTrigger asChild>
                   <Button
                     size="lg"
                     variant="secondary"
-                    className="text-lg px-8 py-3 rounded-full bg-[#0077FF] text-white hover:brightness-95"
+                    className="text-base sm:text-lg px-6 py-3 rounded-full bg-[#0077FF] text-white hover:brightness-95 w-full xs:w-auto"
                   >
                     Book a Consultation
                   </Button>
@@ -56,18 +75,10 @@ function HeroSection() {
                     </DialogDescription>
                   </DialogHeader>
                   <form className="grid gap-3 py-4">
-                    <input
-                      name="name"
-                      placeholder="Your name"
-                      className="input"
-                    />
+                    <input name="name" placeholder="Your name" className="input" />
                     <input name="email" placeholder="Email" className="input" />
                     <input name="phone" placeholder="Phone" className="input" />
-                    <textarea
-                      name="notes"
-                      placeholder="Short note"
-                      className="input h-24"
-                    />
+                    <textarea name="notes" placeholder="Short note" className="input h-20" />
                     <DialogFooter>
                       <Button type="submit">Submit</Button>
                     </DialogFooter>
@@ -77,25 +88,26 @@ function HeroSection() {
                   </DialogClose>
                 </DialogContent>
               </Dialog>
-
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-transparent border-white text-white hover:bg-white hover:text-[#0C1B33] rounded-full"
+                className="text-base sm:text-lg px-6 py-3 bg-transparent border-white text-white hover:bg-white hover:text-[#0C1B33] rounded-full w-full xs:w-auto"
               >
                 Get Started
               </Button>
             </div>
           </div>
 
-          <div className="hidden md:block">
+          {/* Hero Image - always visible, properly sized */}
+          <div className="w-full flex items-center justify-center mb-8 md:mb-0">
             <Image
-              src="/familyPlanningMobile.png"
+              src="/web.png"
               alt="Working professional"
               width={640}
-              height={420}
-              className="rounded-xl shadow-lg object-cover"
-              loading="lazy"
+              height={640}
+              sizes="(max-width: 768px) 80vw, 35vw"
+              className="object-cover w-80 sm:w-100 md:w-[560px] lg:w-[640px] h-auto"
+              priority={true}
             />
           </div>
         </div>

@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <head>
       <link rel="icon" type="image/png" href="/wealthZiFav.ico" sizes="32x32" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased overflow-x-hidden">
         <div className="sticky top-0 z-50">
           {/* <Marquee /> */}
           <Header />
