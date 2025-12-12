@@ -40,17 +40,12 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
   className,
   title = "Our Expertise",
   subtitle = "Decades of global wealth experience with India’s fast-evolving wealth ecosystem",
-  intro = `At Wealthzi's NRI Division, we bring together decades of
-  experience in global wealth management and deep expertise in
-  India's investment ecosystem. Whether you're building assets in
-  India, diversifying globally, or preparing to return home, our
-  advisors help you navigate every decision with clarity,
-  precision, and compliance.`,
+  intro = `Wealthzi’s NRI Division combines global expertise with sharp investment insight-helping you grow, diversify, and manage wealth with clarity and confidence.`,
   items = defaultItems,
 }) => {
   return (
     <section
-      className={`py-10 md:py-16 px-4 md:px-8 lg:px-12 ${className || ''} bg-[url('/moneyBackground.jpeg')] bg-cover bg-center bg-no-repeat`}
+      className={`py-10 md:py-16 px-4 md:px-8 lg:px-12 ${className || ""}`}
     >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -58,11 +53,13 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
           <h1 className="text-2xl sm:text-3xl md:text-4xl mb-2 font-bold text-darkText text-center">
             {title}
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-2 font-light text-center">
+          <div className="text-base sm:text-lg md:text-xl text-gray-600 font-light text-center">
             {subtitle}
-          </p>
+          </div>
           {intro && (
-            <p className="text-sm md:text-base text-center text-gray-500 max-w-3xl mx-auto mt-2">{intro}</p>
+            <div className="text-sm md:text-base text-center text-gray-500 max-w-6xl mx-auto">
+              {intro}
+            </div>
           )}
         </div>
 
@@ -95,7 +92,9 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <p className="text-white text-xs md:text-sm italic leading-relaxed">
-                For NRIs, a globally diversified portfolio—carefully managed for currency and compliance—remains the most robust path to building and safeguarding wealth.
+                For NRIs, a globally diversified portfolio—carefully managed for
+                currency and compliance—remains the most robust path to building
+                and safeguarding wealth.
               </p>
             </div>
           </div>
@@ -112,7 +111,10 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
             </div>
             {/* <p className="text-gray-600 text-base leading-relaxed mb-4">{items[1]?.p}</p> */}
             <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-              Protect idle capital from inflation with dollar-based arbitrage options and tax‑efficient arbitrage/bond funds. Stability, fast access and compliance for payroll funds, emergency reserves and transactions.
+              Protect idle capital from inflation with dollar-based arbitrage
+              options and tax‑efficient arbitrage/bond funds. Stability, fast
+              access and compliance for payroll funds, emergency reserves and
+              transactions.
             </p>
           </div>
 
@@ -128,7 +130,10 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
             </div>
             {/* <p className="text-gray-600 text-base leading-relaxed mb-4">{items[2]?.p}</p> */}
             <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-              Goal-based planning with disciplined SIPs, hybrid funds and tax‑advantaged plans. Regular reviews and rebalancing, dynamic shifts across equity, debt, gold and real estate as horizons approach.
+              Goal-based planning with disciplined SIPs, hybrid funds and
+              tax‑advantaged plans. Regular reviews and rebalancing, dynamic
+              shifts across equity, debt, gold and real estate as horizons
+              approach.
             </p>
           </div>
 
@@ -145,10 +150,14 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
               </h3>
               {/* <p className="text-gray-600 text-base leading-relaxed mb-3">{items[3]?.p}</p> */}
               <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-                Gradual reallocation to INR, income creation via SWP and senior schemes, and healthcare & legacy planning. Understand DTAA and compliance for a smooth, stress‑free retirement.
+                Gradual reallocation to INR, income creation via SWP and senior
+                schemes, and healthcare & legacy planning. Understand DTAA and
+                compliance for a smooth, stress‑free retirement.
               </p>
               <div className="mt-5 pt-4 border-t border-emerald-400 ">
-                <span className="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Strategic Advantage</span>
+                <span className="text-xs text-emerald-400 font-semibold uppercase tracking-wider">
+                  Strategic Advantage
+                </span>
               </div>
             </div>
           </div>
@@ -168,11 +177,13 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
               </div>
               {/* <p className="text-gray-300 text-base leading-relaxed mb-3">{items[4]?.p}</p> */}
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                Invest in USD or major currencies, access international funds/bonds/AIFs/PMS, potential tax benefits, simplified onboarding and repatriation, and globally managed strategies for HNIs.
+                Invest in USD or major currencies, access international
+                funds/bonds/AIFs/PMS, potential tax benefits, simplified
+                onboarding and repatriation, and globally managed strategies for
+                HNIs.
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>

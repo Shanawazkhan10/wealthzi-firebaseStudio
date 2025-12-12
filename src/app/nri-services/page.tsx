@@ -20,8 +20,8 @@ export default function NRIServicesPage() {
         <NRIHeroSection />
         <NriExpertise />
         <AnimatedImageCarousel />
-        <ImageShowcaseCarousel />
-        <InvestmentSolutionsPage />
+        {/* <ImageShowcaseCarousel /> */}
+        {/* <InvestmentSolutionsPage /> */}
         <MapSection />
         <Team />
         <KeySolutionsList />

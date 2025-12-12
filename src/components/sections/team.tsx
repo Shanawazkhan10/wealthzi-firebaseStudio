@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Award } from 'lucide-react';
 import Image from 'next/image';
+import { formatCurrency } from "@/lib/formatCurrency";
 
 // Import team member images
 import AdityaImage from '../../../public/Wealthzi_Aditya.png';
@@ -49,7 +50,7 @@ const teamMembers = [
 
 const reviewsArray = [
   {
-    title: "₹500cr+",
+    title: "₹ 500cr+", // ensure correct INR symbol & a non-breaking space after it for clarity
     subtitle: "Assets Managed",
     emoji: SlightlySmilingFace,
   },
@@ -59,7 +60,7 @@ const reviewsArray = [
     emoji: HuggingFace,
   },
   {
-    title: "10K+",
+    title: "15K+",
     subtitle: "Transactions",
     emoji: StarStruck,
   },

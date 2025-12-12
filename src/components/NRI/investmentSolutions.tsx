@@ -111,19 +111,46 @@ const InvestmentSolutionCard = ({
   );
 };
 const InvestmentSolutionsPage = () => {
-  return (
-    <div className="py-10 max-w-7xl mx-auto">
-      <h1 className="text-xl md:text-4xl text-[#022D36] font-bold  mb-6 items-center text-center">
-        NRI Investment & Planning Solutions
-      </h1>
+  // Only 4 main NRI problems retained, adjust order and clarity if desired
+  const mainProblems = [
+    {
+      id: 0,
+      title: 'Goal: Build Wealth Abroad',
+      description: 'I want ₹1 Cr in 5 years from my India investments while living overseas. Show a compliant, achievable plan.',
+      solution: 'We design a SIP-based mutual fund plan mapped to your goals, using NRE/NRO/PIS for regulatory clarity and easy repatriation.',
+    },
+    {
+      id: 1,
+      title: 'Retiree: Tax-Efficient Income',
+      description: 'I am retired or returning to India with a large corpus; I need a monthly income plan with tax efficiency.',
+      solution: 'We build staggered cashflows via debt and growth assets, personalized to your residency and tax bracket, with easy income management.',
+    },
+    {
+      id: 2,
+      title: 'Global Diversification',
+      description: 'I want global exposure but also a solid India base to hedge against currency risk and volatility.',
+      solution: 'We blend Indian and global funds, enable access via NRE/GIFT City, creating dual-currency and multi-market safety nets.',
+    },
+    {
+      id: 3,
+      title: 'Taxation & Compliance Clarity',
+      description: 'I am confused about TDS, DTAA, global tax reporting, and compliance for my investments.',
+      solution: 'We map your residency, optimize accounts, and ensure seamless disclosures and DTAA relief for global and India income.',
+    },
+  ];
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {nriProblems.map((solution) => (
-          <InvestmentSolutionCard
-            key={solution?.id}
-            solution={solution}
-            // Add your handlers here if needed
-          />
+  return (
+    <div className="py-12 max-w-3xl mx-auto">
+      <h1 className="text-2xl sm:text-4xl text-[#022D36] font-bold mb-8 text-center">
+        Main NRI Problem Statements & Solutions
+      </h1>
+      <div className="flex flex-col gap-8">
+        {mainProblems.map((prob) => (
+          <div key={prob.id} className="rounded-2xl border border-border/50 bg-white/70 p-6 shadow-md">
+            <h2 className="text-lg font-bold text-primary mb-2">{prob.title}</h2>
+            <div className="mb-2 text-sm text-muted-foreground">{prob.description}</div>
+            <div className="font-semibold text-emerald-700">Solution: <span className="font-normal text-foreground">{prob.solution}</span></div>
+          </div>
         ))}
       </div>
     </div>

@@ -19,17 +19,7 @@ import {
 } from '@/components/ui/chart';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { Loader2 } from 'lucide-react';
-
-const formatCurrency = (value: number, toFixed = 0) => {
-    if (isNaN(value) || !isFinite(value)) return '₹0';
-    if (value >= 10000000) {
-      return `₹${(value / 10000000).toFixed(2)} Cr`;
-    }
-    if (value >= 100000) {
-      return `₹${(value / 100000).toFixed(2)} Lac`;
-    }
-    return `₹${value.toLocaleString('en-IN', { maximumFractionDigits: toFixed })}`;
-  };
+import { formatCurrency } from "@/lib/formatCurrency";
 
 const CustomTooltip = ({ active, payload, label, chartConfig }: any) => {
     if (active && payload && payload.length) {
