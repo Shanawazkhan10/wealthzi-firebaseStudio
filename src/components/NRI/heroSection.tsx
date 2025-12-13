@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 function HeroSection() {
   return (
-    <section className="hero-bg pt-16 pb-6 md:pt-24 md:pb-12 text-white pb-10">
+    <section className="hero-bg pt-16 pb-6 md:pt-24 md:pb-12 text-white pb-10 h-screen">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center justify-between">
           {/* Text Content */}
@@ -29,8 +29,8 @@ function HeroSection() {
                 <Image
                   src="https://webassets.nivesh.com/RIA/wealthzi/Content/images/investmentPlanner/taxes.png"
                   alt="Tax Optimization"
-                  width={48}
-                  height={48}
+                  width={60}
+                  height={60}
                   className="rounded-full border bg-[#E4F4EE] m-1"
                 />
                 <span className="text-xs sm:text-base">Taxation Support</span>
@@ -39,8 +39,8 @@ function HeroSection() {
                 <Image
                   src="https://webassets.nivesh.com/RIA/wealthzi/Content/categoryimages/Mandate.png"
                   alt="Kyc"
-                  width={48}
-                  height={48}
+                  width={60}
+                  height={60}
                   className="rounded-full border bg-[#E4F4EE] m-1"
                 />
                 <span className="text-xs sm:text-base">Easy KYC</span>
@@ -49,8 +49,8 @@ function HeroSection() {
                 <Image
                   src="https://webassets.nivesh.com/RIA/wealthzi/Content/images/investmentPlanner/Large-&-Mid-cap.png"
                   alt="assets"
-                  width={48}
-                  height={48}
+                  width={60}
+                  height={60}
                   className="rounded-full border bg-[#E4F4EE] m-1"
                 />
                 <span className="text-xs sm:text-base">10+ Investment Assets</span>
