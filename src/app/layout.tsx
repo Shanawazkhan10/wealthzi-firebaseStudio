@@ -4,6 +4,7 @@ import Header from '@/components/layout/header';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
 import './globals.css';
+import BodyClassSetter from './BodyClassSetter';
 
 export const metadata: Metadata = {
   title: 'Wealthzi Digital',
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth overflow-x-hidden">
+    <html lang="en" suppressHydrationWarning>
       <head>
       <link rel="icon" type="image/png" href="/wealthZiFav.ico" sizes="32x32" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,7 +30,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased overflow-x-hidden">
+      <body suppressHydrationWarning>
+        <BodyClassSetter />
         <div className="sticky top-0 z-50">
           {/* <Marquee /> */}
           <Header />
