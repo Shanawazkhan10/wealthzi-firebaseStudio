@@ -36,8 +36,7 @@ function WhyChooseSection({
     <section className="py-16 px-4 bg-primary text-primary-foreground fade-onload h-screen items-center flex">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
-          Why Choose Nivesh.com's NRI Division?
-        </h2>
+Why Wealthzi is the Trusted Choice for NRIs?        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((r, i) => (
             <div

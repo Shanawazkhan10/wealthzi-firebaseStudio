@@ -27,12 +27,12 @@ const defaultItems: ExpertiseItem[] = [
     p: "Structured solutions for education, housing and more",
   },
   {
-    h: "Retirement for Returning NRIs",
-    p: "Custom INR income plans and smooth transition",
-  },
-  {
     h: "Wealth via GIFT City",
     p: "Tax‑friendly gateway to global and India‑linked assets",
+  },
+  {
+    h: "Tax Optimization and Compliant Execution",
+    p: "Custom INR income plans and smooth transition",
   },
 ];
 
@@ -40,7 +40,7 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
   className,
   title = "Our Expertise",
   subtitle = "Decades of global wealth experience with India’s fast-evolving wealth ecosystem",
-  intro = `Wealthzi’s NRI Division combines global expertise with sharp investment insight-helping you grow, diversify, and manage wealth with clarity and confidence.`,
+  intro = `Wealthzi combines global expertise with sharp investment insight-helping you grow, diversify, and manage wealth with clarity, confidence & trust.`,
   items = defaultItems,
 }) => {
   return (
@@ -78,7 +78,7 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
               <ul className="text-emerald-50 text-xs sm:text-sm md:text-lg mb-6 leading-relaxed list-disc list-inside space-y-1 pl-3">
                 <li>Ease of Digital KYC</li>
                 <li>Goal Planning</li>
-                <li>Globally Diversified Investment Solution</li>
+                <li>Globally Diversified Investment Solutions</li>
                 <li>Gift City Solution</li>
                 <li>Tax Optimization and Compliant Execution</li>
               </ul>
@@ -92,9 +92,10 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
               <p className="text-white text-xs md:text-sm italic leading-relaxed">
-                For NRIs, a globally diversified portfolio—carefully managed for
-                currency and compliance—remains the most robust path to building
-                and safeguarding wealth.
+                For Indians abroad, investing is not just about returns—it’s
+                about staying connected to opportunity at home and across the
+                world. True wealth is built where global access meets Indian
+                insight.{" "}
               </p>
             </div>
           </div>
@@ -111,10 +112,10 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
             </div>
             {/* <p className="text-gray-600 text-base leading-relaxed mb-4">{items[1]?.p}</p> */}
             <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-              Protect idle capital from inflation with dollar-based arbitrage
-              options and tax‑efficient arbitrage/bond funds. Stability, fast
-              access and compliance for payroll funds, emergency reserves and
-              transactions.
+              Goal-based planning via disciplined SIPs, with better asset
+              allocation mix enabling risk adjusted and tax‑efficient portfolio
+              growth. Protect idle capital from inflation with stability, fast
+              access and efficient money mangement.
             </p>
           </div>
 
@@ -130,10 +131,10 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
             </div>
             {/* <p className="text-gray-600 text-base leading-relaxed mb-4">{items[2]?.p}</p> */}
             <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-              Goal-based planning with disciplined SIPs, hybrid funds and
-              tax‑advantaged plans. Regular reviews and rebalancing, dynamic
-              shifts across equity, debt, gold and real estate as horizons
-              approach.
+              Global diversification provides strategic exposure to
+              international markets, reducing regional risk and enhancing
+              portfolio resilience. It enables balanced, risk-adjusted returns
+              through access to global growth opportunities.
             </p>
           </div>
 
@@ -146,13 +147,14 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
             </div>
             <div className="flex-1">
               <h3 className="text-base sm:text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                {items[4]?.h}
+                {items[3]?.h}
               </h3>
               {/* <p className="text-gray-600 text-base leading-relaxed mb-3">{items[3]?.p}</p> */}
               <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">
-                Gradual reallocation to INR, income creation via SWP and senior
-                schemes, and healthcare & legacy planning. Understand DTAA and
-                compliance for a smooth, stress‑free retirement.
+                GIFT City offers access to global financial markets through a
+                world-class international financial services hub. It enables
+                investors to leverage cross-border opportunities with a robust
+                regulatory framework and tax efficiencies.
               </p>
               <div className="mt-5 pt-4 border-t border-emerald-400 ">
                 <span className="text-xs text-emerald-400 font-semibold uppercase tracking-wider">
@@ -172,15 +174,15 @@ const NriExpertise: React.FC<NriExpertiseProps> = ({
                   05
                 </div>
                 <h3 className="text-base sm:text-xl md:text-2xl font-bold text-[#ffffff] mb-3 mx-3">
-                  {items[3]?.h}
+                  {items[4]?.h}
                 </h3>
               </div>
               {/* <p className="text-gray-300 text-base leading-relaxed mb-3">{items[4]?.p}</p> */}
               <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                Invest in USD or major currencies, access international
-                funds/bonds/AIFs/PMS, potential tax benefits, simplified
-                onboarding and repatriation, and globally managed strategies for
-                HNIs.
+                Structured tax optimization strategies help enhance post-tax
+                returns while adhering to global regulatory standards. Seamless,
+                compliant execution ensures transparency, governance, and
+                operational efficiency across jurisdictions.
               </p>
             </div>
           </div>

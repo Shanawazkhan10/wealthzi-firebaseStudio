@@ -24,7 +24,7 @@ export default function NRIServicesPage() {
         {/* <InvestmentSolutionsPage /> */}
         <MapSection />
         <Team />
-        <KeySolutionsList />
+        {/* <KeySolutionsList /> */}
         <WhyChooseSection />
         <AMCMarqueeCarousel />
         <Testimonials />

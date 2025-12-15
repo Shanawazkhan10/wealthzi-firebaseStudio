@@ -4,8 +4,7 @@ function MapSection() {
   return (
     <section className="bg-[#022D36] ">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-8">
-        Proudly supporting NRIs and OCIs across the globe with energy and
-        excellence.{" "}
+        Empowering NRIs and OCIs to create enduring wealth with excellence.{" "}
       </h2>
       <div>
         <Image
@@ -22,3 +21,5 @@ function MapSection() {
 }
 
 export default MapSection;
+
+// USA, kenya, UAE, QAtar, oman,austraila, singapore, UK, canada,  

@@ -22,7 +22,7 @@ function HeroSection() {
               Expert Wealth Management for NRIs. Unlock India's Potential, Globally.
             </h1>
             <p className="text-sm xs:text-base md:text-xl mb-6 md:mb-8 max-w-2xl">
-              Tailored Global & India-Focused Wealth Solutions for NRIs.
+              Curated & Customized Global Focused Wealth Solutions for NRIs.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start mb-6 md:mb-8 w-full">
               <div className="flex items-center gap-2 bg-white/10 rounded-xl px-2 py-2">
@@ -33,7 +33,7 @@ function HeroSection() {
                   height={60}
                   className="rounded-full border bg-[#E4F4EE] m-1"
                 />
-                <span className="text-xs sm:text-base">Taxation Support</span>
+                <span className="text-xs sm:text-base">Taxation & Compliance</span>
               </div>
               <div className="flex items-center gap-2 bg-white/10 rounded-xl px-2 py-2">
                 <Image
