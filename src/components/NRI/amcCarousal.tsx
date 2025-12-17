@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const AmcBaseUrl = "https://webassets.nivesh.com/logo/amc/";
 const AMCIconUrl = {
@@ -57,12 +57,36 @@ const AMCIconUrl = {
 export default function AMCMarqueeCarousel() {
   const [isPaused, setIsPaused] = useState(false);
   const [iconsArray, setIconsArray] = useState<string[]>([]);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const keysRef = useRef<string[]>([]);
 
   useEffect(() => {
     const keys = Object.keys(AMCIconUrl);
-    const duplicateCount =
-      typeof window !== "undefined" && window.innerWidth < 768 ? 4 : 3;
-    setIconsArray(Array(duplicateCount).fill(keys).flat());
+    keysRef.current = keys;
+    
+    const getDuplicateCount = () => {
+      if (typeof window === "undefined") return 3;
+      return window.innerWidth < 768 ? 6 : 4; // Increased for full viewport coverage
+    };
+
+    const duplicateCount = getDuplicateCount();
+    const fullArray = Array(duplicateCount).fill(keys).flat();
+    setIconsArray(fullArray);
+  }, []);
+
+  // Handle window resize to update duplicates
+  useEffect(() => {
+    const handleResize = () => {
+      const keys = keysRef.current;
+      if (!keys.length) return;
+      
+      const duplicateCount = window.innerWidth < 768 ? 6 : 4;
+      const fullArray = Array(duplicateCount).fill(keys).flat();
+      setIconsArray(fullArray);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleEnter = () => setIsPaused(true);
@@ -70,11 +94,12 @@ export default function AMCMarqueeCarousel() {
 
   return (
     <div className="overflow-hidden bg-gradient-to-r from-slate-50 to-slate-100 py-6 md:py-8">
-      <div className="text-[#022D36] text-xl text-center font-semibold mb-4 ">
+      <div className="text-[#022D36] text-xl text-center font-semibold mb-4">
         Trusted by all AMCs
       </div>
       <div
-        className={`flex animate-marquee ${
+        ref={marqueeRef}
+        className={`flex animate-marquee-infinite ${
           isPaused ? "[animation-play-state:paused]" : ""
         }`}
         onMouseEnter={handleEnter}
