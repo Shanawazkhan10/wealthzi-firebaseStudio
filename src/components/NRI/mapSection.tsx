@@ -10,8 +10,8 @@ function MapSection() {
         <Image
           src="/images/Map.png"
           alt="map"
-          width={1000}
-          height={800}
+          width={1500}
+          height={1000}
           className="items-center mx-auto"
           loading="lazy"
         />

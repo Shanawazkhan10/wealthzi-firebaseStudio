@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 function HeroSection() {
   return (
-    <section className="hero-bg pt-16 pb-6 md:pt-24 md:pb-12 text-white pb-10 h-screen">
+    <section id="nri-hero" className="hero-bg pt-16 pb-6 md:pt-24 md:pb-12 text-white pb-10 h-screen">
       <div className="max-w-7xl mx-auto px-3 sm:px-6">
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-8 items-center justify-between">
           {/* Text Content */}
@@ -57,44 +57,18 @@ function HeroSection() {
               </div>
             </div>
             <div className="flex flex-col xs:flex-row gap-3 xs:gap-4 w-full max-w-full md:max-w-none">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    variant="secondary"
-                    className="text-base sm:text-lg px-6 py-3 rounded-full bg-[#00313A] text-white hover:brightness-95 w-full xs:w-auto"
-                  >
-                    Book a Consultation
-                  </Button>
-                </DialogTrigger>
-                <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Book a Consultation</DialogTitle>
-                    <DialogDescription>
-                      Share basic details and our advisor will reach out.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <form className="grid gap-3 py-4">
-                    <input name="name" placeholder="Your name" className="input p-2" />
-                    <input name="email" placeholder="Email" className="input p-2" />
-                    <input name="phone" placeholder="Phone" className="input p-2" />
-                    <textarea name="notes" rows={3} placeholder="Short note" className="input h-20 p-2" />
-                    <DialogFooter>
-                      <Button type="submit">Submit</Button>
-                    </DialogFooter>
-                  </form>
-                  <DialogClose asChild>
-                    <button className="sr-only">Close</button>
-                  </DialogClose>
-                </DialogContent>
-              </Dialog>
-              {/* <Button
+              <Button
                 size="lg"
-                variant="outline"
-                className="text-base sm:text-lg px-6 py-3 bg-transparent border-white text-white hover:bg-white hover:text-[#0C1B33] rounded-full w-full xs:w-auto"
+                variant="secondary"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const el = document.getElementById('consult');
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }}
+                className="text-base sm:text-lg px-6 py-3 rounded-full bg-[#00313A] text-white hover:brightness-95 w-full xs:w-auto"
               >
-                Get Started
-              </Button> */}
+                Book a Consultation
+              </Button>
             </div>
           </div>
 

@@ -6,10 +6,13 @@ import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import wealthziLogo from "../../../public/svgs/wealthziLogo.svg";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const nriActive = pathname?.startsWith('/nri-services');
   return (
     <div className="fixed z-50 w-full">
       {/* Marquee Banner - Kept as is */}
@@ -52,7 +55,7 @@ export default function Header() {
           <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
-              className="font-bold rounded-[10px] border-tranasparent hover:border-[#00313A] text-white bg-transparent hover:bg-white hover:text-[#4ca670]"
+              className={`font-bold rounded-[10px] border-tranasparent hover:border-[#00313A] ${nriActive ? 'bg-white text-[#4ca670]' : 'text-white bg-transparent hover:bg-white hover:text-[#4ca670]'}`}
             >
               <a href="/nri-services">
                 NRI Services
@@ -90,7 +93,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="outline"
-                    className="font-bold rounded-[10px] bg-[#EDF4FE] text-[#4ca670]"
+                    className={`font-bold rounded-[10px] hover:bg-white hover:text-[#4ca670] ${nriActive ? 'bg-white text-[#4ca670]' : 'bg-[#EDF4FE] text-[#4ca670]'}`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Link href="/nri-services">
