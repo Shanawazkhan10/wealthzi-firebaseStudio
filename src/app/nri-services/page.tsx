@@ -76,7 +76,7 @@ export default function NRIServicesPage() {
         <ContactForm />
       </main>
       <StickyConsultationFab />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
