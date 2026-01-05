@@ -94,7 +94,7 @@ export default function AMCMarqueeCarousel() {
 
   return (
     <div className="overflow-hidden bg-gradient-to-r from-slate-50 to-slate-100 py-6 md:py-8">
-      <div className="text-[#022D36] text-xl text-center font-semibold mb-4">
+      <div className="text-[#022D36] text-2xl text-center font-bold mb-5">
         Trusted by all AMCs
       </div>
       <div
@@ -112,11 +112,11 @@ export default function AMCMarqueeCarousel() {
             key={`${amcKey}-${index}`}
             className="flex-shrink-0 px-4 md:px-6"
           >
-            <div className="flex items-center justify-center w-20 h-20 md:w-24 md:h-24 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg border border-slate-200 mx-2 transition-transform duration-200 hover:scale-110">
+            <div className="flex items-center justify-center  bg-transparent backdrop-blur-sm mx-2 transition-transform duration-200 hover:scale-110">
               <img
                 src={AMCIconUrl[amcKey as keyof typeof AMCIconUrl]}
                 alt={`${amcKey} AMC Logo`}
-                className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                className="w-20 h-20 md:w-30 md:h-30 object-contain"
                 loading="lazy"
                 onError={(e) => {
                   (e.target as HTMLImageElement).style.display = "none";

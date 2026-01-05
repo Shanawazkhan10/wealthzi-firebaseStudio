@@ -1,17 +1,19 @@
 "use client";
 import Header from "@/components/layout/header";
-import Footer from "@/components/layout/footer";
 import Team from "@/components/sections/team";
-import NriExpertise from "@/components/NRI/keySolutions";
-import InvestmentSolutionsPage from "@/components/NRI/investmentSolutions";
-import MapSection from "@/components/NRI/mapSection";
-import ImageShowcaseCarousel from "@/components/NRI/imageCarousal";
-import Testimonials from "@/components/NRI/testimonials";
 import NRIHeroSection from "@/components/NRI/heroSection";
+import NRIProblemSolutionStrip from "@/components/NRI/ProblemSolutionStrip";
 import WhyChooseSection from "@/components/NRI/whyChooseUs";
+import ServicesOverview from "@/components/NRI/ServicesOverview";
 import KeySolutionsList from "@/components/NRI/explainedSolution";
-import AMCMarqueeCarousel from "@/components/NRI/amcCarousal";
+import BenefitsComparison from "@/components/NRI/BenefitsComparison";
+import DigitalOnboardingTimeline from "@/components/NRI/DigitalOnboardingTimeline";
+import TrustCredibilitySection from "@/components/NRI/TrustCredibilitySection";
+import FinalCTABand from "@/components/NRI/FinalCTABand";
 import AnimatedImageCarousel from "@/components/NRI/AnimatedImageCarousel";
+import MapSection from "@/components/NRI/mapSection";
+import AMCMarqueeCarousel from "@/components/NRI/amcCarousal";
+import Testimonials from "@/components/NRI/testimonials";
 import ContactForm from "@/components/NRI/contactform";
 import React from "react";
 
@@ -62,21 +64,37 @@ export default function NRIServicesPage() {
     <div className="min-h-screen  ">
       <Header />
       <main className="pt-8">
+        {/* HERO SECTION */}
         <NRIHeroSection />
-        <NriExpertise />
-        <AnimatedImageCarousel />
-        {/* <ImageShowcaseCarousel /> */}
-        {/* <InvestmentSolutionsPage /> */}
-        <MapSection />
-        <Team />
-        {/* <KeySolutionsList /> */}
+        {/* PROBLEM/SOLUTION STRIP - NEW */}
+        <NRIProblemSolutionStrip />
+        {/* ANIMATED IMAGE CAROUSEL - OLD */}
+        {/* <AnimatedImageCarousel /> */}
+        {/* WHY CHOOSE US - 4 CARD GRID - NEW */}
         <WhyChooseSection />
+        {/* SERVICES OVERVIEW - FRAME 4 - NEW */}
+        <ServicesOverview />
+        {/* MAP SECTION - OLD */}
+        <MapSection />
+        {/* SERVICES OVERVIEW/CARDS/EXPLAINED SOLUTIONS - OLD */}
+        {/* <KeySolutionsList /> */}
+        {/* BENEFITS COMPARISON - WITH/WITHOUT - NEW */}
+        <BenefitsComparison />
+        {/* DIGITAL ONBOARDING TIMELINE - NEW */}
+        <DigitalOnboardingTimeline />
+        {/* TEAM SECTION - OLD */}
+        {/* TRUST - FINAL BAND - NEW */}
+        <TrustCredibilitySection />
+        <Team />
+        {/* AMC MARQUEE CAROUSEL - OLD */}
         <AMCMarqueeCarousel />
+        {/* TESTIMONIALS - OLD */}
         <Testimonials />
+        <FinalCTABand />
+        {/* CONTACT FORM - OLD */}
         <ContactForm />
       </main>
       <StickyConsultationFab />
-      {/* <Footer /> */}
     </div>
   );
 }

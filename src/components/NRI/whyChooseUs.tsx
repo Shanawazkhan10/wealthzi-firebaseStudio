@@ -1,50 +1,64 @@
+"use client";
+import Image from "next/image";
+
 const whyChooseUs = [
   {
-    title: "NRI-Focused Advisors",
-    description: "Decades of cross-border experience.",
-  },
-  {
-    title: "Comprehensive Compliance",
-    description: "FEMA, SEBI, RBI and FATCA handled end-to-end.",
-  },
-  {
-    title: "Personalized Attention",
+    imageUrl: "/images/Icon1.png",
+    title: "India Market Expertise",
     description:
-      "One point of contact; ongoing portfolio reviews and strategy calls.",
+      "Deep experience across Indian equities, mutual funds, PMS and alternatives-structured for NRI compliance.",
   },
   {
-    title: "Global-Local Integration",
+    imageUrl: "/images/Icon2.png",
+    title: "Global Asset Allocation",
     description:
-      "Synergy of India's growth with international diversification.",
+      "Balanced portfolios across India, global markets, and USD assets including GIFT City opportunities.",
   },
   {
-    title: "Transparent Fees & Secure Onboarding",
-    description: "No surprises, clear reporting, full digital process.",
-  },
-  {
-    title: "Holistic Legacy and Tax Planning",
+    imageUrl: "/images/Icon3.png",
+    title: "Regulatory & Tax-Aware",
     description:
-      "Including estate, inheritance, and multi-country succession management.",
+      "Built around FEMA, DTAA, FATCA and repatriation rules-so your investments remain compliant.",
+  },
+  {
+    imageUrl: "/images/Icon4.png",
+    title: "Digital-First Experience",
+    description:
+      "End-to-end online onboarding, reporting, and portfolio reviews—across time zones.",
   },
 ];
+
 function WhyChooseSection({
   items = whyChooseUs,
 }: {
-  items?: { title: string; description: string }[];
+  items?: { imageUrl?: string; title: string; description: string }[];
 }) {
   return (
-    <section className="px-4 bg-primary text-primary-foreground h-screen items-center flex">
+    <section className="py-16 px-4 bg-emerald-50 border-b border-emerald-100">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-20">
-Why Wealthzi is the Trusted Choice for NRIs?        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {items.map((r, i) => (
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-emerald-900">
+          Designed Specifically for NRI Wealth Needs
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {items.map((card, i) => (
             <div
-              key={r.title ?? i}
-              className="text-center space-y-4 p-4 border border-primary-foreground/20 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              key={card.title ?? i}
+              className="bg-white border border-emerald-100 rounded-2xl shadow text-center p-8 flex flex-col items-center hover:border-emerald-300 transition"
             >
-              <h3 className="text-xl font-semibold">{r.title}</h3>
-              <p className="text-primary-foreground/90">{r.description}</p>
+              {card.imageUrl && (
+                <div className="mb-4">
+                  <Image
+                    src={card.imageUrl}
+                    alt={card.title}
+                    width={100}
+                    height={100}
+                    className="mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <h3 className="text-lg font-bold text-emerald-700 mb-2">{card.title}</h3>
+              <p className="text-gray-700 text-md font-medium mb-0">{card.description}</p>
             </div>
           ))}
         </div>
