@@ -66,7 +66,7 @@ export default function Footer() {
                           </div>
                           <div className="flex items-center gap-2">
                               <Mail className="h-4 w-4" />
-                              <a href="mailto:service@wealthzi.com" className="hover:text-[#f59e0b]">service@wealthzi.com</a>
+                              <a href="mailto:support@wealthzi.com" className="hover:text-[#f59e0b]">support@wealthzi.com</a>
                           </div>
                       </div>
                    </div>
@@ -191,7 +191,7 @@ export default function Footer() {
             <p>[<span className='font-semibold'>CIN:</span> U74999DL2017PTC310507] [<span className='font-semibold'>PAN:</span> AADCL2103M] [<span className='font-semibold'>GSTIN:</span> 07AADCL2103M1ZP]</p>
             <p>[<span className='font-semibold'>SEBI Registered Name:</span> Lime Internet Private Limited] [<span className='font-semibold'>SEBI RIA Registration No:</span> INA000018133] [<span className='font-semibold'>BASL Member ID:</span> 2014] [<span className='font-semibold'>Type of Registration:</span> Non-Individual] [<span className='font-semibold'>Validity of Registration:</span> Perpetual]</p>
             <p>[<span className='font-semibold'>Registered Address:</span> Flat No. 603, 6th Floor, Kanchenjunga Building, 18 Barakhamba Road, New Delhi - 110001]</p>
-            <p>[<span className='font-semibold'>Principal Officer:</span> Jyoti Prakash Nayak, Email: jyoti.prakash@wealthzi.com] [<span className='font-semibold'>Compliance Officer:</span> Harshit Singh, Email: harshit.singh@wealthzi.com] [<span className='font-semibold'>Grievance Officer:</span> Sanjeev Johari, Email: sanjeev.johari@nivesh.com]</p>
+            <p>[<span className='font-semibold'>Principal Officer:</span> Jyoti Prakash Nayak, Email: jyoti.prakash@wealthzi.com] [<span className='font-semibold'>Compliance Officer:</span> Harshit Singh, Email: harshit.singh@wealthzi.com] [<span className='font-semibold'>Grievance Officer:</span> Sanjeev Johari, Email: sanjeev.johari@wealthzi.com]</p>
             <p>[<span className='font-semibold'>SEBI Regional Office Address:</span> Securities and Exchange Board of India, NBCC Complex, Office Tower-1, 8th Floor, Plate B, East Kidwai Nagar, New Delhi - 110023, Ph: 011-69012998, Email: sebinro@sebi.gov.in]</p>
         </div>
 

@@ -180,7 +180,7 @@ export default function RegulatoryDisclosurePage() {
                         <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell className='text-center'>8</TableCell>
+                        <TableCell className='text-center'>9</TableCell>
                         <TableCell className='text-center'>December 2025</TableCell>
                         <TableCell className='text-center'>0</TableCell>
                         <TableCell className='text-center'>0</TableCell>
@@ -246,7 +246,7 @@ export default function RegulatoryDisclosurePage() {
                         <TableCell className='text-center'>0</TableCell>
                     </TableRow>
                     <TableRow>
-                        <TableCell className='text-center'>4</TableCell>
+                        <TableCell className='text-center'>5</TableCell>
                         <TableCell className='text-center'>2025-2026</TableCell>
                         <TableCell className='text-center'>0</TableCell>
                         <TableCell className='text-center'>0</TableCell>
