@@ -8,7 +8,7 @@ import AdityaImage from "../../../public/Wealthzi_Aditya.png";
 import HarshitImage from "../../../public/Wealthzi_Harshit.png";
 import PradeepImage from "../../../public/Wealthzi_Pradeep.png";
 import SanjeevImage from "../../../public/Wealthzi_Sanjeev.png";
-import YogeshImage from "../../../public/Wealthzi_Yogesh.png";
+import YogeshImage from "../../../public/Wealthzi_Yogesh.jpg";
 
 // Import emoji images
 import HuggingFace from "../../../public/svgs/HuggingFace.svg";
