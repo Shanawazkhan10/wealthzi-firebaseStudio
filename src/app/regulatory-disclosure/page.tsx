@@ -30,7 +30,7 @@ export default function RegulatoryDisclosurePage() {
             </p>
 
             <h3 className="text-lg md:text-xl font-bold mt-8 mb-4 text-center">
-              Data for the month ending - 31st December, 2025
+              Data for the month ending - 31st January,, 2025
             </h3>
             <div className="overflow-x-auto">
                 <Table className='min-w-[800px]'>
@@ -182,6 +182,14 @@ export default function RegulatoryDisclosurePage() {
                     <TableRow>
                         <TableCell className='text-center'>9</TableCell>
                         <TableCell className='text-center'>December 2025</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                        <TableCell className='text-center'>0</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell className='text-center'>10</TableCell>
+                        <TableCell className='text-center'>January 2026</TableCell>
                         <TableCell className='text-center'>0</TableCell>
                         <TableCell className='text-center'>0</TableCell>
                         <TableCell className='text-center'>0</TableCell>
