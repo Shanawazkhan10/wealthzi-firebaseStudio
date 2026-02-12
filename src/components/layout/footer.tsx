@@ -34,6 +34,7 @@ const calculatorLinks = [
 
 const complianceData = [
   { sl: 1, fy: 'FY 2023-24', status: 'Conducted', remarks: '-' },
+  { sl: 2, fy: 'FY 2024-25', status: 'Conducted', remarks: '-' },
 ];
 
 const disclaimers = [
