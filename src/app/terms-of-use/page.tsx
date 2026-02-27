@@ -1,14 +1,5 @@
 
 'use client';
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/table';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function TermsOfUsePage() {
@@ -26,10 +17,13 @@ export default function TermsOfUsePage() {
               Lime Internet Private Limited, having its registered office at Building No 55 S/F, Panchkuian Road, Connaught Place, New Delhi, India 110001, is a mutual fund distributor registered with the Association of Mutual Funds of India under ARN No. 137190.
             </p>
             <p>
+              Lime Internet Private Limited, having its registered office at Building No 55 S/F, Panchkuian Road, Connaught Place, New Delhi, India 110001, is also a registered investment advisor registered with the SEBI under SEBI RIA Registration No: INA000018133] [BASL Member ID: 2014] rendering Investment Advisory under it’s division – Wealthzi investment advisors.
+            </p>
+            <p>
               Lime Internet Private Limited operates website https://wealthzi.com and mobile applications under the brand name Wealthzi (hereinafter referred to as “Wealthzi”). Through its website and mobile applications Wealthzi provides OnlineWealth Management & Financial Management Services that enable you to organise your personal financial information, and also execute mutual funds transactions.
             </p>
             <p>
-              Wealthzi offers wealth management, wealth consulting, financial products distribution, wealth planning and analysis for its clients.
+              Wealthzi offers Investment advisory, wealth management, wealth consulting, financial products distribution, wealth planning and analysis for its clients.
             </p>
             <p>
               Owing to its nature of service, Wealthzi is committed to ensure that its website and mobile applications operate with the appropriate internal controls and highest ethical standards.
@@ -94,7 +88,7 @@ export default function TermsOfUsePage() {
             <p>
               Wealthzi enables users to buy and sell mutual funds on the website. Wealthzi has partnered with mutual fund AMCs and also BSE Star MF to provide execution services.
             </p>
-            <h4 className="font-semibold mt-4">2. Wealth consulting and financial information services</h4>
+            <h4 className="font-semibold mt-4">2. Investment advisory and financial information services</h4>
             <p>
               Wealthzi has financial experts who will help you decide on what funds to buy, your portfolio allocation, retirement planning and goal planning.
             </p>
@@ -122,7 +116,7 @@ export default function TermsOfUsePage() {
 
             <h3 className="text-lg md:text-xl font-bold mt-8 mb-4">Facilitation Fee</h3>
             <p>Wealthzi may receive a commission from AMCs for distributing financial products.</p>
-
+            <p>Wealthzi under his division – Wealthzi investment advisors may receive a Advisory fees from RIA clients on financial products.</p>
             <h3 className="text-lg md:text-xl font-bold mt-8 mb-4">E KYC Services</h3>
             <p>
               Wealthzi has partnered with Signzy for providing e KYC (know your customer) services. Wealthzi clients who are not KYC verified may be asked to perform electronic KYC verification. For e KYC, Signzy requires user’s bank account details, PAN, nominee, Aadhaar or any listed document for proof of address, phone no, and email id. The user, if not KYC verified, agrees to use Signzy’s services for eKYC. Wealthzi checks if the user is KYC verified or not using the KYC check APIs of one of the AMCs. We are currently using the services of ICICI Prudential AMC for KYC check.

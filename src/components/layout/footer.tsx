@@ -1,6 +1,5 @@
-
-'use client';
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
 import {
   Table,
   TableBody,
@@ -8,33 +7,41 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@/components/ui/table';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, Mail, MapPin } from 'lucide-react';
+} from "@/components/ui/table";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const companyLinks = [
-  { title: 'Contact Us', href: '/contact-us' },
-  { title: 'Terms of Use', href: '/terms-of-use' },
-  { title: 'Privacy Policy', href: '/privacy-policy' },
-  { title: 'RIA Disclaimers', href: '/ria-disclaimers' },
-  { title: 'Regulatory Disclosure', href: '/regulatory-disclosure' },
-  { title: 'Investor Charter', href: 'https://drive.google.com/file/d/1QWGelX6o4itgep4-QrIvRH__e2ZpDA5U/view' },
-  { title: 'SCORES Link', href: 'https://scores.sebi.gov.in/scores-home' },
-  { title: 'SMARTODR', href: 'https://smartodr.in/login' },
+  { title: "Contact Us", href: "/contact-us" },
+  { title: "Terms of Use", href: "/terms-of-use" },
+  { title: "Privacy Policy", href: "/privacy-policy" },
+  { title: "RIA Disclaimers", href: "/ria-disclaimers" },
+  { title: "Regulatory Disclosure", href: "/regulatory-disclosure" },
+  {
+    title: "Investor Charter",
+    href: "https://drive.google.com/file/d/1_V2qnV7h2nfRaaG3mytWg4iE0hiTjDtP/view?usp=sharing",
+  },
+  { title: "SCORES Link", href: "https://scores.sebi.gov.in/scores-home" },
+  { title: "SMARTODR", href: "https://smartodr.in/login" },
 ];
 
 const calculatorLinks = [
-  { title: 'SIP Calculator', href: '/calculators?tab=sip' },
-  { title: 'Lumpsum Calculator', href: '/calculators?tab=lumpsum' },
-  { title: 'SIP Goal Calculator', href: '/calculators?tab=sip-goal' },
-  { title: 'Fixed Deposit (FD) Calculator', href: '/calculators?tab=fd' },
-  { title: 'Recurring Deposit (RD) Calculator', href: '/calculators?tab=rd' },
-  { title: 'Loan EMI Calculator', href: '/calculators?tab=loan-emi' },
+  { title: "SIP Calculator", href: "/calculators?tab=sip" },
+  { title: "Lumpsum Calculator", href: "/calculators?tab=lumpsum" },
+  { title: "SIP Goal Calculator", href: "/calculators?tab=sip-goal" },
+  { title: "Fixed Deposit (FD) Calculator", href: "/calculators?tab=fd" },
+  { title: "Recurring Deposit (RD) Calculator", href: "/calculators?tab=rd" },
+  { title: "Loan EMI Calculator", href: "/calculators?tab=loan-emi" },
 ];
 
 const complianceData = [
-  { sl: 1, fy: 'FY 2023-24', status: 'Conducted', remarks: '-' },
-  { sl: 2, fy: 'FY 2024-25', status: 'Conducted', remarks: '-' },
+  { sl: 1, fy: "FY 2023-24", status: "Conducted", remarks: "-" },
+  { sl: 2, fy: "FY 2024-25", status: "Conducted", remarks: "-" },
 ];
 
 const disclaimers = [
@@ -43,91 +50,144 @@ const disclaimers = [
   "The information is only for consumption by the client and such material should not be redistributed.",
 ];
 
-
 export default function Footer() {
   return (
     <footer className="bg-[#0f172a] text-[#f8fafc]">
       <div className="container py-12 lg:py-16">
         <div className="hidden md:block">
-          <h2 className="font-heading font-bold text-lg md:text-xl text-white mb-8">BUILD WEALTH WITH CONFIDENCE</h2>
-          
+          <h2 className="font-heading font-bold text-lg md:text-xl text-white mb-8">
+            BUILD WEALTH WITH CONFIDENCE
+          </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
-              {/* Column 1: Contact and Compliance */}
-              <div className="lg:col-span-6 space-y-8">
-                   <div>
-                      <p className="text-base md:text-lg text-[#cbd5e1] font-semibold">Lime Internet Pvt. Ltd</p>
-                      <div className="mt-4 space-y-3 text-sm md:text-base text-[#cbd5e1]">
-                          <div className="flex items-start gap-2">
-                              <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                              <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                              <Phone className="h-4 w-4" />
-                              <a href="tel:01142542796" className="hover:text-[#f59e0b]">011-42542796</a>
-                          </div>
-                          <div className="flex items-center gap-2">
-                              <Mail className="h-4 w-4" />
-                              <a href="mailto:support@wealthzi.com" className="hover:text-[#f59e0b]">support@wealthzi.com</a>
-                          </div>
+            {/* Column 1: Contact and Compliance */}
+            <div className="lg:col-span-6 space-y-8">
+              <div>
+                <p className="text-base md:text-lg text-[#cbd5e1] font-semibold">
+                  Lime Internet Pvt. Ltd
+                </p>
+                <div className="mt-4 space-y-3 text-sm md:text-base text-[#cbd5e1]">
+                  <div className="flex items-center gap-2">
+                    <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
+                    <div className="space-y-1 items-start gap-2">
+                      <div className="flex flex-row gap-2">
+                        <span className="font-semibold">
+                          Registered Address:
+                        </span>
+                        <span>
+                          Kanchenjunga Building, 603, 6th Floor, Connaught
+                          Place, 18 Barakhamba Road, New Delhi – 110001
+                        </span>
                       </div>
-                   </div>
-
-                   <div>
-                      <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Status of Annual Compliance Report</h3>
-                      <div className="overflow-x-auto">
-                          <Table className="w-full text-sm md:text-base text-[#f8fafc] border border-white/20 min-w-[600px]">
-                          <TableHeader>
-                              <TableRow className="border-white/20">
-                              <TableHead className="text-white font-medium">Sr. No</TableHead>
-                              <TableHead className="text-white font-medium">Financial Year</TableHead>
-                              <TableHead className="text-white font-medium">Compliance Audit Status</TableHead>
-                              <TableHead className="text-white font-medium">Remarks, if any</TableHead>
-                              </TableRow>
-                          </TableHeader>
-                          <TableBody>
-                              {complianceData.map((row) => (
-                              <TableRow key={row.sl} className="border-white/20 hover:bg-white/10">
-                                  <TableCell>{row.sl}</TableCell>
-                                  <TableCell>{row.fy}</TableCell>
-                                  <TableCell>{row.status}</TableCell>
-                                  <TableCell>{row.remarks}</TableCell>
-                              </TableRow>
-                              ))}
-                          </TableBody>
-                          </Table>
+                      <div className="flex flex-row gap-2">
+                        <span className="font-semibold">Office Address:</span>
+                        <span>
+                          C-112, 1st Floor, Sector 2, Noida,Gautam Buddha Nagar,
+                          UP–201301
+                        </span>
                       </div>
-                   </div>
-              </div>
-
-              {/* Column 2: Links */}
-              <div className="lg:col-span-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                      <div>
-                          <h3 className="font-heading font-semibold text-lg text-white">COMPANY</h3>
-                          <ul className="mt-4 space-y-3">
-                          {companyLinks.map((link) => (
-                              <li key={link.title}>
-                              <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                                  {link.title}
-                              </Link>
-                              </li>
-                          ))}
-                          </ul>
-                      </div>
-                      <div>
-                          <h3 className="font-heading font-semibold text-lg text-white">CALCULATORS</h3>
-                          <ul className="mt-4 space-y-3">
-                          {calculatorLinks.map((link) => (
-                              <li key={link.title}>
-                              <Link href={link.href} className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                                  {link.title}
-                              </Link>
-                              </li>
-                          ))}
-                          </ul>
-                      </div>
+                    </div>
                   </div>
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    <a
+                      href="tel:+919818465241"
+                      className="hover:text-[#f59e0b]"
+                    >
+                      +91-9818465241
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-4 w-4" />
+                    <a
+                      href="mailto:support@wealthzi.com"
+                      className="hover:text-[#f59e0b]"
+                    >
+                      support@wealthzi.com
+                    </a>
+                  </div>
+                </div>
               </div>
+
+              <div>
+                <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">
+                  Status of Annual Compliance Report
+                </h3>
+                <div className="overflow-x-auto">
+                  <Table className="w-full text-sm md:text-base text-[#f8fafc] border border-white/20 min-w-[600px]">
+                    <TableHeader>
+                      <TableRow className="border-white/20">
+                        <TableHead className="text-white font-medium">
+                          Sr. No
+                        </TableHead>
+                        <TableHead className="text-white font-medium">
+                          Financial Year
+                        </TableHead>
+                        <TableHead className="text-white font-medium">
+                          Compliance Audit Status
+                        </TableHead>
+                        <TableHead className="text-white font-medium">
+                          Remarks, if any
+                        </TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {complianceData.map((row) => (
+                        <TableRow
+                          key={row.sl}
+                          className="border-white/20 hover:bg-white/10"
+                        >
+                          <TableCell>{row.sl}</TableCell>
+                          <TableCell>{row.fy}</TableCell>
+                          <TableCell>{row.status}</TableCell>
+                          <TableCell>{row.remarks}</TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2: Links */}
+            <div className="lg:col-span-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="font-heading font-semibold text-lg text-white">
+                    COMPANY
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {companyLinks.map((link) => (
+                      <li key={link.title}>
+                        <Link
+                          href={link.href}
+                          className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors"
+                        >
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-heading font-semibold text-lg text-white">
+                    CALCULATORS
+                  </h3>
+                  <ul className="mt-4 space-y-3">
+                    {calculatorLinks.map((link) => (
+                      <li key={link.title}>
+                        <Link
+                          href={link.href}
+                          className="text-sm md:text-base text-[#cbd5e1] hover:text-[#f59e0b] transition-colors"
+                        >
+                          {link.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -135,47 +195,81 @@ export default function Footer() {
         <div className="md:hidden">
           <Accordion type="multiple" className="w-full">
             <AccordionItem value="contact">
-              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Contact Us</AccordionTrigger>
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">
+                Contact Us
+              </AccordionTrigger>
               <AccordionContent className="space-y-3 text-sm text-[#cbd5e1] pt-4">
-                  <p className="font-semibold">Lime Internet Pvt. Ltd</p>
-                  <div className="flex items-start gap-3">
-                      <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
-                      <span>Kanchenjunga Building, 603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001</span>
+                <p className="font-semibold">Lime Internet Pvt. Ltd</p>
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 mt-0.5 shrink-0" />
+                  <div className="space-y-1 items-start gap-2">
+                    <div className="flex flex-row gap-2">
+                      <span className="font-semibold">Registered Address:</span>
+                      <span>
+                        Kanchenjunga Building, 603, 6th Floor, Connaught Place,
+                        18 Barakhamba Road, New Delhi – 110001
+                      </span>
+                    </div>
+                    <div className="flex flex-row gap-2">
+                      <span className="font-semibold">Office Address:</span>
+                      <span>
+                        C-112, 1st Floor, Sector 2, Noida,Gautam Buddha Nagar,
+                        UP–201301
+                      </span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                      <Phone className="h-5 w-5" />
-                      <a href="tel:01142542796" className="hover:text-[#f59e0b]">011-42542796</a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                      <Mail className="h-5 w-5" />
-                      <a href="mailto:service@wealthzi.com" className="hover:text-[#f59e0b]">service@wealthzi.com</a>
-                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone className="h-5 w-5" />
+                  <a href="tel:+919818465241" className="hover:text-[#f59e0b]">
+                    +91-9818465241
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5" />
+                  <a
+                    href="mailto:service@wealthzi.com"
+                    className="hover:text-[#f59e0b]"
+                  >
+                    service@wealthzi.com
+                  </a>
+                </div>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="company">
-              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Company</AccordionTrigger>
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">
+                Company
+              </AccordionTrigger>
               <AccordionContent className="pt-4">
-                  <ul className="space-y-3">
-                    {companyLinks.map((link) => (
-                        <li key={link.title}>
-                        <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                            {link.title}
-                        </Link>
-                        </li>
-                    ))}
-                  </ul>
+                <ul className="space-y-3">
+                  {companyLinks.map((link) => (
+                    <li key={link.title}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors"
+                      >
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="calculators">
-              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">Calculators</AccordionTrigger>
+              <AccordionTrigger className="font-heading font-semibold text-lg text-white hover:no-underline">
+                Calculators
+              </AccordionTrigger>
               <AccordionContent className="pt-4">
                 <ul className="space-y-3">
                   {calculatorLinks.map((link) => (
-                      <li key={link.title}>
-                      <Link href={link.href} className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors">
-                          {link.title}
+                    <li key={link.title}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-[#cbd5e1] hover:text-[#f59e0b] transition-colors"
+                      >
+                        {link.title}
                       </Link>
-                      </li>
+                    </li>
                   ))}
                 </ul>
               </AccordionContent>
@@ -183,28 +277,67 @@ export default function Footer() {
           </Accordion>
         </div>
 
-
         {/* Regulatory */}
-         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1] space-y-4">
-            <p><span className='font-semibold'>BSE Member code:</span> 58371</p>
-            <p>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</p>
-            <p>Wealthzi Investment Advisers (A division of Lime Internet Private Limited)</p>
-            <p>[<span className='font-semibold'>CIN:</span> U74999DL2017PTC310507] [<span className='font-semibold'>PAN:</span> AADCL2103M] [<span className='font-semibold'>GSTIN:</span> 07AADCL2103M1ZP]</p>
-            <p>[<span className='font-semibold'>SEBI Registered Name:</span> Lime Internet Private Limited] [<span className='font-semibold'>SEBI RIA Registration No:</span> INA000018133] [<span className='font-semibold'>BASL Member ID:</span> 2014] [<span className='font-semibold'>Type of Registration:</span> Non-Individual] [<span className='font-semibold'>Validity of Registration:</span> Perpetual]</p>
-            <p>[<span className='font-semibold'>Registered Address:</span> Flat No. 603, 6th Floor, Kanchenjunga Building, 18 Barakhamba Road, New Delhi - 110001]</p>
-            <p>[<span className='font-semibold'>Principal Officer:</span> Jyoti Prakash Nayak, Email: jyoti.prakash@wealthzi.com] [<span className='font-semibold'>Compliance Officer:</span> Harshit Singh, Email: harshit.singh@wealthzi.com] [<span className='font-semibold'>Grievance Officer:</span> Sanjeev Johari, Email: sanjeev.johari@wealthzi.com]</p>
-            <p>[<span className='font-semibold'>SEBI Regional Office Address:</span> Securities and Exchange Board of India, NBCC Complex, Office Tower-1, 8th Floor, Plate B, East Kidwai Nagar, New Delhi - 110023, Ph: 011-69012998, Email: sebinro@sebi.gov.in]</p>
+        <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1] space-y-4">
+          <p>
+            <span className="font-semibold">BSE Member code:</span> 58371
+          </p>
+          <p>
+            Mutual Fund investments are subject to market risks, read all scheme
+            related documents carefully.
+          </p>
+          <p>
+            Wealthzi Investment Advisers (A division of Lime Internet Private
+            Limited)
+          </p>
+          <p>
+            [<span className="font-semibold">CIN:</span> U74999DL2017PTC310507]
+            [<span className="font-semibold">PAN:</span> AADCL2103M] [
+            <span className="font-semibold">GSTIN:</span> 07AADCL2103M1ZP]
+          </p>
+          <p>
+            [<span className="font-semibold">SEBI Registered Name:</span> Lime
+            Internet Private Limited] [
+            <span className="font-semibold">SEBI RIA Registration No:</span>{" "}
+            INA000018133] [
+            <span className="font-semibold">BASL Member ID:</span> 2014] [
+            <span className="font-semibold">Type of Registration:</span>{" "}
+            Non-Individual] [
+            <span className="font-semibold">Validity of Registration:</span>{" "}
+            Perpetual]
+          </p>
+          <p>
+            [<span className="font-semibold">Registered Address:</span> Flat No.
+            603, 6th Floor, Kanchenjunga Building, 18 Barakhamba Road, New Delhi
+            - 110001]
+          </p>
+          <p>
+            [<span className="font-semibold">Principal Officer:</span> Jyoti
+            Prakash Nayak, Email: jyoti.prakash@wealthzi.com] [
+            <span className="font-semibold">Compliance Officer:</span> Harshit
+            Singh, Email: harshit.singh@wealthzi.com] [
+            <span className="font-semibold">Grievance Officer:</span> Sanjeev
+            Johari, Email: sanjeev.johari@nivesh.com]
+          </p>
+          <p>
+            [
+            <span className="font-semibold">SEBI Regional Office Address:</span>{" "}
+            Securities and Exchange Board of India, NBCC Complex, Office
+            Tower-1, 8th Floor, Plate B, East Kidwai Nagar, New Delhi - 110023,
+            Ph: 011-69012998, Email: sebinro@sebi.gov.in]
+          </p>
         </div>
-
 
         {/* Disclaimers */}
         <div className="mt-12 lg:mt-16 border-t border-white/20 pt-8 text-xs md:text-sm text-[#cbd5e1]">
-            <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">Disclaimers:</h3>
-            <div className="space-y-4">
+          <h3 className="font-heading font-semibold text-lg md:text-xl text-white mb-4">
+            Disclaimers:
+          </h3>
+          <div className="space-y-4">
             {disclaimers.map((disclaimer, index) => (
-                <p key={index}>{disclaimer}</p>
+              <p key={index}>{disclaimer}</p>
             ))}
-            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,23 +1,24 @@
+"use client";
 
-'use client';
-
-import { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
@@ -25,7 +26,7 @@ export default function ContactUsPage() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   return (
@@ -85,8 +86,14 @@ export default function ContactUsPage() {
                   />
                 </div>
                 <div>
-                  <p className="text-sm text-destructive mb-4">*All Fields are mandatory</p>
-                  <Button type="submit" className="w-full md:w-auto" variant="outline">
+                  <p className="text-sm text-destructive mb-4">
+                    *All Fields are mandatory
+                  </p>
+                  <Button
+                    type="submit"
+                    className="w-full md:w-auto"
+                    variant="outline"
+                  >
                     Submit
                   </Button>
                 </div>
@@ -99,9 +106,9 @@ export default function ContactUsPage() {
               <Phone className="h-8 w-8 text-primary mt-1" />
               <div>
                 <p className="font-semibold text-lg text-foreground">
-                  011-42542796
-                  <br />
-                  +91-9818465241
+                  <a href="tel:+919818465241" className="hover:text-[#f59e0b]">
+                    +91-9818465241
+                  </a>
                 </p>
                 <p className="text-foreground">(10 am-6pm IST, Mon-Friday)</p>
               </div>
@@ -109,15 +116,42 @@ export default function ContactUsPage() {
             <div className="flex items-start gap-4">
               <Mail className="h-8 w-8 text-primary mt-1" />
               <div>
-                <p className="font-semibold text-lg text-foreground">service@wealthzi.com</p>
+                <p className="font-semibold text-lg text-foreground">
+                  service@wealthzi.com
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <MapPin className="h-8 w-8 text-primary mt-1" />
+              <div className="flex items-center gap-4">
+                <MapPin className="h-10 w-10 text-primary mt-1" />
+                <p className="font-semibold text-lg text-foreground">
+                  Office Address
+                </p>
+              </div>
               <div>
-                <p className="font-semibold text-lg text-foreground">Lime Internet Pvt Ltd</p>
+                <p className="font-semibold text-lg text-foreground">
+                  Lime Internet Pvt Ltd
+                </p>
                 <p className="text-foreground">
-                  Kanchenjunga Building, #603, 6th Floor, Connaught Place, 18 Barakhamba Road, New Delhi – 110001
+                  C-112, 1st Floor, Sector 2, Noida,Gautam Buddha Nagar,
+                  UP–201301
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="flex items-center gap-4">
+                <MapPin className="h-10 w-10 text-primary mt-1" />
+                <p className="font-semibold text-lg text-foreground">
+                  Registered Address
+                </p>
+              </div>{" "}
+              <div>
+                <p className="font-semibold text-lg text-foreground">
+                  Lime Internet Pvt Ltd
+                </p>
+                <p className="text-foreground">
+                  Kanchenjunga Building, #603, 6th Floor, Connaught Place, 18
+                  Barakhamba Road, New Delhi – 110001
                 </p>
               </div>
             </div>
