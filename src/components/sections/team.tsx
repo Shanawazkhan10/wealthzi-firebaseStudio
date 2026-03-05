@@ -21,24 +21,24 @@ const teamMembers = [
     image: SanjeevImage,
     bgImage: "bg-[url(/Wealthzi_Sanjeev.png)]"
   },
-  { 
-    name: 'Pradeep Pillai', 
-    title: 'Co-founder, Head of Wealth', 
-    image: PradeepImage,
-    bgImage: "bg-[url(/Wealthzi_Pradeep.png)]"
-  },
-  { 
-    name: 'Yogesh Kumar', 
-    title: 'Director, Wealthzi', 
-    image: YogeshImage,
-    bgImage: "bg-[url(/Wealthzi_Yogesh.png)]"
-  },
-  { 
-    name: 'Aditya Kachru', 
-    title: 'Association Director, Advisory', 
-    image: AdityaImage,
-    bgImage: "bg-[url(/Wealthzi_Aditya.png)]"
-  },
+  // { 
+  //   name: 'Pradeep Pillai', 
+  //   title: 'Co-founder, Head of Wealth', 
+  //   image: PradeepImage,
+  //   bgImage: "bg-[url(/Wealthzi_Pradeep.png)]"
+  // },
+  // { 
+  //   name: 'Yogesh Kumar', 
+  //   title: 'Director, Wealthzi', 
+  //   image: YogeshImage,
+  //   bgImage: "bg-[url(/Wealthzi_Yogesh.png)]"
+  // },
+  // { 
+  //   name: 'Aditya Kachru', 
+  //   title: 'Association Director, Advisory', 
+  //   image: AdityaImage,
+  //   bgImage: "bg-[url(/Wealthzi_Aditya.png)]"
+  // },
   { 
     name: 'Harshit Singh', 
     title: 'AVP Operations', 
@@ -80,7 +80,8 @@ export default function Team() {
         
         {/* Team Members Section */}
         {/* Team Members Grid - Desktop Version */}
-        <div className="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="hidden md:grid grid-cols-4  mx-auto gap-10">
+          <div></div>
           {teamMembers.map((member) => (
             <Card key={member.name} className="relative overflow-hidden rounded-xl shadow-lg group text-white border-none">
               <Image
@@ -96,6 +97,7 @@ export default function Team() {
               </div>
             </Card>
           ))}
+          <div></div>
         </div>
 
         {/* Team Members Mobile Version */}
@@ -125,7 +127,7 @@ export default function Team() {
         <div className="pt-8">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-primary text-primary-foreground shadow-xl rounded-xl">
-              <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+              <CardContent className="p-6 md:p-8 py-4 flex flex-col md:flex-row items-center gap-6">
                 <Award className="w-16 h-16 text-white shrink-0"/>
                 <div>
                   <h3 className="font-heading text-xl md:text-2xl font-bold">Backed by Trust</h3>
