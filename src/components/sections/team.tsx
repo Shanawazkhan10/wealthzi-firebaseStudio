@@ -138,7 +138,7 @@ export default function Team() {
               </CardContent>
             </Card>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-8">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-8">
               {reviewsArray.map((item, index) => (
                 <Card key={index} className="bg-blue-100/50 backdrop-blur-sm border-blue-200 rounded-xl">
                   <CardContent className="p-6 text-center">
@@ -156,7 +156,7 @@ export default function Team() {
                   </CardContent>
                 </Card>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

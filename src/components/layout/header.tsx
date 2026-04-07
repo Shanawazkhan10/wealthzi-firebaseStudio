@@ -48,7 +48,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
+          {/* <div className="hidden md:flex items-center justify-end space-x-2 flex-1">
             <Button
               asChild
               className="font-bold rounded-[10px] h-11 px-6 text-base"
@@ -58,10 +58,10 @@ export default function Header() {
                 Login/Register
               </a>
             </Button>
-          </div>
+          </div> */}
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          {/* <div className="md:hidden">
             <Button
               asChild
               size="sm"
@@ -72,7 +72,7 @@ export default function Header() {
                 Login/Register
               </a>
             </Button>
-          </div>
+          </div> */}
         </div>
       </header>
     </div>
