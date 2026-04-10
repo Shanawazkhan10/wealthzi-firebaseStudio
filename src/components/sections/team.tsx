@@ -124,7 +124,7 @@ export default function Team() {
         </div>
 
         {/* Stats Section */}
-        <div className="pt-8">
+        {/* <div className="pt-8">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-primary text-primary-foreground shadow-xl rounded-xl">
               <CardContent className="p-6 md:p-8 py-4 flex flex-col md:flex-row items-center gap-6">
@@ -138,7 +138,7 @@ export default function Team() {
               </CardContent>
             </Card>
 
-            {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mt-8">
               {reviewsArray.map((item, index) => (
                 <Card key={index} className="bg-blue-100/50 backdrop-blur-sm border-blue-200 rounded-xl">
                   <CardContent className="p-6 text-center">
@@ -156,9 +156,9 @@ export default function Team() {
                   </CardContent>
                 </Card>
               ))}
-            </div> */}
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

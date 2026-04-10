@@ -43,7 +43,7 @@ export default function Home() {
       <Hero />
       {/* <Features /> */}
       <Team />
-      <SuccessStories />
+      {/* <SuccessStories /> */}
       <Faq />
     </>
   );
