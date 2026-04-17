@@ -6,7 +6,6 @@ import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import wealthziLogo from "../../../public/svgs/wealthziLogo.svg";
 
 export default function Header() {
   return (
@@ -41,8 +40,10 @@ export default function Header() {
         <div className="flex h-14 items-center justify-between px-4 md:px-6">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
-              src={wealthziLogo}
+              src="/LimeW.png"
               alt="Wealthzi Logo"
+              width={160}
+              height={48}
               className="h-10 md:h-12 w-auto"
             />
           </Link>

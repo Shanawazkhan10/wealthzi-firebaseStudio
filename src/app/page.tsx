@@ -8,21 +8,21 @@ import { MetaTagsData } from '@/localeData/MetaTagsData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: MetaTagsData?.home?.title,
+  title: 'Lime Wealth',
   keywords: MetaTagsData?.home?.keywords,
   description: MetaTagsData?.home?.discription,
   twitter: {
     card: 'summary_large_image',
     images: [metaOgImageUrl],
     description: MetaTagsData?.home?.discription,
-    title: MetaTagsData?.home?.title,
+    title: 'Lime Wealth',
     site: '@Wealthzi_in',
     creator: '@Wealthzi_in',
   },
   openGraph: {
     locale: 'en_US',
     type: 'website',
-    title: MetaTagsData?.home?.title,
+    title: 'Lime Wealth',
     images: [metaOgImageUrl],
     description: MetaTagsData?.home?.discription,
     url: 'https://www.wealthzi.com/',
