@@ -17,10 +17,10 @@ import {
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const companyLinks = [
-  { title: "Contact Us", href: "/contact-us" },
+  // { title: "Contact Us", href: "/contact-us" },
   { title: "Terms of Use", href: "/terms-of-use" },
   { title: "Privacy Policy", href: "/privacy-policy" },
-  { title: "RIA Disclaimers", href: "/ria-disclaimers" },
+  // { title: "RIA Disclaimers", href: "/ria-disclaimers" },
   { title: "Regulatory Disclosure", href: "/regulatory-disclosure" },
   {
     title: "Investor Charter",
