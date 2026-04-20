@@ -44,7 +44,7 @@ export default function Features() {
         {/* Main Heading Section - No background color */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
-            Create Wealth with Wealthzi
+            Create Wealth with LimeWealth
           </h2>
           <p className="mt-4 text-lg md:text-xl text-foreground">
             Wealth creation is made smooth with an easy-to-use interface to
@@ -53,7 +53,7 @@ export default function Features() {
             and tracking.
           </p>
           <p className="mt-2 text-base md:text-lg text-foreground">
-            Join over 10,000 customers who trust wealthzi to take control of
+            Join over 10,000 customers who trust LimeWealth to take control of
             their financial future.
           </p>
         </div>

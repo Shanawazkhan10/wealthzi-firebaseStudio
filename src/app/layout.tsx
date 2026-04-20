@@ -9,7 +9,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Lime Wealth',
-  description: 'A modern, professional wealth management website by Wealthzi.',
+  description: 'A modern, professional wealth management website by LimeWealth.',
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },

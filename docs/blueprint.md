@@ -1,13 +1,13 @@
-# **App Name**: Wealthzi Digital
+# **App Name**: LimeWealth Digital
 
 ## Core Features:
 
 - Interactive Hero Slider: Rotating hero section with key value propositions and clear CTAs, highlighting financial education, wealth creation, and free guidance.
 - Team Showcase: Dedicated section to introduce the wealth management team with photos, titles, and a trust badge showcasing their experience and assets managed.
-- Wealth Advisor Chatbot: A generative AI-powered chatbot to answer user queries on financial planning, investment options, and Wealthzi services acting as a helpful tool.
+- Wealth Advisor Chatbot: A generative AI-powered chatbot to answer user queries on financial planning, investment options, and LimeWealth services acting as a helpful tool.
 - Personalized Investment Recommendations: Provide personalized investment recommendations based on user's financial goals and risk tolerance.
-- Success Stories Showcase: Display testimonials and case studies highlighting successful client outcomes and savings achieved with Wealthzi.
-- FAQ Section: Comprehensive FAQ section addressing common questions about financial planning, Wealthzi services, and investment options.
+- Success Stories Showcase: Display testimonials and case studies highlighting successful client outcomes and savings achieved with LimeWealth.
+- FAQ Section: Comprehensive FAQ section addressing common questions about financial planning, LimeWealth services, and investment options.
 - Investment Calculator Tools: Offer interactive tools for users to calculate potential returns on investments, plan for retirement, and estimate financial goals.
 
 ## Style Guidelines:

@@ -100,10 +100,10 @@ export default function Footer() {
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4" />
                     <a
-                      href="mailto:support@wealthzi.com"
+                      href="mailto:support@LimeWealth.com"
                       className="hover:text-[#f59e0b]"
                     >
-                      support@wealthzi.com
+                     support@wealthzi.com
                     </a>
                   </div>
                 </div>
@@ -287,7 +287,7 @@ export default function Footer() {
             related documents carefully.
           </p>
           <p>
-            Wealthzi Investment Advisers (A division of Lime Internet Private
+            LimeWealth Investment Advisers (A division of Lime Internet Private
             Limited)
           </p>
           <p>
@@ -313,9 +313,9 @@ export default function Footer() {
           </p>
           <p>
             [<span className="font-semibold">Principal Officer:</span> Jyoti
-            Prakash Nayak, Email: jyoti.prakash@wealthzi.com] [
+            Prakash Nayak, Email: jyoti.prakash@LimeWealth.com] [
             <span className="font-semibold">Compliance Officer:</span> Harshit
-            Singh, Email: harshit.singh@wealthzi.com] [
+            Singh, Email: harshit.singh@LimeWealth.com] [
             <span className="font-semibold">Grievance Officer:</span> Sanjeev
             Johari, Email: sanjeev.johari@nivesh.com]
           </p>

@@ -3,35 +3,35 @@ import { metaOgImageUrl } from '@/lib/application.properties';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Wealthzi: Privacy Policy',
+  title: 'LimeWealth: Privacy Policy',
   keywords:
     'mutual funds, invest in mutual funds, buy mutual funds, mutual fund investments, best mutual funds',
   description:
-    'Wealthzi is a wealth management app which enables you to track and review your existing mutual funds portfolio. Wealthzi helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with Wealthzi and build wealth with confidence.',
+    'LimeWealth is a wealth management app which enables you to track and review your existing mutual funds portfolio. LimeWealth helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with LimeWealth and build wealth with confidence.',
   openGraph: {
-    title: 'Wealthzi: Privacy Policy',
+    title: 'LimeWealth: Privacy Policy',
     description:
-      'Wealthzi is a wealth management app which enables you to track and review your existing mutual funds portfolio. Wealthzi helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with Wealthzi and build wealth with confidence.',
-    url: 'https://www.wealthzi.com/privacy-policy',
-    siteName: 'Wealthzi',
+      'LimeWealth is a wealth management app which enables you to track and review your existing mutual funds portfolio. LimeWealth helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with LimeWealth and build wealth with confidence.',
+    url: 'https://www.LimeWealth.com/privacy-policy',
+    siteName: 'LimeWealth',
     images: [metaOgImageUrl],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Wealthzi: Privacy Policy',
+    title: 'LimeWealth: Privacy Policy',
     description:
-      'Wealthzi is a wealth management app which enables you to track and review your existing mutual funds portfolio. Wealthzi helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with Wealthzi and build wealth with confidence.',
-    site: '@Wealthzi_in',
-    creator: '@Wealthzi_in',
+      'LimeWealth is a wealth management app which enables you to track and review your existing mutual funds portfolio. LimeWealth helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with LimeWealth and build wealth with confidence.',
+    site: '@LimeWealth_in',
+    creator: '@LimeWealth_in',
     images: [metaOgImageUrl],
   },
   alternates: {
-    canonical: 'https://www.wealthzi.com/privacy-policy',
+    canonical: 'https://www.LimeWealth.com/privacy-policy',
   },
    other: {
-    'itemProp-name': 'Wealthzi: Privacy Policy',
+    'itemProp-name': 'LimeWealth: Privacy Policy',
     'itemProp-image': metaOgImageUrl,
   },
 };
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   const linkClassName = "text-[#007FFF] underline";
   const textPadding = "pt-3";
-  const mailToWealthzi = "mailto:support@wealthzi.com";
+  const mailToLimeWealth = "mailto:support@LimeWealth.com";
 
   return (
     <section className="py-16 lg:py-24 bg-muted">
        <div className="container mx-auto px-6 md:px-0">
          <div className="prose prose-sm md:prose-base max-w-none text-foreground bg-background p-6 md:p-8 rounded-lg shadow-lg">
           <h1 className="text-center text-3xl md:text-4xl font-extrabold pb-6">
-            Wealthzi Privacy Policy
+            LimeWealth Privacy Policy
           </h1>
        
           <p className={textPadding}>
@@ -59,21 +59,21 @@ export default function PrivacyPolicy() {
           </p>
           <p className={textPadding}>
             Lime Internet Private Limited operates website{" "}
-            <a href="https://www.wealthzi.com/" className={linkClassName}>
-              https://www.wealthzi.com
+            <a href="https://www.LimeWealth.com/" className={linkClassName}>
+              https://www.LimeWealth.com
             </a>{" "}
-            and mobile applications under the brand name Wealthzi (hereinafter
-            referred to as &ldquo;Wealthzi&rdquo;). Wealthzi provides Wealth
+            and mobile applications under the brand name LimeWealth (hereinafter
+            referred to as &ldquo;LimeWealth&rdquo;). LimeWealth provides Wealth
             Management &amp; Financial Consulting Services that enable you to
             organise your financial information, execute transactions, and track
             your portfolios.
           </p>
           <p className={textPadding}>
-            Wealthzi is committed to operating its website and mobile
+            LimeWealth is committed to operating its website and mobile
             applications with the highest ethical standards and appropriate
-            internal controls. This Privacy Policy explains how Wealthzi
+            internal controls. This Privacy Policy explains how LimeWealth
             collects, uses &amp; protects your information when you access
-            Wealthzi website(s) &amp; mobile apps (collectively referred to as
+            LimeWealth website(s) &amp; mobile apps (collectively referred to as
             &ldquo;Services&rdquo; or &ldquo;Application&rdquo;). Since we are
             dealing with your Data, We take your privacy extremely seriously and
             encourage you to read this Privacy Policy.
@@ -82,15 +82,15 @@ export default function PrivacyPolicy() {
             We urge you to only use our website/application and Our Services if
             you agree to all the terms of the Privacy Policy. If you are not
             comfortable with any of the terms or policies of Our Privacy Policy,
-            you may choose to discontinue usage of Wealthzi Services. You should
+            you may choose to discontinue usage of LimeWealth Services. You should
             read our Privacy Policy in detail before availing our Services and
             ensure that you agree to the same in toto.
           </p>
           <p className={textPadding}>
             In compliance to applicable laws, if you wish to update or delete
-            your Data that Wealthzi has collected, You can also email us at{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            your Data that LimeWealth has collected, You can also email us at{" "}
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>
@@ -100,11 +100,11 @@ export default function PrivacyPolicy() {
             knowingly. In case you are not a major (as per your jurisdiction) or
             if you are under 18 years of age, please do not attempt to or
             register for Our Services or send any Data about yourself to
-            Wealthzi in any manner or for any purpose whatsoever. If you believe
+            LimeWealth in any manner or for any purpose whatsoever. If you believe
             that a person under 18 may have provided us with Data, please
             contact us at&nbsp;{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>
@@ -115,7 +115,7 @@ export default function PrivacyPolicy() {
           </p>
          
           <h3 className='font-bold mt-6'>
-            A. What Information does Wealthzi collect?
+            A. What Information does LimeWealth collect?
           </h3>
           <p className={textPadding}>
             We receive and store only that information you knowingly provide to
@@ -126,8 +126,8 @@ export default function PrivacyPolicy() {
           <p className={textPadding}>
             If you want, You can always delete this information by writing to us
             at&nbsp;{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>
@@ -210,7 +210,7 @@ export default function PrivacyPolicy() {
           <p className={textPadding}>
             <strong>(iii) Connect your Gmail account:&nbsp;</strong>You can
             choose to provide explicit consent to connect your Gmail account
-            with Wealthzi account (using Google&rsquo;s OAuth authentication
+            with LimeWealth account (using Google&rsquo;s OAuth authentication
             method), so that the application / website can &ldquo;read
             only&rdquo; the attachment from a small white listed set of senders
             specifically comprising :
@@ -258,8 +258,8 @@ export default function PrivacyPolicy() {
             If you wish, You can choose to de-link your Gmail account with the
             application at any time and/ or you can also delete your information
             by writing to&nbsp;{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>
@@ -268,7 +268,7 @@ export default function PrivacyPolicy() {
             Mail&rsquo;s permission settings.
           </p>
           <p className={textPadding}>
-            The act of connecting your Gmail accounts with Wealthzi accounts
+            The act of connecting your Gmail accounts with LimeWealth accounts
             comes under the &ldquo;Restricted scopes&rdquo; as mentioned in the
             Google API services user Data policy.
           </p>
@@ -282,7 +282,7 @@ export default function PrivacyPolicy() {
           </p>
           <p className={textPadding}>
             <strong>Credit score &amp; Liabilities information</strong> : You
-            provide Wealthzi with explicit consent to collect this information
+            provide LimeWealth with explicit consent to collect this information
             from third party service providers that are expressly authorised by
             you to distribute such information (for example, Experian or CRIF
             High Mark which is a credit information company registered under the
@@ -316,28 +316,28 @@ export default function PrivacyPolicy() {
             analysed to help the user better manage his liabilities.
           </p>
           
-          <h3 className='font-bold mt-6'>B. Why does Wealthzi ask for this information?</h3>
+          <h3 className='font-bold mt-6'>B. Why does LimeWealth ask for this information?</h3>
           <p className={textPadding}>
-            Wealthzi provides online wealth management services to you. We only
-            receive information you knowingly provide to Wealthzi or with your
+            LimeWealth provides online wealth management services to you. We only
+            receive information you knowingly provide to LimeWealth or with your
             explicit consent through third Party entities.
           </p>
           <p className={textPadding}>
             The information you provide to us enables you to organise and
-            aggregate your financial information in one place on Wealthzi
-            Services which enables Wealthzi to provide you analytics on your
+            aggregate your financial information in one place on LimeWealth
+            Services which enables LimeWealth to provide you analytics on your
             investments &amp; liabilities, all in one place.
           </p>
           <p className={textPadding}>
-            The information also enables Wealthzi Application to help you assess
+            The information also enables LimeWealth Application to help you assess
             your risk profile from time to time, create your investment plans,
             make decisions on investments, execute purchase and sale of
             investment products and also enables you to manage your taxation.
           </p>
           
-          <h3 className='font-bold mt-6'>C. How does Wealthzi store your Data?</h3>
+          <h3 className='font-bold mt-6'>C. How does LimeWealth store your Data?</h3>
           <p className={textPadding}>
-            Wealthzi implements appropriate security safeguards including&mdash;
+            LimeWealth implements appropriate security safeguards including&mdash;
           </p>
           <ol className="list-lower-alpha pl-6 space-y-2 mt-2">
             <li>
@@ -352,26 +352,26 @@ export default function PrivacyPolicy() {
             </li>
           </ol>
           <p className={textPadding}>
-            Wealthzi stores all collected Data in secured cloud based servers
+            LimeWealth stores all collected Data in secured cloud based servers
             that are hosted in India.
           </p>
           
-          <h3 className='font-bold mt-6'>D. How does Wealthzi process your Data?</h3>
+          <h3 className='font-bold mt-6'>D. How does LimeWealth process your Data?</h3>
           <p className={textPadding}>
             In order to provide you with optimised services and results,
-            Wealthzi uses technologies such as Deep data and Machine learning
+            LimeWealth uses technologies such as Deep data and Machine learning
             based algorithm to process Your Data and provide you with optimum
             results.
           </p>
          
-          <h3 className='font-bold mt-6'>E. How Does Wealthzi Secure Your Data?</h3>
+          <h3 className='font-bold mt-6'>E. How Does LimeWealth Secure Your Data?</h3>
           <p className={textPadding}>
             Owing to your understanding of your Data&rsquo;s importance and
-            sensitivity, Wealthzi uses 128 Bit data encryption along with a
+            sensitivity, LimeWealth uses 128 Bit data encryption along with a
             secured 3 tier password protection.
           </p>
          
-          <h3 className='font-bold mt-6'>F. Does Wealthzi share your Data with 3rd Parties?</h3>
+          <h3 className='font-bold mt-6'>F. Does LimeWealth share your Data with 3rd Parties?</h3>
           <p className={textPadding}>
             While we do not share Data to any third Party entities, we might
             share them to enable us to provide you better Services in the
@@ -403,22 +403,22 @@ export default function PrivacyPolicy() {
             these rights in an emergency situation or wish for us to take
             immediate action, we request you to kindly contact us immediately{" "}
             <strong>Customer Support&nbsp;</strong> on{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>
           <p className={textPadding}>
-            Wealthzi may use automated decision making in processing your Data
+            LimeWealth may use automated decision making in processing your Data
             for some Services and You can request a manual review of the
             accuracy of an automated decision at any time.
           </p>
           <p className={textPadding}>
-            Wealthzi relies on its legal &amp; legitimate interests, described
+            LimeWealth relies on its legal &amp; legitimate interests, described
             above, to process your Data. In addition to the above, We may also
             process other information that constitutes your Data for direct
             marketing purposes or other purposes and you have a right to object
-            to Wealthzi&rsquo;s use of your Data for this purpose at any time,
+            to LimeWealth&rsquo;s use of your Data for this purpose at any time,
             if you so deem fit.
           </p>
           <p className={textPadding}>
@@ -433,7 +433,7 @@ export default function PrivacyPolicy() {
             <li>
                 <em>The right of confirmation &amp; access:</em> This
                 essentially gives you the right to see what Data is held about
-                you by Wealthzi and, whether or not it is being processed, how
+                you by LimeWealth and, whether or not it is being processed, how
                 is it being processed, etc.
             </li>
             <li>
@@ -443,7 +443,7 @@ export default function PrivacyPolicy() {
             </li>
             <li>
                 <em>The right to erasure:</em> Under certain circumstances you
-                can ask Wealthzi to delete your Data. This right is also known
+                can ask LimeWealth to delete your Data. This right is also known
                 as the &lsquo;the Right to be Forgotten&rsquo; and would apply
                 if the Data is no longer required for the purposes it was
                 collected for, or your consent for the processing of that Data
@@ -452,14 +452,14 @@ export default function PrivacyPolicy() {
             </li>
             <li>
                 <em>The right to restrict processing: This&nbsp;</em>gives you
-                the right to ask Wealthzi to temporarily halt the processing of
+                the right to ask LimeWealth to temporarily halt the processing of
                 Data, such as in the case where a dispute or if a legal case has
                 to be concluded, or the Data contains certain error and is being
                 corrected.
             </li>
             <li>
                 <em>The right to Data portability</em>: You have the right to
-                ask for any Data supplied directly to Wealthzi, to be provided
+                ask for any Data supplied directly to LimeWealth, to be provided
                 in a structured, commonly used, and machine-readable format.
             </li>
 
@@ -482,14 +482,14 @@ export default function PrivacyPolicy() {
             </li>
           </ul>
 
-          <h3 className='font-bold mt-6'>H. How long does Wealthzi store and retain your Data?</h3>
+          <h3 className='font-bold mt-6'>H. How long does LimeWealth store and retain your Data?</h3>
           <p className={textPadding}>
-            Wealthzi shall retain your Data as long as may be reasonably
+            LimeWealth shall retain your Data as long as may be reasonably
             necessary to satisfy the purpose for which your Data is being
             collected and thereafter stored and processed.
           </p>
           <p className={textPadding}>
-            Wealthzi otherwise stores Data for the entire customer life
+            LimeWealth otherwise stores Data for the entire customer life
             cycle and an additional period of three (3) months. In the event
             that a customer exits our application/website and terminates
             their account or stops using Our Service and intimates us of the
@@ -497,15 +497,15 @@ export default function PrivacyPolicy() {
             such intimation.
           </p>
           <p className={textPadding}>
-            Wealthzi shall also undertake periodic review in order to
+            LimeWealth shall also undertake periodic review in order to
             determine whether it is necessary to retain the Data in its
             possession any further or determine the correct time to dispose
             it off.
           </p>
 
-          <h3 className='font-bold mt-6'>I. How does Wealthzi do an impact assessment?</h3>
+          <h3 className='font-bold mt-6'>I. How does LimeWealth do an impact assessment?</h3>
           <p className={textPadding}>
-            At Wealthzi, data protection impact assessment contains, at a
+            At LimeWealth, data protection impact assessment contains, at a
             minimum&mdash;
           </p>
           <p className={textPadding}>
@@ -523,8 +523,8 @@ export default function PrivacyPolicy() {
             such risk of harm.
           </p>
           <p className={textPadding}>
-            Wealthzi shall notify in case of Data breach relating to any
-            Data processed by Wealthzi where such breach is likely to cause
+            LimeWealth shall notify in case of Data breach relating to any
+            Data processed by LimeWealth where such breach is likely to cause
             harm to You.
           </p>
 
@@ -564,8 +564,8 @@ export default function PrivacyPolicy() {
           <p className={textPadding}>
             In order to provide a superior user experience, we provide the
             third party analytics service providers with a user&rsquo;s
-            demographic information at Wealthzi along with user&rsquo;s
-            movements on Wealthzi website and mobile applications.
+            demographic information at LimeWealth along with user&rsquo;s
+            movements on LimeWealth website and mobile applications.
           </p>
           <p className={textPadding}>
             We do not share and will never share any confidential Data such
@@ -578,21 +578,21 @@ export default function PrivacyPolicy() {
           </p>
 
           <h3 className='font-bold mt-6'>K. Your Data with respect to connecting your Gmail account with
-            Wealthzi Application : Compliance w.r.t. Google OAuth
+            LimeWealth Application : Compliance w.r.t. Google OAuth
             API Scopes (Restricted scopes)</h3>
           
           <p className={textPadding}>
-            Wealthzi limits use of Data to provide or improve your user
+            LimeWealth limits use of Data to provide or improve your user
             experience. With your updated information, the application can give
             you deep and accurate analytics on your investments.
           </p>
           <p className={textPadding}>
             We will never rent or sell your information or Data to anyone.
-            Wealthzi ensures that it is always in compliance with the restricted
+            LimeWealth ensures that it is always in compliance with the restricted
             scope defined under Google OAuth API policies.
           </p>
           <p className={textPadding}>
-            Alternatively, you can remove access to Wealthzi from Google
+            Alternatively, you can remove access to LimeWealth from Google
             Mail&rsquo;s permission settings located at:
             <a
               href="https://myaccount.google.com/permissions"
@@ -636,13 +636,13 @@ export default function PrivacyPolicy() {
             We will also be undergoing annual security assessment from a
             Google-designated third party and keep the same updated from time to
             time or as per instructions from Google and will publish the
-            &ldquo;letter of assessment&rdquo; on Wealthzi website and mobile
+            &ldquo;letter of assessment&rdquo; on LimeWealth website and mobile
             applications. &nbsp;
           </p>
           
           <h3 className='font-bold mt-6'>L. Changes to Privacy Policy</h3>
           <p className={textPadding}>
-            Wealthzi reserves the right to change this policy from time to time.
+            LimeWealth reserves the right to change this policy from time to time.
             Any changes shall be effective immediately upon the posting of the
             revised Privacy Policy.
           </p>
@@ -655,12 +655,12 @@ export default function PrivacyPolicy() {
           </p>
           <p className={textPadding}>
             If you are not comfortable with any of the changes to Privacy Policy
-            you may choose to discontinue usage of Wealthzi website or mobile
+            you may choose to discontinue usage of LimeWealth website or mobile
             applications. You can also email us at{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>{" "}
-            to update or delete your Data that Wealthzi has collected. &nbsp;By
+            to update or delete your Data that LimeWealth has collected. &nbsp;By
             continuing use of Our Services after a Policy change, you accept and
             agree to all the terms of our Privacy Policy and the changed terms
             thereafter.
@@ -670,8 +670,8 @@ export default function PrivacyPolicy() {
           <p className={textPadding}>
             If you have questions, concerns, or suggestions regarding our
             Privacy Policy, we can be reached at{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
           </p>
           
@@ -685,14 +685,14 @@ export default function PrivacyPolicy() {
           </p>
           <p className={textPadding}>
             If you are a security enthusiast or a researcher and you have found
-            a possible security vulnerability on Wealthzi, we encourage you to
+            a possible security vulnerability on LimeWealth, we encourage you to
             report the issue to us responsibly.
           </p>
           <p className={textPadding}>
             You could submit a bug report to us or communicate with our Data
             Protection Officer Mr. Harshit Singh at&nbsp;{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             with detailed steps required to reproduce the vulnerability.
           </p>
@@ -703,8 +703,8 @@ export default function PrivacyPolicy() {
             suggestions on how we could improve our security systems to make it
             more robust and safe for all users, you can share those with us
             at&nbsp;{" "}
-            <a href={mailToWealthzi} className={linkClassName}>
-              support@wealthzi.com
+            <a href={mailToLimeWealth} className={linkClassName}>
+             support@wealthzi.com
             </a>
             .
           </p>

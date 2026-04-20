@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     images: [metaOgImageUrl],
     description: MetaTagsData?.home?.discription,
     title: 'Lime Wealth',
-    site: '@Wealthzi_in',
-    creator: '@Wealthzi_in',
+    site: '@LimeWealth_in',
+    creator: '@LimeWealth_in',
   },
   openGraph: {
     locale: 'en_US',
@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     title: 'Lime Wealth',
     images: [metaOgImageUrl],
     description: MetaTagsData?.home?.discription,
-    url: 'https://www.wealthzi.com/',
-    siteName: 'Wealthzi',
+    url: 'https://www.LimeWealth.com/',
+    siteName: 'LimeWealth',
   },
   alternates: {
-    canonical: 'https://www.wealthzi.com/',
+    canonical: 'https://www.LimeWealth.com/',
   },
   other: {
-    'itemProp-name': 'Wealthzi',
+    'itemProp-name': 'LimeWealth',
     'itemProp-image': metaOgImageUrl,
   },
 };

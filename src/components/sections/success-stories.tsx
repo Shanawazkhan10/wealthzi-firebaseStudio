@@ -84,7 +84,7 @@ export default function SuccessStories() {
             Real Impact. Real Savings.
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-foreground">
-            Read success stories from Wealthzi Customers.
+            Read success stories from LimeWealth Customers.
           </p>
         </div>
         <Carousel

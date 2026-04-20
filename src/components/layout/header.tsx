@@ -25,7 +25,7 @@ export default function Header() {
           onMouseOver={(e) => e.currentTarget.style.animationPlayState = 'paused'}
           onMouseOut={(e) => e.currentTarget.style.animationPlayState = 'running'}
         >
-          {`Nivesh Acquires Wealthzi: Transforming Wealth Management`}
+          {`Nivesh Acquires LimeWealth: Transforming Wealth Management`}
         </a>
       </div>
       <style jsx>{`
@@ -41,7 +41,7 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
               src="/LimeW.png"
-              alt="Wealthzi Logo"
+              alt="LimeWealth Logo"
               width={160}
               height={48}
               className="h-10 md:h-12 w-auto"
@@ -55,7 +55,7 @@ export default function Header() {
               className="font-bold rounded-[10px] h-11 px-6 text-base"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
-              <a href="https://app.wealthzi.com/login">
+              <a href="https://app.LimeWealth.com/login">
                 Login/Register
               </a>
             </Button>
@@ -69,7 +69,7 @@ export default function Header() {
               className="font-bold rounded-[10px] h-9 px-4 text-sm"
               style={{ backgroundColor: 'rgb(76 167 113)' }}
             >
-              <a href="https://app.wealthzi.com/login">
+              <a href="https://app.LimeWealth.com/login">
                 Login/Register
               </a>
             </Button>

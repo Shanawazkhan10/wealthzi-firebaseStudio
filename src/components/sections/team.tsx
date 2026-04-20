@@ -19,31 +19,31 @@ const teamMembers = [
     name: 'Sanjeev Johari', 
     title: 'Director - Financial Planning', 
     image: SanjeevImage,
-    bgImage: "bg-[url(/Wealthzi_Sanjeev.png)]"
+    bgImage: "bg-[url(/LimeWealth_Sanjeev.png)]"
   },
   // { 
   //   name: 'Pradeep Pillai', 
   //   title: 'Co-founder, Head of Wealth', 
   //   image: PradeepImage,
-  //   bgImage: "bg-[url(/Wealthzi_Pradeep.png)]"
+  //   bgImage: "bg-[url(/LimeWealth_Pradeep.png)]"
   // },
   // { 
   //   name: 'Yogesh Kumar', 
-  //   title: 'Director, Wealthzi', 
+  //   title: 'Director, LimeWealth', 
   //   image: YogeshImage,
-  //   bgImage: "bg-[url(/Wealthzi_Yogesh.png)]"
+  //   bgImage: "bg-[url(/LimeWealth_Yogesh.png)]"
   // },
   // { 
   //   name: 'Aditya Kachru', 
   //   title: 'Association Director, Advisory', 
   //   image: AdityaImage,
-  //   bgImage: "bg-[url(/Wealthzi_Aditya.png)]"
+  //   bgImage: "bg-[url(/LimeWealth_Aditya.png)]"
   // },
   { 
     name: 'Harshit Singh', 
     title: 'AVP Operations', 
     image: HarshitImage,
-    bgImage: "bg-[url(/Wealthzi_Harshit.png)]"
+    bgImage: "bg-[url(/LimeWealth_Harshit.png)]"
   },
 ];
 

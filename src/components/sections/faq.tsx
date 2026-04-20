@@ -7,16 +7,16 @@ import {
 
 const faqData = [
   // {
-  //   title: 'How do I import and track my external mutual funds on Wealthzi?',
-  //   subTitle: `We support CAS statements from CAMS. You can auto-generate it using our "Track Mutual Funds" section. You will have to forward it to "cas@wealthzi.com".`,
+  //   title: 'How do I import and track my external mutual funds on LimeWealth?',
+  //   subTitle: `We support CAS statements from CAMS. You can auto-generate it using our "Track Mutual Funds" section. You will have to forward it to "cas@LimeWealth.com".`,
   // },
   // {
-  //   title: 'How to start a SIP on Wealthzi?',
+  //   title: 'How to start a SIP on LimeWealth?',
   //   subTitle: (
   //     <p>
-  //       To initiate a SIP with Wealthzi, you can follow these steps:
+  //       To initiate a SIP with LimeWealth, you can follow these steps:
   //       <br />
-  //       1. Sign up on Wealthzi and become investment ready.
+  //       1. Sign up on LimeWealth and become investment ready.
   //       <br />
   //       2. Follow the Build Portfolio journey on the dashboard.
   //       <br />
@@ -42,9 +42,9 @@ const faqData = [
       'Minimum SIP amount varies from fund to fund, you can start as low as Rs 100 in some of the funds.',
   },
   // {
-  //   title: 'Is Wealthzi Safe?',
+  //   title: 'Is LimeWealth Safe?',
   //   subTitle:
-  //     'Wealthzi is registered with Association of Mutual Funds of India (AMFI) and BSEStAR for mutual fund transactions. Signzy and ICICI Prudention AMC are our KYC partners. We take utmost care in securing the user data and information. We do not share it with any third party.',
+  //     'LimeWealth is registered with Association of Mutual Funds of India (AMFI) and BSEStAR for mutual fund transactions. Signzy and ICICI Prudention AMC are our KYC partners. We take utmost care in securing the user data and information. We do not share it with any third party.',
   // },
   // {
   //   title: 'What is Zi Methodology?',
@@ -62,7 +62,7 @@ const faqData = [
   //   ),
   // },
   // {
-  //   title: 'What is the framework of building portfolio on Wealthzi?',
+  //   title: 'What is the framework of building portfolio on LimeWealth?',
   //   subTitle:
   //     'Our build portfolio recommendation are based on your risk profile, investment time horizon and asset allocation.',
   // },
@@ -72,9 +72,9 @@ const faqData = [
       'Risk profiling is the first and formost step in the process of financial planning and building a suitable investment portfolio. It helps you in taking the right risk as per your requirement and capacity. It helps to identify your psychological reactions to surprises in your investment and how to keep your emotions away from your investing decisions.',
   },
   // {
-  //   title: 'What are all assets I can track and invest on Wealthzi App?',
+  //   title: 'What are all assets I can track and invest on LimeWealth App?',
   //   subTitle:
-  //     'On the Wealthzi app, you can track and invest in a variety of assets, including Mutual Funds, Stocks, Bonds, PMS, AIF and Gold.',
+  //     'On the LimeWealth app, you can track and invest in a variety of assets, including Mutual Funds, Stocks, Bonds, PMS, AIF and Gold.',
   // },
 
   {
@@ -91,7 +91,7 @@ const faqData = [
         <br /> It&apos;s free important to consult with a financial advisor or investment
         expert before making any investment decisions to determine the most
         suitable investment approach for your goals and risk tolerance.
-        {/* Additionally, the Wealthzi app provides curated investment options and
+        {/* Additionally, the LimeWealth app provides curated investment options and
         Investment experts advice that can help you make informed investment
         decisions based on your personal financial situation and investment
         goals. */}
@@ -100,14 +100,14 @@ const faqData = [
   },
 
   // {
-  //   title: 'Why should I invest through Wealthzi?',
+  //   title: 'Why should I invest through LimeWealth?',
   //   subTitle:
-  //     'Wealthzi helps you build portfolio for your suitable time horizon and recommends funds which are weighted by its proprietary Zi Methodology.',
+  //     'LimeWealth helps you build portfolio for your suitable time horizon and recommends funds which are weighted by its proprietary Zi Methodology.',
   // },
   // {
-  //   title: 'Can I setup SIP, SWP and STP on Wealthzi?',
+  //   title: 'Can I setup SIP, SWP and STP on LimeWealth?',
   //   subTitle:
-  //     'Absolutely. Wealthzi allows you to set up SIP (Systematic Investment Plan), SWP (Systematic Withdrawal Plan), and STP (Systematic Transfer Plan) to make regular investments, withdrawals, or transfers based on your investment goals and preferences. You can easily configure these options in the app and modify them at any time as per your convenience.',
+  //     'Absolutely. LimeWealth allows you to set up SIP (Systematic Investment Plan), SWP (Systematic Withdrawal Plan), and STP (Systematic Transfer Plan) to make regular investments, withdrawals, or transfers based on your investment goals and preferences. You can easily configure these options in the app and modify them at any time as per your convenience.',
   // },
   // {
   //   title:
@@ -118,7 +118,7 @@ const faqData = [
   // {
   //   title: 'Can I Top Up or redeem after initial lumpsum investment?',
   //   subTitle:
-  //     'Wealthzi allows you to Top Up or redeem their investment after the initial lump sum investment. This provides flexibility to investors who may want to adjust their investment allocation or redeem their funds for any reason. You can easily Top Up or redeem their investments through the Wealthzi app. Keep in mind that mutual fund investments are subject to market risks, and past performance does not guarantee future returns.',
+  //     'LimeWealth allows you to Top Up or redeem their investment after the initial lump sum investment. This provides flexibility to investors who may want to adjust their investment allocation or redeem their funds for any reason. You can easily Top Up or redeem their investments through the LimeWealth app. Keep in mind that mutual fund investments are subject to market risks, and past performance does not guarantee future returns.',
   // },
   {
     title: 'What is the ideal time period for investment?',
@@ -128,26 +128,26 @@ const faqData = [
   // {
   //   title: 'What is the minimum investment amount to start?',
   //   subTitle:
-  //     "At Wealthzi, we understand the importance of making investing accessible to all. That's why we offer you the flexibility to start building their investment portfolio with as little as Rs 100. However, we recommend a minimum investment of Rs 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor's risk profile and investment goals.",
+  //     "At LimeWealth, we understand the importance of making investing accessible to all. That's why we offer you the flexibility to start building their investment portfolio with as little as Rs 100. However, we recommend a minimum investment of Rs 5,000 to ensure that the portfolio is robust and well-diversified across various asset classes. This amount allows you to benefit from the power of compounding and potentially earn attractive returns over the long term. Our investment experts can provide guidance on the optimal investment amount based on an investor's risk profile and investment goals.",
   // },
   // {
-  //   title: 'Does Wealthzi charges fees for the services?',
+  //   title: 'Does LimeWealth charges fees for the services?',
   //   subTitle:
-  //     "Wealthzi is a mutual fund distribution platform that allows investors to invest in mutual funds online. As a distributor, Wealthzi does not charge any additional fees for its services. However, there may be certain charges associated with the mutual funds such as expense ratios, exit loads, and other regulatory fees. Wealthzi's investment experts can provide clarity on the fees associated with mutual fund investments and help you make informed decisions based on their investment goals and risk appetite.",
+  //     "LimeWealth is a mutual fund distribution platform that allows investors to invest in mutual funds online. As a distributor, LimeWealth does not charge any additional fees for its services. However, there may be certain charges associated with the mutual funds such as expense ratios, exit loads, and other regulatory fees. LimeWealth's investment experts can provide clarity on the fees associated with mutual fund investments and help you make informed decisions based on their investment goals and risk appetite.",
   // },
   // {
-  //   title: 'Are returns from investment on Wealthzi app guaranteed?',
+  //   title: 'Are returns from investment on LimeWealth app guaranteed?',
   //   subTitle:
-  //     'Market returns are subject to market risk and are not guaranteed, While wealthzi Investment experts strive to provide valuable guidance and support to investors. However, by investing in a diversified portfolio of mutual funds with a long-term investment horizon, you can potentially earn attractive returns while managing their risk effectively.',
+  //     'Market returns are subject to market risk and are not guaranteed, While LimeWealth Investment experts strive to provide valuable guidance and support to investors. However, by investing in a diversified portfolio of mutual funds with a long-term investment horizon, you can potentially earn attractive returns while managing their risk effectively.',
   // },
   // {
   //   title:
-  //     'Why Wealthzi investments experts required, when one invests only for long term?',
+  //     'Why LimeWealth investments experts required, when one invests only for long term?',
   //   subTitle:
-  //     "While investing for the long term is important, it's essential to have the right guidance and support to navigate through the ups and downs of the market. Wealthzi's investment experts are equipped with the knowledge and experience to help you create and manage a well-diversified portfolio that is aligned with their long-term financial goals. They can provide hand-holding and support through every stage of your life, including the changing market conditions, to ensure that their portfolio stays on track. By having an expert partner like Wealthzi, you can stay focused on their long-term investment objectives and achieve your financial goals with confidence.",
+  //     "While investing for the long term is important, it's essential to have the right guidance and support to navigate through the ups and downs of the market. LimeWealth's investment experts are equipped with the knowledge and experience to help you create and manage a well-diversified portfolio that is aligned with their long-term financial goals. They can provide hand-holding and support through every stage of your life, including the changing market conditions, to ensure that their portfolio stays on track. By having an expert partner like LimeWealth, you can stay focused on their long-term investment objectives and achieve your financial goals with confidence.",
   // },
   // {
-  //   title: 'How can I start with investing via Wealthzi app?',
+  //   title: 'How can I start with investing via LimeWealth app?',
   //   subTitle:
   //     'After downloading the app, you have to provide us with your PAN, Email, Mobile and KYC information to make you investment ready.',
   // },

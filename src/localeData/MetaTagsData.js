@@ -250,7 +250,7 @@ export const MetaTagsData = {
       "Direct Mutual Fund Investment in India, Direct Mutual Fund Investment Platform",
     title: "Direct Mutual Fund Investment Platform in India",
     discription:
-      "Wealthzi is the best Direct Mutual Fund Investment Platform in India, where users can find their investment solution. Download now and start investing funds.",
+      "LimeWealth is the best Direct Mutual Fund Investment Platform in India, where users can find their investment solution. Download now and start investing funds.",
     h1Tags: "Direct Mutual Fund Investment Platform in India",
   },
   // explore

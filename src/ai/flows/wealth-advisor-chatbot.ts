@@ -3,7 +3,7 @@
 /**
  * @fileOverview WealthAdvisorChatbot AI agent.
  *
- * - wealthAdvisorChatbot - A function that handles user queries related to financial planning, investment options, and Wealthzi services.
+ * - wealthAdvisorChatbot - A function that handles user queries related to financial planning, investment options, and LimeWealth services.
  * - WealthAdvisorChatbotInput - The input type for the wealthAdvisorChatbot function.
  * - WealthAdvisorChatbotOutput - The return type for the wealthAdvisorChatbot function.
  */
@@ -12,7 +12,7 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const WealthAdvisorChatbotInputSchema = z.object({
-  query: z.string().describe('The user query about financial planning, investment options, or Wealthzi services.'),
+  query: z.string().describe('The user query about financial planning, investment options, or LimeWealth services.'),
 });
 export type WealthAdvisorChatbotInput = z.infer<typeof WealthAdvisorChatbotInputSchema>;
 
@@ -29,13 +29,13 @@ const prompt = ai.definePrompt({
   name: 'wealthAdvisorChatbotPrompt',
   input: {schema: WealthAdvisorChatbotInputSchema},
   output: {schema: WealthAdvisorChatbotOutputSchema},
-  prompt: `You are a helpful AI-powered chatbot for Wealthzi, a wealth management website. Your goal is to provide quick and helpful answers to user queries about financial planning, investment options, and Wealthzi services.
+  prompt: `You are a helpful AI-powered chatbot for LimeWealth, a wealth management website. Your goal is to provide quick and helpful answers to user queries about financial planning, investment options, and LimeWealth services.
 
   Use the following information to answer the user query:
-  - Wealthzi offers mutual funds, FDs, bonds, portfolio management services and AIFs.
-  - Wealthzi provides automated portfolio review and tracking.
-  - Wealthzi has a team of wealth experts with 20+ years of experience.
-  - Wealthzi manages ₹2,500 crore worth assets of 1000+ high net-worth clients.
+  - LimeWealth offers mutual funds, FDs, bonds, portfolio management services and AIFs.
+  - LimeWealth provides automated portfolio review and tracking.
+  - LimeWealth has a team of wealth experts with 20+ years of experience.
+  - LimeWealth manages ₹2,500 crore worth assets of 1000+ high net-worth clients.
   
   User Query: {{{query}}}
   `,

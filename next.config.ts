@@ -20,7 +20,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.wealthzi.com",
+        hostname: "www.LimeWealth.com",
         port: "",
         pathname: "/landing-page/**", // ✅ wildcard fix (was missing `/`)
       },
@@ -32,7 +32,7 @@ const nextConfig = {
 
   // ✅ Environment variables (if needed)
   env: {
-    NEXT_PUBLIC_SITE_URL: "https://www.wealthzi.com",
+    NEXT_PUBLIC_SITE_URL: "https://www.LimeWealth.com",
   },
 
   // ⚠ Redirects and rewrites don’t work with static export.
