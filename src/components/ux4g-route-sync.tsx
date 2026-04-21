@@ -34,20 +34,23 @@ export default function Ux4gRouteSync() {
         return;
       }
 
+      // Only preserve backgrounds for elements that explicitly opt in.
       const preservedElements = document.querySelectorAll<HTMLElement>('[data-preserve-bg="true"]');
       preservedElements.forEach((element) => {
         element.style.setProperty('background-color', 'transparent', 'important');
         element.style.setProperty('background-blend-mode', 'normal', 'important');
       });
 
-      const elements = document.querySelectorAll<HTMLElement>('*');
+      const preservedMedia = document.querySelectorAll<HTMLElement>('[data-preserve-media="true"]');
+      preservedMedia.forEach((element) => {
+        element.style.setProperty('background-color', 'transparent', 'important');
 
-      elements.forEach((element) => {
-        const computedStyle = window.getComputedStyle(element);
-        if (computedStyle.backgroundImage && computedStyle.backgroundImage !== 'none') {
-          element.style.setProperty('background-color', 'transparent', 'important');
-          element.style.setProperty('background-blend-mode', 'normal', 'important');
-        }
+        const descendants = element.querySelectorAll<HTMLElement>('*');
+        descendants.forEach((descendant) => {
+          descendant.style.setProperty('background-color', 'transparent', 'important');
+          descendant.style.setProperty('background-image', 'initial', 'important');
+          descendant.style.setProperty('mix-blend-mode', 'normal', 'important');
+        });
       });
     };
 
@@ -109,6 +112,9 @@ export default function Ux4gRouteSync() {
 
       if (document.body.classList.contains('dark') && preserveIntervalId === null) {
         preserveIntervalId = window.setInterval(preserveBackgroundImages, 150);
+      } else if (!document.body.classList.contains('dark') && preserveIntervalId !== null) {
+        window.clearInterval(preserveIntervalId);
+        preserveIntervalId = null;
       }
     });
 

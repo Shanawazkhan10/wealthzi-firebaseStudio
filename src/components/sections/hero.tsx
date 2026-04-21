@@ -1,97 +1,102 @@
-'use client';
+"use client";
 
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   type CarouselApi,
-} from '@/components/ui/carousel';
-import { cn } from '@/lib/utils';
-import Image from 'next/image';
-import * as React from 'react';
+} from "@/components/ui/carousel";
+import { Ux4gSafeImage, Ux4gSafeText } from "@/components/ui/ux4g-safe-image";
+import { cn } from "@/lib/utils";
+import * as React from "react";
 
 // Import images
-import familyPlanningImage from '../../../public/familyPlanning.png';
-import firstSipImage from '../../../public/firstSip.png';
-import portfolioReviewImage from '../../../public/portfolioReview.png';
-import retiredLifeImage from '../../../public/retiredLife.png';
-import workingProfessionalImage from '../../../public/workingProfessional.png';
+import familyPlanningImage from "../../../public/familyPlanning.png";
+import firstSipImage from "../../../public/firstSip.png";
+import portfolioReviewImage from "../../../public/portfolioReview.png";
+import retiredLifeImage from "../../../public/retiredLife.png";
+import workingProfessionalImage from "../../../public/workingProfessional.png";
 
+const className = cn(
+  "font-heading font-extrabold tracking-tight drop-shadow-lg",
+  "text-3xl sm:text-4xl md:text-5xl",
+);
 const slides = [
   {
-    id: 'slide1',
+    id: "slide1",
     text1: (
-      <p>
-        I need a <span className="text-[#56b28b]">Rs. 40L</span> corpus <br /> in the next{' '}
-        <span className="text-[#56b28b]">5 years.</span>
+      <p className="className">
+        I need a <span className="text-[#56b28b]">Rs. 40L</span> corpus <br />{" "}
+        in the next <span className="text-[#56b28b]">5 years.</span>
       </p>
     ),
     text2: "“But, I don't know how to get there!”",
     image: workingProfessionalImage,
     altImage: "working professional",
-    contentPosition: 'left',
+    contentPosition: "left",
     text1Size: "text-3xl md:text-4xl lg:text-5xl",
-    text2Size: "text-xl lg:text-2xl xl:text-3xl"
+    text2Size: "text-xl lg:text-2xl xl:text-3xl",
   },
   {
-    id: 'slide2',
+    id: "slide2",
     text1: (
       <p>
-        I want to make my{' '}
-        <span className="text-[#56b28b]">First SIP</span> investment.
+        I want to make my <span className="text-[#56b28b]">First SIP</span>{" "}
+        investment.
       </p>
     ),
-    text2: '“How should I start?”',
+    text2: "“How should I start?”",
     image: firstSipImage,
     altImage: "first SIP investment",
-    contentPosition: 'left',
+    contentPosition: "left",
     text1Size: "text-3xl md:text-4xl lg:text-5xl",
-    text2Size: "text-xl lg:text-2xl xl:text-3xl"
+    text2Size: "text-xl lg:text-2xl xl:text-3xl",
   },
   {
-    id: 'slide3',
+    id: "slide3",
     text1: (
       <p>
-        I'm retiring with <span className="text-[#56b28b]">Rs. 50L</span> and have{' '}
-        <span className="text-[#56b28b]">Rs. 35K </span>
+        I'm retiring with <span className="text-[#56b28b]">Rs. 50L</span> and
+        have <span className="text-[#56b28b]">Rs. 35K </span>
         monthly expenses.
       </p>
     ),
-    text2: '“Help me generate monthly income.”',
+    text2: "“Help me generate monthly income.”",
     image: retiredLifeImage,
     altImage: "about to retire person",
-    contentPosition: 'left',
+    contentPosition: "left",
     text1Size: "text-3xl md:text-4xl lg:text-5xl",
-    text2Size: "text-xl lg:text-2xl xl:text-3xl"
+    text2Size: "text-xl lg:text-2xl xl:text-3xl",
   },
   {
-    id: 'slide4',
+    id: "slide4",
     text1: (
-       <p>
-        My investments are giving {' '}
+      <p>
+        My investments are giving{" "}
         <span className="text-[#56b28b]">below average returns.</span>
       </p>
     ),
-    text2: '“Please review my portfolio and give recommendation.”',
+    text2: "“Please review my portfolio and give recommendation.”",
     image: portfolioReviewImage,
     altImage: "investing since last few years",
-    contentPosition: 'left',
+    contentPosition: "left",
     text1Size: "text-3xl md:text-4xl lg:text-5xl",
-    text2Size: "text-xl lg:text-2xl xl:text-3xl"
+    text2Size: "text-xl lg:text-2xl xl:text-3xl",
   },
   {
-    id: 'slide5',
+    id: "slide5",
     text1: (
       <p>
-        We'll need <span className="text-[#56b28b]">Rs. 1.5 crore</span> for our <span className="text-[#56b28b]">kids'</span> future.
+        We'll need <span className="text-[#56b28b]">Rs. 1.5 crore</span> for our{" "}
+        <span className="text-[#56b28b]">kids'</span> future.
       </p>
     ),
-    text2: '“Give us a long-term investment plan!”',
+    text2: "“Give us a long-term investment plan!”",
     image: familyPlanningImage,
     altImage: "higher education and wedding",
-    contentPosition: 'left',
+    contentPosition: "left",
     text1Size: "text-3xl md:text-4xl lg:text-5xl",
-    text2Size: "text-xl lg:text-2xl xl:text-3xl"
+    text2Size: "text-xl lg:text-2xl xl:text-3xl",
   },
 ];
 
@@ -110,22 +115,22 @@ export default function Hero() {
       setCurrent(api.selectedScrollSnap());
     };
 
-    api.on('select', onSelect);
-    
+    api.on("select", onSelect);
+
     const interval = setInterval(() => {
       api.scrollNext();
     }, 5000);
 
     return () => {
-      api.off('select', onSelect);
+      api.off("select", onSelect);
       clearInterval(interval);
     };
   }, [api]);
 
   return (
     <section id="hero" className="relative w-full pt-5">
-      <Carousel 
-        setApi={setApi} 
+      <Carousel
+        setApi={setApi}
         className="w-full"
         opts={{
           loop: true,
@@ -134,42 +139,32 @@ export default function Hero() {
         <CarouselContent>
           {slides.map((slide, index) => (
             <CarouselItem key={slide.id}>
-              <div className="relative h-[calc(100vh-80px)] min-h-screen w-full">
-                <Image
+              <div className="relative h-[calc(100vh-80px)] min-h-screen w-full z-[999]">
+                <Ux4gSafeImage
                   src={slide.image}
                   alt={slide.altImage}
                   fill
+                  wrapperClassName="absolute inset-0"
                   className="object-cover w-full h-full"
                   priority={index === 0}
                 />
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative h-full container mx-auto flex items-center">
                   <div
-                    className={cn('w-full text-white', {
-                      'text-center': slide.contentPosition === 'center',
-                      'text-left': slide.contentPosition === 'left',
-                      'text-right': slide.contentPosition === 'right',
+                    className={cn("w-full text-white", {
+                      "text-center": slide.contentPosition === "center",
+                      "text-left": slide.contentPosition === "left",
+                      "text-right": slide.contentPosition === "right",
                     })}
                   >
                     <div
-                      className={cn('max-w-2xl', {
-                        'mx-auto': slide.contentPosition === 'center',
-                        'mr-auto': slide.contentPosition === 'left',
-                        'ml-auto': slide.contentPosition === 'right',
+                      className={cn("max-w-2xl", {
+                        "mx-auto": slide.contentPosition === "center",
+                        "mr-auto": slide.contentPosition === "left",
+                        "ml-auto": slide.contentPosition === "right",
                       })}
                     >
-                      <div className={cn(
-                        "font-heading font-extrabold tracking-tight drop-shadow-lg",
-                        "text-3xl sm:text-4xl md:text-5xl"
-                      )}>
-                        {slide.text1}
-                      </div>
-                      <p className={cn(
-                        "pt-6 font-normal text-white text-left leading-tight font-caveat-brush",
-                        "text-xl sm:text-2xl md:text-3xl"
-                      )}>
-                        {slide.text2}
-                      </p>
+                      <Ux4gSafeText text1={slide.text1} text2={slide.text2} />
                     </div>
                   </div>
                 </div>
@@ -184,8 +179,8 @@ export default function Hero() {
             key={index}
             onClick={() => api?.scrollTo(index)}
             className={cn(
-              'h-3 w-3 rounded-full transition-colors duration-300',
-              current === index ? 'bg-white' : 'bg-white/50 hover:bg-white/75'
+              "h-3 w-3 rounded-full transition-colors duration-300",
+              current === index ? "bg-white" : "bg-white/50 hover:bg-white/75",
             )}
             aria-label={`Go to slide ${index + 1}`}
           />

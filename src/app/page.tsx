@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     title: 'Lime Wealth',
     images: [metaOgImageUrl],
     description: MetaTagsData?.home?.discription,
-    url: 'https://www.LimeWealth.com/',
+    url: 'https://www.LimeWealth.in/',
     siteName: 'LimeWealth',
   },
   alternates: {
-    canonical: 'https://www.LimeWealth.com/',
+    canonical: 'https://www.LimeWealth.in/',
   },
   other: {
     'itemProp-name': 'LimeWealth',

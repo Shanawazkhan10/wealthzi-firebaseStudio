@@ -1,4 +1,4 @@
-
+import { Suspense } from 'react';
 import Footer from '@/components/layout/footer';
 import Ux4gWidget from '@/components/ux4g-widget';
 import Ux4gRouteSync from '@/components/ux4g-route-sync';
@@ -46,7 +46,9 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <Ux4gWidget />
-        <Ux4gRouteSync />
+        <Suspense fallback={null}>
+          <Ux4gRouteSync />
+        </Suspense>
         <Script
           src="https://img1.digitallocker.gov.in/ux4g/UX4G-CDN-accessibility/js/weights-v1.js"
           strategy="afterInteractive"

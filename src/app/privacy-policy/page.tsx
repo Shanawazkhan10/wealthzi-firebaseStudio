@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'LimeWealth: Privacy Policy',
     description:
       'LimeWealth is a wealth management app which enables you to track and review your existing mutual funds portfolio. LimeWealth helps you invest into mutual funds suggested by its proprietary Zi methodology. Get started your investment journey with LimeWealth and build wealth with confidence.',
-    url: 'https://www.LimeWealth.com/privacy-policy',
+    url: 'https://www.LimeWealth.in/privacy-policy',
     siteName: 'LimeWealth',
     images: [metaOgImageUrl],
     locale: 'en_US',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     images: [metaOgImageUrl],
   },
   alternates: {
-    canonical: 'https://www.LimeWealth.com/privacy-policy',
+    canonical: 'https://www.LimeWealth.in/privacy-policy',
   },
    other: {
     'itemProp-name': 'LimeWealth: Privacy Policy',
@@ -59,8 +59,8 @@ export default function PrivacyPolicy() {
           </p>
           <p className={textPadding}>
             Lime Internet Private Limited operates website{" "}
-            <a href="https://www.LimeWealth.com/" className={linkClassName}>
-              https://www.LimeWealth.com
+            <a href="https://www.LimeWealth.in/" className={linkClassName}>
+              https://www.LimeWealth.in
             </a>{" "}
             and mobile applications under the brand name LimeWealth (hereinafter
             referred to as &ldquo;LimeWealth&rdquo;). LimeWealth provides Wealth

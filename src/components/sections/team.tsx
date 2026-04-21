@@ -1,4 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
+import { Ux4gSafeImage, Ux4gSafeText1 } from '@/components/ui/ux4g-safe-image';
 import { Award } from 'lucide-react';
 import Image from 'next/image';
 
@@ -67,8 +68,8 @@ const reviewsArray = [
 
 export default function Team() {
   return (
-    <section id="about" className="relative py-16 lg:py-24 bg-[url(/moneyBackground.jpeg)] bg-cover bg-center bg-no-repeat">
-      <div className="container mx-auto relative space-y-16">
+    <section id="about" className="relative  bg-[url(/moneyBackground.jpeg)] bg-cover bg-center bg-no-repeat">
+      <div className="container py-16 lg:py-24 relative space-y-16">
         <div className="text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-foreground">
             Wealth experts with 20+ years experience
@@ -84,16 +85,21 @@ export default function Team() {
           <div></div>
           {teamMembers.map((member) => (
             <Card key={member.name} className="relative overflow-hidden rounded-xl shadow-lg group text-white border-none">
-              <Image
+              <Ux4gSafeImage
                 src={member.image}
                 alt={`Photo of ${member.name}`}
                 fill
+                wrapperClassName="absolute inset-0"
                 className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
               <div className="relative flex flex-col justify-end h-full p-4 min-h-[350px]">
-                <h3 className="font-heading text-xl lg:text-2xl font-bold">{member.name}</h3>
-                <p className="text-base text-white/90">{member.title}</p>
+                <div className="font-heading text-xl lg:text-2xl font-bold">
+                  <Ux4gSafeText1 text={member.name} />
+                </div>
+                <div className="text-base text-white/90">
+                  <Ux4gSafeText1 text={member.title} />
+                </div>
               </div>
             </Card>
           ))}
@@ -114,8 +120,12 @@ export default function Team() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                           <div className="relative flex flex-col justify-end h-full p-4">
-                            <h3 className="font-heading text-lg font-bold">{member.name}</h3>
-                            <p className="text-sm text-white/90">{member.title}</p>
+                            <div className="font-heading text-lg font-bold">
+                              <Ux4gSafeText1 text={member.name} />
+                            </div>
+                            <div className="text-sm text-white/90">
+                              <Ux4gSafeText1 text={member.title} />
+                            </div>
                           </div>
                       </Card>
                   </div>

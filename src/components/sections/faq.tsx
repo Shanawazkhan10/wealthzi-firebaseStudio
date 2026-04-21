@@ -155,8 +155,8 @@ const faqData = [
 
 export default function Faq() {
   return (
-    <section id="faq" className="pb-16 lg:pb-24 bg-gradient-to-b from-[#e4f3ff] to-white pt-15">
-      <div className="container mx-auto xl:max-w-screen-xl px-4 py-8">
+    <section id="faq" className="bg-gradient-to-b from-[#e4f3ff] to-white pt-15">
+      <div className="container px-4 md:px-24 py-8">
         <div className="flex-col mb-8 md:mb-12">
           <p className="font-bold text-2xl md:text-5xl text-center">
             Frequently Asked Questions
