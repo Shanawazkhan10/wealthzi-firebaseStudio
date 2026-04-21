@@ -16,6 +16,14 @@ export default function Ux4gRouteSync() {
 
   useEffect(() => {
     let preserveIntervalId: number | null = null;
+    let postNavigationFrameId: number | null = null;
+    let syncFrameId: number | null = null;
+
+    const handleTriggerClick = (event: Event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      window.openMain?.();
+    };
 
     const preserveBackgroundImages = () => {
       if (!document.body.classList.contains('dark')) {
@@ -43,36 +51,60 @@ export default function Ux4gRouteSync() {
       });
     };
 
+    const bindTrigger = (trigger: HTMLElement) => {
+      trigger.style.setProperty('position', 'fixed', 'important');
+      trigger.style.setProperty('right', '24px', 'important');
+      trigger.style.setProperty('bottom', '24px', 'important');
+      trigger.style.setProperty('z-index', '2147483647', 'important');
+      trigger.style.setProperty('pointer-events', 'auto', 'important');
+      trigger.style.setProperty('display', 'flex', 'important');
+      trigger.style.setProperty('visibility', 'visible', 'important');
+      trigger.style.setProperty('opacity', '1', 'important');
+
+      trigger.removeEventListener('click', handleTriggerClick, true);
+      trigger.addEventListener('click', handleTriggerClick, true);
+    };
+
     const syncWidget = () => {
       const trigger = document.getElementById('uw-widget-custom-trigger');
       const panel = document.getElementById('uw-main');
 
       if (trigger) {
-        trigger.setAttribute(
-          'style',
-          'position:fixed;right:24px;bottom:24px;z-index:2147483647;pointer-events:auto;'
-        );
-
-        trigger.onclick = (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-          window.openMain?.();
-        };
+        bindTrigger(trigger);
       }
 
       if (panel) {
-        panel.setAttribute('style', 'z-index:2147483646;');
+        panel.style.setProperty('z-index', '2147483646', 'important');
+        panel.style.setProperty('pointer-events', 'auto', 'important');
       }
 
       preserveBackgroundImages();
-      window.closeMain?.();
+    };
+
+    const queueSyncWidget = () => {
+      if (syncFrameId !== null) {
+        return;
+      }
+
+      syncFrameId = window.requestAnimationFrame(() => {
+        syncFrameId = null;
+        syncWidget();
+      });
     };
 
     syncWidget();
+    window.closeMain?.();
+    postNavigationFrameId = window.requestAnimationFrame(() => {
+      postNavigationFrameId = window.requestAnimationFrame(() => {
+        syncWidget();
+      });
+    });
 
-    const timeoutId = window.setTimeout(syncWidget, 300);
-    const timeoutId2 = window.setTimeout(syncWidget, 1000);
+    const timeoutId = window.setTimeout(syncWidget, 200);
+    const timeoutId2 = window.setTimeout(syncWidget, 800);
+    const timeoutId3 = window.setTimeout(syncWidget, 1500);
     const observer = new MutationObserver(() => {
+      queueSyncWidget();
       preserveBackgroundImages();
 
       if (document.body.classList.contains('dark') && preserveIntervalId === null) {
@@ -90,9 +122,19 @@ export default function Ux4gRouteSync() {
     return () => {
       window.clearTimeout(timeoutId);
       window.clearTimeout(timeoutId2);
+      window.clearTimeout(timeoutId3);
+      if (postNavigationFrameId !== null) {
+        window.cancelAnimationFrame(postNavigationFrameId);
+      }
+      if (syncFrameId !== null) {
+        window.cancelAnimationFrame(syncFrameId);
+      }
       if (preserveIntervalId !== null) {
         window.clearInterval(preserveIntervalId);
       }
+      document
+        .getElementById('uw-widget-custom-trigger')
+        ?.removeEventListener('click', handleTriggerClick, true);
       observer.disconnect();
     };
   }, [pathname, searchParams]);
