@@ -1,6 +1,7 @@
 
 import Footer from '@/components/layout/footer';
 import Ux4gWidget from '@/components/ux4g-widget';
+import Ux4gRouteSync from '@/components/ux4g-route-sync';
 import Header from '@/components/layout/header';
 import { Toaster } from '@/components/ui/toaster';
 import type { Metadata } from 'next';
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -44,6 +46,7 @@ export default function RootLayout({
         <Footer />
         <Toaster />
         <Ux4gWidget />
+        <Ux4gRouteSync />
         <Script
           src="https://img1.digitallocker.gov.in/ux4g/UX4G-CDN-accessibility/js/weights-v1.js"
           strategy="afterInteractive"
